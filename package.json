@@ -16,7 +16,8 @@
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "^1.0.0-rc.1",
     "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
-    "@vuepress/plugin-nprogress": "^1.0.0-rc.1"
+    "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
+    "vuepress": "^1.2.0"
   },
   "homepage": "https://huskyareyouscared.github.io/blog"
 }
