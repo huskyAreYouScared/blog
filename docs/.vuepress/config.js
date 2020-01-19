@@ -1,4 +1,14 @@
+const path = require('path');
 module.exports = {
-  title: 'Hello VuePress',
-  description: 'Just playing around'
+  title: 'huskyAreYouScared-Blog',
+  description: '持续学习者，憧憬未来的开发者',
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@alias':'docs'
+      }
+    }
+  }
 }
+
+console.log(path.resolve('docs'));
