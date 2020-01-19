@@ -7,13 +7,13 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - run: npm install
-    - run: npm run build
+    - name: Checkout
+      uses: actions/checkout@master
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2.5.0
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@master
       env:
-        ACTIONS_DEPLOY_KEY: ${{secrets.access_token}}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: docs/.vuepress/dist
+        ACCESS_TOKEN: ${{ secrets.access_token }}
+        BRANCH: gh-pages
+        FOLDER: docs/.vuepress/dist
+        BUILD_SCRIPT: npm install && npm run build
