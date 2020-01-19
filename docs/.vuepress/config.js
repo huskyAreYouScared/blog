@@ -8,6 +8,7 @@ module.exports = {
       { text: '主页', link: '/' },
       { text: 'husky-subtitle', link: '/subtitle/' },
       { text: '资源', link: '/tools/' },
+      { text: '技术杂谈', link: '/other/' },
     ],
     sidebar: {
       '/subtitle/': [     
@@ -15,6 +16,10 @@ module.exports = {
       ],
       '/tools/': [
         ''
+      ],
+      '/other/':[
+        '',
+        'githubAction'
       ],
       '/': [
         ''
