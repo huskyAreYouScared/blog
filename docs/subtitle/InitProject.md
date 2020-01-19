@@ -1,4 +1,4 @@
-### 项目初始化总结
+### 项目初始化
 
 #### 开发husky-subtitle是基于electron-vue这个脚手架进行开发的，有些插件和配置比较老，所以会遇到一些坑在这里记录一下
 * [electron-vue GitHub传送门](https://github.com/SimulatedGREG/electron-vue)
@@ -63,4 +63,4 @@
 
 #### 到这里项目就可以正常通过 npm run dev 启动了
 
-##### :koala: 考拉 因为澳大利亚大火很多动物遇难，希望大火早日熄灭
+##### :koala: 考拉 因为澳大利亚大火很多动物遇难，希望大火早日熄灭 --2020.1.19

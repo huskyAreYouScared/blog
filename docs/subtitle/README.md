@@ -3,3 +3,6 @@
 
 * 项目地址
 [toGithub](https://github.com/huskyAreYouScared/subtitle)
+
+### 当前进度
+* [项目初始化](./InitProject.html)
