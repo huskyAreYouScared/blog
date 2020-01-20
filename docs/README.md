@@ -8,8 +8,8 @@ features:
   details: husky-subtitle给视频加字幕的软件，基于electron-vue开发
 - title: 未来任务
   details: 用threeJS开发一个3D风格的Blog
-- title: 单身狗
-  details: 欢迎小姐姐来撩，现居住于上海
+- title: 更新周期
+  details: 双周更新
 footer: MIT Licensed | Copyright © 2018-present huskyAreYouScared
 ---
 
