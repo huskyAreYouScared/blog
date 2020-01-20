@@ -16,4 +16,8 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.access_token }}
         BRANCH: gh-pages
         FOLDER: docs/.vuepress/dist
-        BUILD_SCRIPT: npm install && npm run build && cd ./docs/.vuepress/dist && touch .nojekyll
+        BUILD_SCRIPT: npm install && npm run build
+
+    - name: new .nojekyll
+      run: |
+        touch .nojekyll
