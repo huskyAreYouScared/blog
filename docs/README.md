@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /logo/logo.jpg
-heroText: 哈士奇你怕吗
+heroText: 哈士奇你怕吗!
 tagline: web前端learner
 features:
 - title: 近期项目
