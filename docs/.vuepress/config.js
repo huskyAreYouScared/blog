@@ -22,7 +22,7 @@ module.exports = {
       ],
       '/other/':[
         '',
-        'githubAction'
+        'vuepress_build'
       ],
       '/': [
         ''
