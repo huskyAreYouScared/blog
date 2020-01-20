@@ -1,6 +1,7 @@
 const path = require('path');
 module.exports = {
   base:'/blog/',
+  dest:'dist',
   title: 'huskyAreYouScared-Blog',
   description: '持续学习者，憧憬未来的开发者',
   themeConfig: {

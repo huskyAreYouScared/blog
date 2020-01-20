@@ -17,5 +17,5 @@ jobs:
       env:
         ACCESS_TOKEN: ${{ secrets.access_token }}
         BRANCH: gh-pages
-        FOLDER: docs/.vuepress/dist
-        BUILD_SCRIPT: npm install && npm run build && cd docs && ls
+        FOLDER: dist
+        BUILD_SCRIPT: chmod 777 dist && npm install && npm run build && cd dist && touch .nojekyll
