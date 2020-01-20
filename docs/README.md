@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo/logo.jpg
 heroText: 哈士奇你怕吗!
-tagline: web前端learner
+tagline: web前端
 features:
 - title: 近期项目
   details: husky-subtitle给视频加字幕的软件，基于electron-vue开发
