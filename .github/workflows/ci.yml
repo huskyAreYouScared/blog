@@ -18,4 +18,4 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.access_token }}
         BRANCH: gh-pages
         FOLDER: dist
-        BUILD_SCRIPT: chmod 777 dist && npm install && npm run build && cd dist && touch .nojekyll
+        BUILD_SCRIPT: npm install && npm run build && chmod 777 dist && cd dist && touch .nojekyll
