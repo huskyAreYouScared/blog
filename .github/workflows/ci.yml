@@ -1,29 +1,19 @@
-name: github pages
-
+name: huskyareyouscared  blog actions
 on:
   push:
     branches:
-    - master
-
+      - master
 jobs:
-  build-deploy:
-    runs-on: ubuntu-18.04
+  build-and-deploy:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-      # with:
-      #   submodules: true
-
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: '0.59.1'
-
-    - name: Build
-      run: hugo --minify
-
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2
+    - name: Checkout
+      uses: actions/checkout@master
+      
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@master
       env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.access_token }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./docs/.vuepress/dist
+        ACCESS_TOKEN: ${{ secrets.access_token }}
+        BRANCH: gh-pages
+        FOLDER: docs/.vuepress/dist
+        BUILD_SCRIPT: npm install && npm run build && cd ./docs/.vuepress/dist && touch .nojekyll
