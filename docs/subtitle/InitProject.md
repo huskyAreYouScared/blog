@@ -45,7 +45,72 @@
 :koala:
 <img :src="$withBase('/image/electron-process-error.png')" alt="dock">
 
-### 解决办法
+#### 解决办法
+* 分别在.electron-vue的webpack.renderer.config和webpack.web.config中的new HtmlWebpackPlugin的配置进行更改
+```js
+   // webpack.renderer.config
+   // ...
+    new MiniCssExtractPlugin({filename: 'styles.css'}),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: path.resolve(__dirname, '../src/index.ejs'),
+      minify: {
+        collapseWhitespace: true,
+        removeAttributeQuotes: true,
+        removeComments: true
+      },
++     templateParameters(compilation, assets, options) {
++       return {
++         compilation: compilation,
++         webpack: compilation.getStats().toJson(),
++         webpackConfig: compilation.options,
++         htmlWebpackPlugin: {
++           files: assets,
++           options: options
++         },
++         process,
++       };
++     },
+      nodeModules: process.env.NODE_ENV !== 'production'
+        ? path.resolve(__dirname, '../node_modules')
+        : false
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+    // ...
+
+    // webpack.web.config
+    // ...
+    new MiniCssExtractPlugin({filename: 'styles.css'}),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: path.resolve(__dirname, '../src/index.ejs'),
+      minify: {
+        collapseWhitespace: true,
+        removeAttributeQuotes: true,
+        removeComments: true
+      },
++    templateParameters(compilation, assets, options) {
++       return {
++         compilation: compilation,
++         webpack: compilation.getStats().toJson(),
++         webpackConfig: compilation.options,
++        htmlWebpackPlugin: {
++          files: assets,
++          options: options
++        },
++        process,
++      };
++     },
+      nodeModules: false
+    }),
+    new webpack.DefinePlugin({
+      'process.env.IS_WEB': 'true'
+    }),
+    // ...
+```
+### 以为什么都ok了，结果又发现require报错
+
+#### 解决办法
 * 在/src/main/index.js文件中加入代码
 ```js
 // 在createWindow函数中新增
