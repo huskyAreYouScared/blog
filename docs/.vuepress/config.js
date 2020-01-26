@@ -8,7 +8,7 @@ module.exports = {
     logo: '/logo/logo.gif',
     nav: [
       { text: '主页', link: '/' },
-      { text: 'husky-subtitle', link: '/subtitle/' },
+      { text: 'husky字幕', link: '/subtitle/' },
       { text: '资源', link: '/document/' },
       { text: '技术杂谈', link: '/other/' },
       { text: 'Github', link: 'https://github.com/huskyAreYouScared/' },

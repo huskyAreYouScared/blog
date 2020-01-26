@@ -7,6 +7,7 @@
 * ffmpeg
 * node 
 * sass
+* node-vad
 
 
 ### 项目地址
