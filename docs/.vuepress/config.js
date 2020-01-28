@@ -16,12 +16,11 @@ module.exports = {
     sidebar: {
       '/subtitle/': [     
         'InitProject', 
+        'mac_windows'
       ],
       '/document/': [
-        ''
       ],
       '/other/':[
-        '',
         'vuepress_build',
         'mac_terminal'
       ],
