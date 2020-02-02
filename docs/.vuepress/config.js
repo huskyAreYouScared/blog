@@ -9,7 +9,8 @@ module.exports = {
     nav: [
       { text: '主页', link: '/' },
       { text: 'husky字幕', link: '/subtitle/' },
-      { text: '资源', link: '/document/' },
+      { text: 'HTML+CSS', link: '/HtmlAndCss/' },
+      { text: '资源', link: '/source/' },
       { text: '技术杂谈', link: '/other/' },
       { text: 'Github', link: 'https://github.com/huskyAreYouScared/' },
     ],
@@ -18,7 +19,9 @@ module.exports = {
         'InitProject', 
         'mac_windows'
       ],
-      '/document/': [
+      '/source/': [
+      ],
+      '/HtmlAndCss/': [
       ],
       '/other/':[
         'vuepress_build',
