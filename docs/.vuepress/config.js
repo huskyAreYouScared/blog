@@ -25,7 +25,8 @@ module.exports = {
       ],
       '/other/':[
         'vuepress_build',
-        'mac_terminal'
+        'mac_terminal',
+        'mac_npm_error'
       ],
       '/': [
         ''
