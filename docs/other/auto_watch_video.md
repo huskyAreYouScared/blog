@@ -50,3 +50,4 @@
 #### 声明
 * 版权归原作者所有，如有侵权联系删除 issue即可 
 * [项目地址](https://github.com/huskyAreYouScared/blog)
+* 软件虽好，不要干坏事哦
