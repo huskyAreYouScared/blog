@@ -27,7 +27,8 @@ module.exports = {
         'vuepress_build',
         'mac_terminal',
         'mac_npm_error',
-        'auto_watch_video'
+        'auto_watch_video',
+        'conventional_changelog'
       ],
       '/': [
         ''

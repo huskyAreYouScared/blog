@@ -1,5 +1,6 @@
-### github pages+actions+vuepress
-
+### 自动化发布
+* github pages+actions+vuepress
+---
 * 有一次看阮一峰老师的blog知道了actions[传送门](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
 * 在使用github提供的actions之前，我一直用的是netlify，由于处于好奇，研究了一下github的actions
 * 最开始我是按照阮老师的blog操作的，所以一些关于 workflow, job, step, action的知识大家可以去看阮老师的blog
