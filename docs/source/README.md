@@ -6,3 +6,6 @@
 
 #### 工具类
 * [svg在线编辑网站](https://www.zhangxinxu.com/sp/svg/)
+
+#### 音乐网站
+* [artlist](https://artlist.io)
