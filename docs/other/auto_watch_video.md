@@ -8,10 +8,11 @@
 #### 编程语言要求
 * javascript 不熟悉也没关系
 #### 使用讲解
-* 1.安装之后打开Auto.js需要给予权限
+* 1.安装之后打开Auto.js需要给予权限，注意这里每个手机给与权限的界面不一致，只需要找到给autojs赋权限的地方即可
 <br/>
 <img style="width:300px;" :src="$withBase('/image/autojs-1.jpg')" alt="dock">
 
+* 如果没有提示这个赋予权限的弹框，那么点开左上角折叠即可看到无障碍服务
 * 2.点击右下角加号新建文件
 <br/>
 <img style="width:300px;" :src="$withBase('/image/autojs-2.jpg')" alt="dock">
@@ -27,7 +28,7 @@
   var i = 0
   setInterval(function(){i++
     swipe(500,2000,500,500,600); // 滑屏
-    if(i==200){
+    if(i==200){ // 每次执行任务次数 （eg：200->100,每次执行任务有200次变为100次）
       let next = confirm("is next")
       if(next){
         i=0
@@ -35,7 +36,7 @@
         exit()
       }
     }
-  },15000) // 滑屏间隔
+  },15000) // 滑屏间隔，可调节改变时间间隔（eg: 15000->10000 ,将15s变为10s）
 ```
 [滑屏的api](https://hyb1996.github.io/AutoJs-Docs/#/coordinatesBasedAutomation?id=swipex1-y1-x2-y2-duration)
 
