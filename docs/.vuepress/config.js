@@ -28,7 +28,8 @@ module.exports = {
         'mac_terminal',
         'mac_npm_error',
         'auto_watch_video',
-        'conventional_changelog'
+        'conventional_changelog',
+        'steam_community'
       ],
       '/': [
         ''
