@@ -6,6 +6,7 @@
 
 #### 工具类
 * [svg在线编辑网站](https://www.zhangxinxu.com/sp/svg/)
+* [用衍生艺术生成占位符图片占位符](https://generative-placeholders.glitch.me/)
 
 #### 音乐网站
 * [artlist](https://artlist.io)
