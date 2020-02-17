@@ -17,4 +17,4 @@ footer: MIT Licensed | Copyright © 2018-present huskyAreYouScared
 * [传送门](https://space.bilibili.com/28125784)
 
 ### 近期录制的视频
-* [anime.js动画库使用](https://www.bilibili.com/video/av74622855)
+* [anime.js动画库使用](https://www.bilibili.com/video/av80129240)
