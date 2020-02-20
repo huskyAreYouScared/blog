@@ -10,3 +10,6 @@
 
 #### 音乐网站
 * [artlist](https://artlist.io)
+
+#### js库插件
+[minimap](https://github.com/lrsjng/pagemap)
