@@ -22,6 +22,8 @@ module.exports = {
       '/source/': [
       ],
       '/HtmlAndCss/': [
+        '',
+        'H5Show'
       ],
       '/other/':[
         'vuepress_build',
