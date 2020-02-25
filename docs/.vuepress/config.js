@@ -17,7 +17,8 @@ module.exports = {
     sidebar: {
       '/subtitle/': [     
         'InitProject', 
-        'mac_windows'
+        'mac_windows',
+        'electronDialog'
       ],
       '/source/': [
       ],

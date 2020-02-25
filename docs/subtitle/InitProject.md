@@ -1,4 +1,4 @@
-### 项目初始化
+### 项目初始化，electron-vue升级electron等
 
 #### 开发husky-subtitle是基于electron-vue这个脚手架进行开发的，有些插件和配置比较老，所以会遇到一些坑在这里记录一下
 * [electron-vue GitHub传送门](https://github.com/SimulatedGREG/electron-vue)
