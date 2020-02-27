@@ -10,6 +10,7 @@ module.exports = {
       { text: '主页', link: '/' },
       { text: 'husky字幕', link: '/subtitle/' },
       { text: 'HTML+CSS', link: '/HtmlAndCss/' },
+      { text: 'JS', link: '/javaScript/' },
       { text: '资源', link: '/source/' },
       { text: '技术杂谈', link: '/other/' },
       { text: 'Github', link: 'https://github.com/huskyAreYouScared/' },
@@ -25,6 +26,10 @@ module.exports = {
       '/HtmlAndCss/': [
         '',
         'H5Show'
+      ],
+      '/javaScript/': [
+        '',
+        'imgCrossDomain'
       ],
       '/other/':[
         'vuepress_build',
