@@ -7,6 +7,7 @@
 #### 工具类
 * [svg在线编辑网站](https://www.zhangxinxu.com/sp/svg/)
 * [用衍生艺术生成占位符图片占位符](https://generative-placeholders.glitch.me/)
+* [adobe.color](https://color.adobe.com/zh/create/color-wheel/)还可以拖入图片识别里面的颜色值
 
 #### 音乐网站
 * [artlist](https://artlist.io)
