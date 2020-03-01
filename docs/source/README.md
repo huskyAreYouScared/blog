@@ -8,13 +8,18 @@
 * [svg在线编辑网站](https://www.zhangxinxu.com/sp/svg/)
 * [用衍生艺术生成占位符图片占位符](https://generative-placeholders.glitch.me/)
 * [adobe.color](https://color.adobe.com/zh/create/color-wheel/)还可以拖入图片识别里面的颜色值
+* [生成代码图片](https://carbon.now.sh/)
+* [手绘风格流程图](https://excalidraw.com)
+* [很强大的流程图在线绘制draw.io](https://www.draw.io/)
 
-#### 音乐网站
+#### 音乐
 * [artlist](https://artlist.io)
+* [学习音乐的网站](https://learningmusic.ableton.com/zh/index.html)
+* [浏览器中的音乐交互框架ToneJS](https://tonejs.github.io/)
 
 #### js库插件
-[minimap](https://github.com/lrsjng/pagemap)
-[各种版本的Todo-List](http://todomvc.com/)
+* [minimap](https://github.com/lrsjng/pagemap)
+* [各种版本的Todo-List](http://todomvc.com/)
 
 #### 实战
-[Let's Encrypt 安装免费的 HTTPS 证书](https://www.jitao.tech/blog/2020/01/sre-lets-encrypt/)
+* [Let's Encrypt 安装免费的 HTTPS 证书](https://www.jitao.tech/blog/2020/01/sre-lets-encrypt/)[certbot官网](https://certbot.eff.org)
