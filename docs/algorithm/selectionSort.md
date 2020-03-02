@@ -1,4 +1,4 @@
-### 插入排序
+### 选择排序
 
 ```js{5,6,9}
   function insertSort(arr){

@@ -31,7 +31,7 @@ module.exports = {
       '/algorithm/': [
         '',
         'quickSort',
-        'insertSort',
+        'selectionSort',
       ],
       '/other/':[
         'vuepress_build',
