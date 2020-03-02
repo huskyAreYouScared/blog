@@ -32,6 +32,7 @@ module.exports = {
         '',
         'quickSort',
         'selectionSort',
+        'binarySearch'
       ],
       '/other/':[
         'vuepress_build',
