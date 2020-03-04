@@ -14,6 +14,7 @@
 
 #### 音乐
 * [artlist](https://artlist.io)
+* [freemusicarchive](https://freemusicarchive.org/)免版权
 * [学习音乐的网站](https://learningmusic.ableton.com/zh/index.html)
 * [浏览器中的音乐交互框架ToneJS](https://tonejs.github.io/)
 
@@ -23,3 +24,6 @@
 
 #### 实战
 * [Let's Encrypt 安装免费的 HTTPS 证书](https://www.jitao.tech/blog/2020/01/sre-lets-encrypt/)[certbot官网](https://certbot.eff.org)
+
+#### 前端技术文档
+* [css-Tricks](https://css-tricks.com/)
