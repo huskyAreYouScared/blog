@@ -18,3 +18,6 @@ footer: MIT Licensed | Copyright © 2018-present huskyAreYouScared
 
 ### 近期录制的视频
 * [anime.js动画库使用](https://www.bilibili.com/video/av80129240)
+
+### 国内访问加速
+* [传送门](https://xindeli.gitee.io/blog/) 
