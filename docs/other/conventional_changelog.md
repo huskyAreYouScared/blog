@@ -53,7 +53,7 @@
 ```bash{1}
   npm version minor -m 'description'
 ```
-* 此时就将git 提交的信息写入CHANGELOG了
+* 此时就将git 提交的信息写入CHANGELOG了，package.json中的version（major/minor/patch）也会更新
 
 ## 别忘了提交
 

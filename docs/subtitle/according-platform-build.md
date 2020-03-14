@@ -1,9 +1,9 @@
 # ffmpeg-static根据不同平台进行打包
 [[toc]]
 ## 1.webpack.renderer.config修改
-> path .electron-vue>webpack-renderer.config
+* path .electron-vue->webpack-renderer.config
 * 其实就是对渲染进程打包的相应配置文件
-> 在webpack配置的插件部分增加copy-webpack-plugin相应的配置，配置如下
+* 在webpack配置的插件部分增加copy-webpack-plugin相应的配置，配置如下
 ```js
   // 用来指定最后打包进electron中不同平台的ffmpeg 
   var platform = os.platform()
