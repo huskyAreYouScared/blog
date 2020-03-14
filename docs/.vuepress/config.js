@@ -17,7 +17,7 @@ module.exports = {
       { text: '资源', link: '/source/' },
       { text: '技术杂谈', link: '/other/' },
       { text: 'Github', link: 'https://github.com/huskyAreYouScared/' },
-      { text: '国内地址', link: 'https://xindeli.gitee.io/blog/' },
+      { text: '国内地址', link: 'https://husky_are_you_scared.gitee.io/blog/' },
 
     ],
     sidebar: {

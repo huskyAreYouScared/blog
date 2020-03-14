@@ -20,4 +20,4 @@ footer: MIT Licensed | Copyright © 2018-present huskyAreYouScared
 * [anime.js动画库使用](https://www.bilibili.com/video/av80129240)
 
 ### 国内访问加速
-* [传送门](https://xindeli.gitee.io/blog/) 
+* [传送门](https://husky_are_you_scared.gitee.io/blog/) 
