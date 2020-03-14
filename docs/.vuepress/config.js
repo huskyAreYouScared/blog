@@ -25,7 +25,8 @@ module.exports = {
         'InitProject', 
         'mac_windows',
         'electronDialog',
-        'according-platform-build'
+        'according-platform-build',
+        'user-custom-install'
       ],
       '/source/': [
       ],

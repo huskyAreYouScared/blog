@@ -1,4 +1,4 @@
-# 项目初始化，electron-vue升级electron等
+# 项目初始化，升级electron
 
 ## 简介
 * 开发husky-subtitle是基于electron-vue这个脚手架进行开发的，有些插件和配置比较老，所以会遇到一些坑在这里记录一下
@@ -21,7 +21,7 @@
   electron_mirror=https://npm.taobao.org/mirrors/electron
 ```
 
-## electron版本升级到V7.1.9LTS
+## electron版本升级到V7.1.9LTS <Badge text="可以选择更高版本的LTS版"/>
 * 在package.json文件中将electron的版本 V2.x --> V7.1.9
 ```js
   "devDependencies": {
