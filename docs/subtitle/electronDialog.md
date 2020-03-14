@@ -1,6 +1,6 @@
-### electron dialog小记
+# electron dialog小记
 
-#### 调用保存弹框（showSaveDialog）
+## 调用保存弹框（showSaveDialog）
 
 ```js{2,3,4}
   dialog.showSaveDialog({title:'保存文件',

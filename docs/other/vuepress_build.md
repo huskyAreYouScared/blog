@@ -1,4 +1,4 @@
-### 自动化发布
+# 自动化发布
 * github pages+actions+vuepress
 ---
 * 有一次看阮一峰老师的blog知道了actions[传送门](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
@@ -6,7 +6,7 @@
 * 最开始我是按照阮老师的blog操作的，所以一些关于 workflow, job, step, action的知识大家可以去看阮老师的blog
 * 接下来会将我遇到的一些问题、还有和阮老师的blog不一样的地方，在这篇文章进行记录
 
-#### 首先是 GitHub 密钥配置的不同之处
+## 首先是 GitHub 密钥配置的不同之处
 
 * 我这里采用的是在本地生成公钥和私钥
 ```bash
@@ -23,7 +23,7 @@
 
 * 到这里密钥配置完成
 
-#### .github/workflows用的是其他的actions
+## .github/workflows用的是其他的actions
 
 * 在这里先说一下，我开始用的是阮老师blog里那个workflows配置，对发布路径和其他的一些密钥配置稍加改造，但是GitHub actions 运行成功之后，我去访问我的那个主页，发现是404
 * 后来经过Google发现要加上[.nojekyll](https://github.community/t5/GitHub-Pages/GitHub-Pages-Builds-Fail/m-p/29184#M2000)的空文件即可,但是后续又出现了问题，我更新文章的时候，GitHub actions也运行成功了但是blog就是不更新

@@ -1,5 +1,5 @@
-### 解决mac权限问题报错
-##### (Error: EACCES: permission denied,···)
+# 解决mac权限问题报错
+## (Error: EACCES: permission denied,···)
 
 * 举例，我在项目中要用到sass，但是要安装node-sass
 * 安装之后告诉我需要npm rebuild node-sass

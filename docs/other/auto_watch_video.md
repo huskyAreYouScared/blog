@@ -1,13 +1,13 @@
-### Auto.js自动刷短视频
+# Auto.js自动刷短视频
 
-#### 首先要获取到软件
+## 首先要获取到软件
 * [传送门](https://pan.baidu.com/s/1IG1J1ewAVFmTgcY4uE-hGw)提取码: ygpq
 
-#### 设备要求
+## 设备要求
 * \>= Android7.0
-#### 编程语言要求
+## 编程语言要求
 * javascript 不熟悉也没关系
-#### 使用讲解
+## 使用讲解
 * 1.安装之后打开Auto.js需要给予权限，注意这里每个手机给与权限的界面不一致，只需要找到给autojs赋权限的地方即可
 <br/>
 <img style="width:300px;" :src="$withBase('/image/autojs-1.jpg')" alt="dock">
@@ -27,14 +27,11 @@
 ```js{3}
   var i = 0
   setInterval(function(){i++
-    swipe(500,2000,500,500,600); // 滑屏
-    if(i==200){ // 每次执行任务次数 （eg：200->100,每次执行任务有200次变为100次）
-      let next = confirm("is next")
-      if(next){
-        i=0
-      }else{
-        exit()
-      }
+    
+    if(i%2){ // 根据i的变化，来改变每次滑屏的位置
+        swipe(500,2000,500,500,600); // 滑屏
+    }else{
+      swipe(500,2050,500,400,650); // 滑屏
     }
   },15000) // 滑屏间隔，可调节改变时间间隔（eg: 15000->10000 ,将15s变为10s）
 ```
@@ -46,9 +43,9 @@
 <img style="width:300px;" :src="$withBase('/image/autojs-5.jpg')" alt="dock">
 * 7.关闭脚本，在管理界面->运行中的脚本->每个脚本后面对应的叉号点击即可关闭
 
-#### 相关文章
+## 相关文章
 * [autojs文档](https://hyb1996.github.io/AutoJs-Docs/#/)
-#### 声明
+## 声明
 * 版权归原作者所有，如有侵权联系删除 issue即可 
 * [项目地址](https://github.com/huskyAreYouScared/blog)
 * 软件虽好，不要干坏事哦

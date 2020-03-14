@@ -1,4 +1,4 @@
-### 其他技术杂谈
+# 其他技术杂谈
 
 * [github action使用体验](./vuepress_build.html)
 * [Auto.js自动刷短视频](./auto_watch_video.html)

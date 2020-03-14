@@ -1,5 +1,8 @@
 const path = require('path');
 module.exports = {
+  markdown: {
+    lineNumbers: true
+  },
   base:'/blog/',
   dest:'dist',
   title: 'huskyAreYouScared-Blog',
@@ -21,7 +24,8 @@ module.exports = {
       '/subtitle/': [     
         'InitProject', 
         'mac_windows',
-        'electronDialog'
+        'electronDialog',
+        'according-platform-build'
       ],
       '/source/': [
       ],

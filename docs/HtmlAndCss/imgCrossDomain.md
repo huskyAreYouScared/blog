@@ -1,6 +1,6 @@
-### 跨域请求图片下载小记
+# 跨域请求图片下载小记
 
-#### 跨域无法下载，而是直接预览
+## 跨域无法下载，而是直接预览
 
 * 在同域下进行是没有问题的可以下载
 ```js
@@ -44,6 +44,6 @@
     }
 ```
 
-#### 参考地址
+## 参考地址
 * [JS前端创建html或json文件并浏览器导出下载](https://www.zhangxinxu.com/wordpress/2017/07/js-text-string-download-as-html-json-file/)
 * [解决 canvas 将图片转为base64报错: Uncaught DOMException: Failed to execute 'toDataURL' on 'HTMLCanvasEleme...](https://www.cnblogs.com/brock/p/11673177.html)

@@ -1,4 +1,4 @@
-### 快速排序（快排）
+# 快速排序（快排）
 
 ```js
   function quickSort(arr){

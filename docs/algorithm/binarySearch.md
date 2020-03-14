@@ -1,4 +1,4 @@
-### 二分查找
+# 二分查找
 * binary search
 
 ```js
