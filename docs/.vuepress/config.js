@@ -40,7 +40,8 @@ module.exports = {
         '',
         'quickSort',
         'selectionSort',
-        'binarySearch'
+        'binarySearch',
+        'arraySort'
       ],
       '/other/':[
         'vuepress_build',
@@ -71,5 +72,3 @@ module.exports = {
   },
   plugins: ['@vuepress/back-to-top', '@vuepress/active-header-links','@vuepress/nprogress']
 }
-
-console.log(path.resolve('docs'));
