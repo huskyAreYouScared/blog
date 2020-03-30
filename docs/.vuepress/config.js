@@ -12,7 +12,7 @@ module.exports = {
     nav: [
       { text: '主页', link: '/' },
       { text: 'husky字幕', link: '/subtitle/' },
-      { text: 'HTML+CSS+JS', link: '/HtmlAndCss/' },
+      { text: '前端日志', link: '/HtmlAndCss/' },
       { text: '算法', link: '/algorithm/' },
       { text: '资源', link: '/source/' },
       { text: '技术杂谈', link: '/other/' },
@@ -32,6 +32,7 @@ module.exports = {
       ],
       '/HtmlAndCss/': [
         '',
+        'fontStyle',
         'H5Show',
         'imgCrossDomain'
       ],
@@ -39,7 +40,8 @@ module.exports = {
         '',
         'quickSort',
         'selectionSort',
-        'binarySearch'
+        'binarySearch',
+        'arraySort'
       ],
       '/other/':[
         'vuepress_build',
@@ -70,5 +72,3 @@ module.exports = {
   },
   plugins: ['@vuepress/back-to-top', '@vuepress/active-header-links','@vuepress/nprogress']
 }
-
-console.log(path.resolve('docs'));

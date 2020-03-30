@@ -8,8 +8,8 @@ features:
   details: husky-subtitle给视频加字幕的软件，基于electron-vue开发
 - title: 未来任务
   details: 用threeJS开发一个3D风格的Blog
-- title: 更新周期
-  details: 双周更新
+- title: husky-subtitle
+  details: 欢迎star，issue
 footer: MIT Licensed | Copyright © 2018-present huskyAreYouScared
 ---
 
