@@ -1,4 +1,6 @@
-# HTML+CSS 小记
+# 前端日志
 
-## CSS
-* [css圆形的写法](https://cloudfour.com/thinks/css-circles/)
+::: tip 哈士奇你怕吗
+  每天多一点，让点连成线
+:::
+

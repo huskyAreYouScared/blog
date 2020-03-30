@@ -32,9 +32,11 @@ module.exports = {
       ],
       '/HtmlAndCss/': [
         '',
+        'css',
         'fontStyle',
         'H5Show',
-        'imgCrossDomain'
+        'imgCrossDomain',
+        'elementUIUpload'
       ],
       '/algorithm/': [
         '',
