@@ -42,6 +42,21 @@
 ```
 * 接下来在node_modules文件夹中删除electron然后重新 npm install or yarn install
 
+## electron手动配置path.txt和dist
+* 完成了上面这个步骤，在运行`yarn run dev`的时候可能会遇到一下错误
+```sh
+  绝对路径/node_modules/electron/index.js:14
+    throw new Error('Electron failed to install correctly, please delete node_modules/electron and try installing again')
+```
+
+* 如果遇到上面这个错误，就要去`node_modules`目录检查一下`electron`中是否有`path.txt`文件和`dist`文件夹
+* 如果没有需要在`https://cdn.npm.taobao.org/dist/electron/`这个网址中下载对应平台的electron，然后在`node_modules/electron`中新建`dist`,将下载好的文件解压在`dist`中
+* 在`path.txt`中写入一下内容，这里以mac系统举例
+```sh
+Electron.app/Contents/MacOS/Electron
+```
+* 此时就可以运行了，当然也可能别的错误，如果有请继续往下看
+
 ## 运行npm run dev,如果又遇到了process报错
 :koala:
 <img :src="$withBase('/image/electron-process-error.png')" alt="dock">
