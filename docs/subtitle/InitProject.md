@@ -36,7 +36,7 @@
 ```bash
   registry=https://registry.npm.taobao.org
   sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
-  electron_mirror=https://cdn.npm.taobao.org/dist/electron/
+  electron_mirror=https://npm.taobao.org/mirrors/electron
 
   // 时间：2020.1.19
 ```
@@ -50,10 +50,16 @@
 ```
 
 * 如果遇到上面这个错误，就要去`node_modules`目录检查一下`electron`中是否有`path.txt`文件和`dist`文件夹
-* 如果没有需要在`https://cdn.npm.taobao.org/dist/electron/`这个网址中下载对应平台的electron，然后在`node_modules/electron`中新建`dist`,将下载好的文件解压在`dist`中
-* 在`path.txt`中写入一下内容，这里以mac系统举例
+* 如果没有需要在`https://npm.taobao.org/mirrors/electron`这个网址中下载对应平台的electron
+* 以64位操作系统举例，windows应该下载带有`win32-x64`，mac应该下载`darwin-x64`
+* 然后在`node_modules/electron`中新建`dist`,将下载好的文件，解压缩后放入`dist`中
+* mac系统，在`path.txt`中写入以下内容
 ```sh
 Electron.app/Contents/MacOS/Electron
+```
+* windows系统，在`path.txt`中写入以下内容
+```sh
+electron.exe
 ```
 * 此时就可以运行了，当然也可能别的错误，如果有请继续往下看
 
