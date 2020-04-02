@@ -1,4 +1,4 @@
-# 自动化发布
+# github action使用体验
 * github pages+actions+vuepress
 ---
 * 有一次看阮一峰老师的blog知道了actions[传送门](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)

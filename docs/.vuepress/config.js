@@ -36,7 +36,8 @@ module.exports = {
         'fontStyle',
         'H5Show',
         'imgCrossDomain',
-        'elementUIUpload'
+        'elementUIUpload',
+        'unixTimeStamp'
       ],
       '/algorithm/': [
         '',
