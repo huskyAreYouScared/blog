@@ -37,7 +37,8 @@ module.exports = {
         'H5Show',
         'imgCrossDomain',
         'elementUIUpload',
-        'unixTimeStamp'
+        'unixTimeStamp',
+        'babelLoaderError'
       ],
       '/algorithm/': [
         '',

@@ -24,10 +24,10 @@
 * 4.在空白处写入代码，代码我会粘贴在下面，写好代码之后点击保存,这里代码很简单就是对定时器的利用配合滑屏API来完成，如果对脚本不是很熟悉直接复制即可
 <br/>
 <img style="width:300px;" :src="$withBase('/image/autojs-4.jpg')" alt="dock">
+
 ```js{3}
   var i = 0
   setInterval(function(){i++
-    
     if(i%2){ // 根据i的变化，来改变每次滑屏的位置
         swipe(500,2000,500,500,600); // 滑屏
     }else{
@@ -49,3 +49,16 @@
 * 版权归原作者所有，如有侵权联系删除 issue即可 
 * [项目地址](https://github.com/huskyAreYouScared/blog)
 * 软件虽好，不要干坏事哦
+
+## 其他脚本
+* 自动翻看小说`横屏翻页 `
+```js
+var i = 0
+setInterval(function(){i++
+if(i%2==0){
+    swipe(500,2000,500,500,600);
+}else{
+    swipe(500,2050,500,400,650);
+}
+},10000)
+```
