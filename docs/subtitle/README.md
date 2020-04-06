@@ -1,13 +1,13 @@
 # husky-subtitle 给视频加字幕的软件
 ## 记录一下关于我开发husky-subtitle项目（踩坑，总结）
-
+## 使用教程
+* [B站传送门](https://www.bilibili.com/video/BV1hp4y1C74N)
 ## 需要了解的技术
 * vue  +  vue-router  +  vuex
 * electron
 * ffmpeg
 * node 
 * sass
-
 
 ## 项目地址
 [Github](https://github.com/huskyAreYouScared/subtitle)
