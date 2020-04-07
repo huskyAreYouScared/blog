@@ -38,7 +38,8 @@ module.exports = {
         'imgCrossDomain',
         'elementUIUpload',
         'unixTimeStamp',
-        'babelLoaderError'
+        'babelLoaderError',
+        'playFavicon'
       ],
       '/algorithm/': [
         '',
