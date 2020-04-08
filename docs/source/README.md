@@ -13,11 +13,12 @@
 * [手绘风格流程图](https://excalidraw.com)
 * [很强大的流程图在线绘制draw.io](https://www.draw.io/)
 * [在线查看github仓库网站](https://sourcegraph.com)只需要在该网址后面加上GitHub仓库地址就可以了
-* [在线函数绘图网站](https://helloacm.com/tools/math-plot-graph/)
 ```
   eg: https://sourcegraph.com/加上GitHub项目地址
   eg: https://sourcegraph.com/github.com/huskyAreYouScared/subtitle
 ```
+* [在线函数绘图网站](https://helloacm.com/tools/math-plot-graph/)
+* [jsrun](http://jsrun.net/new)OnlineIDE 类似CodePen
 
 ## 音乐
 * [artlist](https://artlist.io)
@@ -29,6 +30,9 @@
 * [minimap](https://github.com/lrsjng/pagemap)
 * [各种版本的Todo-List](http://todomvc.com/)
 * [protonJS](https://drawcall.github.io/Proton/)前端粒子插件，粒子一般多用于视频特效，游戏特效
+* [CaretJS](http://ichord.github.io/Caret.js/)定位输入光标的位置
+* [AtJs](https://github.com/ichord/At.js)自动提示-已经不在维护了
+* [TributeJS](https://github.com/zurb/tribute)自动提示
 
 ## 实战
 * [Let's Encrypt 安装免费的 HTTPS 证书](https://www.jitao.tech/blog/2020/01/sre-lets-encrypt/)[certbot官网](https://certbot.eff.org)
