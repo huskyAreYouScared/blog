@@ -19,6 +19,12 @@
 ```
 * [在线函数绘图网站](https://helloacm.com/tools/math-plot-graph/)
 * [jsrun](http://jsrun.net/new)OnlineIDE 类似CodePen
+* [微软提供的在线预览offic功能](https://www.microsoft.com/en-us/microsoft-365/blog/2013/04/10/office-web-viewer-view-office-documents-in-a-browser/?eu=true)
+```js
+  // 具体使用方式
+  // <Document Location> 可访问的文件地址
+  "http://view.officeapps.live.com/op/view.aspx?src=<Document Location>"
+``` 
 
 ## 音乐
 * [artlist](https://artlist.io)
