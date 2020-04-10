@@ -25,6 +25,13 @@
   // <Document Location> 可访问的文件地址
   "http://view.officeapps.live.com/op/view.aspx?src=<Document Location>"
 ``` 
+* [分析GitHub开源项目的图标网站](https://gitmemory.com/) 
+```
+// 使用方式：https://gitmemory.com/<账号>/<开源仓库名>
+eg:https://gitmemory.com/huskyareyouscared/subtitle
+```
+* [加速下载](https://d.serctl.com/)eg:例如 GitHub的releases文件
+* [设计稿转前端代码`imgcook`](https://www.imgcook.com/)
 
 ## 音乐
 * [artlist](https://artlist.io)
@@ -47,5 +54,5 @@
 * [css-Tricks](https://css-tricks.com/)
 
 
-## 工具网站
-* [加速下载](https://d.serctl.com/)eg:例如 GitHub的releases文件
+## 有趣网站分享
+* [3D风格的网站分享网站（套娃）](https://bruno-simon.com/)
