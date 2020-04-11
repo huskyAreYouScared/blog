@@ -3,7 +3,10 @@
 ## 资源类
 * [github emoji 表情列表](https://www.cnblogs.com/takeurhand/p/6940135.html)
 * [插图网站](https://undraw.co/illustrations)可商用
+* [免费的视频图片素材网站Pexels](https://www.pexels.com/zh-cn/)
 * [github徽章-badgen](https://badgen.net/)
+* [github中文项目排行榜](https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts)
+* [canva设计网站](https://www.canva.com/join/heads-locate-foam)
 
 ## 工具类
 * [svg在线编辑网站](https://www.zhangxinxu.com/sp/svg/)
@@ -32,6 +35,8 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 ```
 * [加速下载](https://d.serctl.com/)eg:例如 GitHub的releases文件
 * [设计稿转前端代码`imgcook`](https://www.imgcook.com/)
+* [局域网代码实时预览工具keppler](https://brunosimon.github.io/keppler/)
+* [命令行终端录制回访工具](https://github.com/JavaCS3/xterm-player)
 
 ## 音乐
 * [artlist](https://artlist.io)
