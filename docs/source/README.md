@@ -37,7 +37,8 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [设计稿转前端代码`imgcook`](https://www.imgcook.com/)
 * [局域网代码实时预览工具keppler](https://brunosimon.github.io/keppler/)
 * [命令行终端录制回访工具](https://github.com/JavaCS3/xterm-player)
-
+* [英语语法纠正网站Grammarly](https://app.grammarly.com/)
+* [免费的ebook cover在线生成网站](https://diybookcovers.com/3Dmockups/)
 ## 音乐
 * [artlist](https://artlist.io)
 * [freemusicarchive](https://freemusicarchive.org/)免版权
@@ -57,6 +58,7 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 
 ## 前端技术文档
 * [css-Tricks](https://css-tricks.com/)
+* [网道](https://wangdoc.com/)
 
 
 ## 有趣网站分享
