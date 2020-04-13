@@ -39,7 +39,8 @@ module.exports = {
         'elementUIUpload',
         'unixTimeStamp',
         'babelLoaderError',
-        'playFavicon'
+        'playFavicon',
+        'templateLiterals'
       ],
       '/algorithm/': [
         '',
