@@ -39,6 +39,10 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [命令行终端录制回访工具](https://github.com/JavaCS3/xterm-player)
 * [英语语法纠正网站Grammarly](https://app.grammarly.com/)
 * [免费的ebook cover在线生成网站](https://diybookcovers.com/3Dmockups/)
+* [在线配置webpack](https://createapp.dev/)
+* [JSUI 是一个可视化分类、构建和管理 JavaScript 项目的工具](https://github.com/kitze/JSUI)
+* [keyframes.app在线制作css动画](https://keyframes.app/)
+
 ## 音乐
 * [artlist](https://artlist.io)
 * [freemusicarchive](https://freemusicarchive.org/)免版权
@@ -52,6 +56,9 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [CaretJS](http://ichord.github.io/Caret.js/)定位输入光标的位置
 * [AtJs](https://github.com/ichord/At.js)自动提示-已经不在维护了
 * [TributeJS](https://github.com/zurb/tribute)自动提示
+* [复制到剪切板](https://clipboardjs.com/)
+* [vue实现的各种验证码](前端复制插件)
+* [boardgame.io开源游戏框架](https://boardgame.io/)
 
 ## 实战
 * [Let's Encrypt 安装免费的 HTTPS 证书](https://www.jitao.tech/blog/2020/01/sre-lets-encrypt/)[certbot官网](https://certbot.eff.org)
@@ -59,6 +66,7 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 ## 前端技术文档
 * [css-Tricks](https://css-tricks.com/)
 * [网道](https://wangdoc.com/)
+* [w3school手册](https://www.w3schools.com/)
 
 
 ## 有趣网站分享
