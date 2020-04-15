@@ -40,7 +40,8 @@ module.exports = {
         'unixTimeStamp',
         'babelLoaderError',
         'playFavicon',
-        'templateLiterals'
+        'templateLiterals',
+        'compatibility'
       ],
       '/algorithm/': [
         '',

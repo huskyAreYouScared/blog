@@ -59,6 +59,10 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [复制到剪切板](https://clipboardjs.com/)
 * [vue实现的各种验证码](前端复制插件)
 * [boardgame.io开源游戏框架](https://boardgame.io/)
+* [appleple很多移动端小工具](https://appleple.github.io/)
+* [swup页面转场效果](https://github.com/swup/swup)
+* [selection电影选座插件](https://github.com/Simonwep/selection)
+* [滚动视差插件](https://scroll-out.github.io/)
 
 ## 实战
 * [Let's Encrypt 安装免费的 HTTPS 证书](https://www.jitao.tech/blog/2020/01/sre-lets-encrypt/)[certbot官网](https://certbot.eff.org)
@@ -67,7 +71,7 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [css-Tricks](https://css-tricks.com/)
 * [网道](https://wangdoc.com/)
 * [w3school手册](https://www.w3schools.com/)
-
+* [markdown备忘录](https://segmentfault.com/markdown)
 
 ## 有趣网站分享
 * [3D风格的网站分享网站（套娃）](https://bruno-simon.com/)
