@@ -42,6 +42,7 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [在线配置webpack](https://createapp.dev/)
 * [JSUI 是一个可视化分类、构建和管理 JavaScript 项目的工具](https://github.com/kitze/JSUI)
 * [keyframes.app在线制作css动画](https://keyframes.app/)
+* [360查字体，是否可以免费商用](https://fonts.safe.360.cn/)
 
 ## 音乐
 * [artlist](https://artlist.io)
