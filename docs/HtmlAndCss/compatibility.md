@@ -18,3 +18,14 @@
 <iframe src="https://caniuse.com/#feat=mdn-svg_elements_use_href"  width="100%" height="500">
 </iframe>
 * 所以整体图标全部换成了[iconfont](https://www.iconfont.cn/)的字体图标
+* 后面发现这个有人提这个[issues](https://github.com/PanJiaChen/vue-element-admin/pull/3085)，被修复了
+* 将原来的use的href属性替换成xlink:href
+```html
+<template>
+  <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" v-on="$listeners" />
+  <svg v-else :class="svgClass" aria-hidden="true" v-on="$listeners">
+-  <use :href="iconName" />
++  <use :xlink:href="iconName" />
+  </svg>
+</template>
+```
