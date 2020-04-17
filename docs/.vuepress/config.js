@@ -41,7 +41,8 @@ module.exports = {
         'babelLoaderError',
         'playFavicon',
         'templateLiterals',
-        'compatibility'
+        'compatibility',
+        'stringSummary'
       ],
       '/algorithm/': [
         '',
