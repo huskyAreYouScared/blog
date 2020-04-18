@@ -32,7 +32,6 @@ module.exports = {
       ],
       '/HtmlAndCss/': [
         '',
-        'onlineCodeFence',
         'css',
         'fontStyle',
         'H5Show',
