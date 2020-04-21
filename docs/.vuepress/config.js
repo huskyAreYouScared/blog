@@ -42,7 +42,8 @@ module.exports = {
         'playFavicon',
         'templateLiterals',
         'compatibility',
-        'stringSummary'
+        'stringSummary',
+        'inputCapture'
       ],
       '/algorithm/': [
         '',
