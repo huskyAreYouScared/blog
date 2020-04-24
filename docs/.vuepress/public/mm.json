@@ -4,7 +4,7 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
-  "description": "哈士奇你怕吗的BLOG",
+  "description": "哈士奇你怕吗的前端blog",
   "icons": [
 		{
 			"src": "\/favicon-36.png",
