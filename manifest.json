@@ -1,10 +1,10 @@
 {
-  "name": "哈士奇你怕吗",
-  "short_name": "小哈哈",
-  "start_url": "/",
+  "name": "husky are you scared",
+  "short_name": "small haha",
+  "start_url": "/blog/index.html",
   "display": "standalone",
   "background_color": "#fff",
-	"description": "哈士奇你怕吗的前端blog",
+	"description": "blog of husky are you scared",
   "scope": "/",
   "theme_color": "#3367D6",
   "icons": [
