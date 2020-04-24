@@ -27,27 +27,27 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "8767dfb4d3db4bbbbef3712180ed34cc"
+    "revision": "01a6cb3faedd6f3f1532f34268873d20"
   },
   {
     "url": "algorithm/arraySort.html",
-    "revision": "8cc89f846cb774b29732f63bf6049279"
+    "revision": "48d8b0a63df3a43e02855148555e5105"
   },
   {
     "url": "algorithm/binarySearch.html",
-    "revision": "27276cc4c505f4f9ed5db912dd7e266a"
+    "revision": "6850ac6ae9a8b043900235521a377ea1"
   },
   {
     "url": "algorithm/index.html",
-    "revision": "01224bb49fff6765a5719fce3d8ce2c5"
+    "revision": "2d11afcfa4d9f23dbb694662abc674ca"
   },
   {
     "url": "algorithm/quickSort.html",
-    "revision": "377f1ddb54f66262580c2565287520da"
+    "revision": "7d2e26a86ee94562066961d38fbd3464"
   },
   {
     "url": "algorithm/selectionSort.html",
-    "revision": "85f1a5a9a81efb711ea2bc3f44d34f9c"
+    "revision": "2fe2768de1eba53b2b609abd55628cab"
   },
   {
     "url": "assets/css/0.styles.70904243.css",
@@ -214,8 +214,8 @@ self.__precacheManifest = [
     "revision": "533e75933c0e18c249bc7a74e0d0abe2"
   },
   {
-    "url": "assets/js/app.ad170da2.js",
-    "revision": "78f7cd92a6e5897a8b2a864b0abda6eb"
+    "url": "assets/js/app.0cad506f.js",
+    "revision": "48c31bfc3c2ff449d1db18993127065d"
   },
   {
     "url": "favicon-114-precomposed.png",
@@ -279,55 +279,55 @@ self.__precacheManifest = [
   },
   {
     "url": "HtmlAndCss/babelLoaderError.html",
-    "revision": "013a74d529a29e6be2cb59f1f5253cb0"
+    "revision": "467ed13790c081b71549aeb48c393a57"
   },
   {
     "url": "HtmlAndCss/compatibility.html",
-    "revision": "07a10711254fb42024880424aeab7e38"
+    "revision": "396eb33bc294e0029d238b478fd5e7ef"
   },
   {
     "url": "HtmlAndCss/css.html",
-    "revision": "cba1ffd24fdc08c4d4f6105820168264"
+    "revision": "3d61daa09dd7076e4144216352b93f5a"
   },
   {
     "url": "HtmlAndCss/elementUIUpload.html",
-    "revision": "0dd151257fa50bbd411167381fcdd1fa"
+    "revision": "de295c336c9adcd2bc407400dba0f10e"
   },
   {
     "url": "HtmlAndCss/fontStyle.html",
-    "revision": "21f8b100aa4dccd8ee3c2284934294d7"
+    "revision": "db8fa8be61420899ada645f344874450"
   },
   {
     "url": "HtmlAndCss/H5Show.html",
-    "revision": "6e9c7beb94564643d70618ecfb7923a0"
+    "revision": "a096c6975362ba5f3ec801d6e87073ff"
   },
   {
     "url": "HtmlAndCss/imgCrossDomain.html",
-    "revision": "8b752e84daf5257a5006aa7d86fdd5bb"
+    "revision": "f4ee3234d59879844df9cdeb4ee9180f"
   },
   {
     "url": "HtmlAndCss/index.html",
-    "revision": "b0c2dec6b9e80e8e008ac714dd1fa3a6"
+    "revision": "98cc7cdd813bbb2047ea47432915b2ee"
   },
   {
     "url": "HtmlAndCss/inputCapture.html",
-    "revision": "d5be202fefcd17de7091401e617186f7"
+    "revision": "502e50d3ca479e8a7cf207b8234e79f1"
   },
   {
     "url": "HtmlAndCss/playFavicon.html",
-    "revision": "45b98926820c24a071d92f456377cd3e"
+    "revision": "015bba56dcae65dacbdfcd31ea9b66cf"
   },
   {
     "url": "HtmlAndCss/stringSummary.html",
-    "revision": "d40413586d5d39a49ec41c023087db51"
+    "revision": "86a6a4661b904100c60fc9ab98545770"
   },
   {
     "url": "HtmlAndCss/templateLiterals.html",
-    "revision": "30acaed88d5436db40fcaf353e3cbcd2"
+    "revision": "bf4540fbd107c3dcfacd8687f640161b"
   },
   {
     "url": "HtmlAndCss/unixTimeStamp.html",
-    "revision": "728509b8ad99aa4d6a8f05dc0d22ac5b"
+    "revision": "377d4d8cf2507e36207334ee1926d863"
   },
   {
     "url": "image/autojs-1.jpg",
@@ -379,7 +379,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "1534a6f7980092a40f6abe6fe928edc6"
+    "revision": "06b139a513e791c29036d068ac1414b1"
   },
   {
     "url": "logo/logo.gif",
@@ -391,59 +391,59 @@ self.__precacheManifest = [
   },
   {
     "url": "other/auto_watch_video.html",
-    "revision": "d219caf7c842cb9734aa783d620d6dc6"
+    "revision": "072b4d6b5142bf76f40458aaf866e537"
   },
   {
     "url": "other/conventional_changelog.html",
-    "revision": "1901bb8bd1ba5a59ffb420e63c01c2b7"
+    "revision": "a08d30fe802308f7e0900e4f0800c527"
   },
   {
     "url": "other/index.html",
-    "revision": "8c5b263fcca18eca26f92353640dc621"
+    "revision": "39341a17d6e5800b2ced80c29f0ec4da"
   },
   {
     "url": "other/mac_npm_error.html",
-    "revision": "dc76780700d19da8f253447fbd2c8abe"
+    "revision": "f89a92612d2c2c104edb28ae6d8a8b9f"
   },
   {
     "url": "other/mac_terminal.html",
-    "revision": "897fc70554c4a9cd5ead91507496dc96"
+    "revision": "3fc5925d864ab47883851fc44d3b0d8a"
   },
   {
     "url": "other/steam_community.html",
-    "revision": "30efe9533effbb3e4f9029f639db05c2"
+    "revision": "275a396945649ccd777050dc933c07ee"
   },
   {
     "url": "other/vuepress_build.html",
-    "revision": "a66675c748a390e92d47545a305d63df"
+    "revision": "4af6fb66ee5d6d7ecaebbb792513fb35"
   },
   {
     "url": "source/index.html",
-    "revision": "8d04679ab6e354dae304c7c75e197788"
+    "revision": "b584b49be209b9be576fdaf53b6fad5c"
   },
   {
     "url": "subtitle/according-platform-build.html",
-    "revision": "481261595c29f0efb942c991db37825c"
+    "revision": "ef6213b3d210467cb25a1c72cc09d4c4"
   },
   {
     "url": "subtitle/electronDialog.html",
-    "revision": "bc6cabe7c3f6e521015b799c6557ec2a"
+    "revision": "d93329f7dcc09a408495e2ac31629c43"
   },
   {
     "url": "subtitle/index.html",
-    "revision": "e53d22b278d4f32ceb4fb440d26a2a49"
+    "revision": "7fdeedf96eaa18147fe1f5cf71545fec"
   },
   {
     "url": "subtitle/InitProject.html",
-    "revision": "1ef213698f12c21d36903e5518d09ca4"
+    "revision": "36c977bf5e1878244295c95db3d0cb39"
   },
   {
     "url": "subtitle/mac_windows.html",
-    "revision": "30d52cd4f6a77e55c52678b566228bba"
+    "revision": "d9e6e3ec2c6869c128bcfa06c1d21202"
   },
   {
     "url": "subtitle/user-custom-install.html",
-    "revision": "e676c43c167d58c4059b90d2b2df5ed4"
+    "revision": "ec88941eadb0c18ee0af8d632764a768"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
