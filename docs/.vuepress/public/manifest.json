@@ -1,7 +1,7 @@
 {
   "name": "husky are you scared",
   "short_name": "small haha",
-  "start_url": "/blog/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#fff",
 	"description": "blog of husky are you scared",
@@ -46,7 +46,7 @@
 		},
 		{
 			"src": "\/blog\/favicon-512.png",
-			"sizes": "192x192",
+			"sizes": "512x512",
 			"type": "image\/png",
 			"density": 4
 		}
