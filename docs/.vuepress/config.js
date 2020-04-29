@@ -33,6 +33,8 @@ module.exports = {
         'user-custom-install'
       ],
       '/source/': [
+        '/',
+        'npmPlugins'
       ],
       '/HtmlAndCss/': [
         '',
