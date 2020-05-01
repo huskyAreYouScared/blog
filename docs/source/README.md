@@ -43,6 +43,7 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [JSUI 是一个可视化分类、构建和管理 JavaScript 项目的工具](https://github.com/kitze/JSUI)
 * [keyframes.app在线制作css动画](https://keyframes.app/)
 * [360查字体，是否可以免费商用](https://fonts.safe.360.cn/)
+* [浏览器自动化脚本语言和运行时 kasaya](https://github.com/syscolabs/kasaya)
 
 ## 音乐
 * [artlist](https://artlist.io)
@@ -64,7 +65,8 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [swup页面转场效果](https://github.com/swup/swup)
 * [selection电影选座插件](https://github.com/Simonwep/selection)
 * [滚动视差插件](https://scroll-out.github.io/)
-
+* [移动端模拟控制台 eruda](https://github.com/liriliri/eruda)
+* [全景图片预览插件 panolens.js](https://pchen66.github.io/Panolens/)
 ## 实战
 * [Let's Encrypt 安装免费的 HTTPS 证书](https://www.jitao.tech/blog/2020/01/sre-lets-encrypt/)[certbot官网](https://certbot.eff.org)
 
