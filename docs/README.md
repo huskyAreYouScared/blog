@@ -22,4 +22,4 @@ footer: MIT Licensed | Copyright © 2018-present huskyAreYouScared
 ### 国内访问加速
 * [传送门](https://husky_are_you_scared.gitee.io/blog/) 
 
-<a style="color:#000;position:absolute;bottom:-70px;left:50%;transform:translateX(-50%);" target="_blank" href="http://www.beian.miit.gov.cn">辽IPC备19010161号-1</a>
+<a style="color:#666;position:absolute;top:1140px;left:50%;transform:translateX(-50%);" target="_blank" href="http://www.beian.miit.gov.cn">辽IPC备19010161号-1</a>
