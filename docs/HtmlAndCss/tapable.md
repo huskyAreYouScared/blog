@@ -1,7 +1,7 @@
 ---
 sidebarDepth: 3
 ---
-# webpack tabable小记
+# webpack tapable原理学习
 
 ## tapable
 ### SyncHook 同步钩子
@@ -307,6 +307,53 @@ asyncSeriesPromiseHook.tapPromise('2', function (data) {
   })
 })
 asyncSeriesPromiseHook.promise('end').then(() => {
+  console.log('over');
+})
+```
+
+### AsyncSeriesWaterfallHook
+
+```js
+// 异步串行钩子
+class AsyncSeriesWaterfallHook {
+  constructor() {
+    this.tasks = []
+  }
+  tapAsync(name, task) {
+    this.tasks.push(task)
+  }
+  callAsync(...args) {
+    let index = 0
+    let finalCallBack = args.pop()
+    let next = (err, data) => {
+      let currentTask = this.tasks[index]
+      if (!currentTask) return finalCallBack()
+      if(index === 0){
+        currentTask(...args, next)
+      }else{
+        currentTask(data, next)
+      }
+      index++
+    }
+    next()
+  }
+}
+
+//  执行
+let asyncSeriesWaterfallHook = new AsyncSeriesWaterfallHook()
+asyncSeriesWaterfallHook.tapAsync('1', function (data, cb) {
+  setTimeout(() => {
+    console.log(1, data);
+    cb(null, '结果')
+  }, 1000)
+})
+asyncSeriesWaterfallHook.tapAsync('2', function (data, cb) {
+  setTimeout(() => {
+    console.log(2, data);
+    cb(null, '结果')
+  }, 1000)
+})
+asyncSeriesWaterfallHook.callAsync('end', () => {
   console.log('over');
 })
 ```
