@@ -27,13 +27,14 @@ module.exports = {
     sidebar: {
       '/subtitle/': [     
         'InitProject', 
+        'small',
         'mac_windows',
         'electronDialog',
         'according-platform-build',
         'user-custom-install'
       ],
       '/source/': [
-        '/',
+        '',
         'npmPlugins'
       ],
       '/HtmlAndCss/': [
