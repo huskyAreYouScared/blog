@@ -51,6 +51,7 @@ module.exports = {
         'compatibility',
         'stringSummary',
         'inputCapture',
+        'webpackConfig',
         'tapable',
         'CLI',
         'webpackPrinciple'

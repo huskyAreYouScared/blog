@@ -311,7 +311,7 @@ asyncSeriesPromiseHook.promise('end').then(() => {
 })
 ```
 
-### AsyncSeriesWaterfallHook
+### AsyncSeriesWaterfallHook 异步串行瀑布流钩子
 
 ```js
 // 异步串行钩子

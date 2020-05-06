@@ -249,7 +249,6 @@ getCode(modulePath) {
 
 ### loader简单原理
 * loader一般都是一个函数，入参是需要处理的代码，返回值是处理之后的代码
-* 将loader函数导出
 ```js
 let tool = require('引入编译包')
 function customLoader(source){
