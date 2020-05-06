@@ -37,8 +37,8 @@ compiler.run()
 ```
 
 ## Compiler逻辑编写
-* 在第一步中，我们使用了compiler，第二部我们来编写一下内部逻辑
-### 先把该有的方法结构准备好
+* 在`index`文件中引入了`compiler`，接下来编写一下内部逻辑
+### 先把该有的结构准备好
 ```js
 // 文件/bin/lib/Compiler.js
       
@@ -172,28 +172,28 @@ npm i babylon @babel/traverse @babel/generator @babel/types
 //文件 webpackTemplate.js
 
 (function (modules) {
-var installedModules = {};
-function __webpack_require__(moduleId) {
-if (installedModules[moduleId]) {
-return installedModules[moduleId].exports;
-}
-var module = installedModules[moduleId] = {
-i: moduleId,
-l: false,
-exports: {}
-};
-modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-module.l = true;
-return module.exports;
-}
-return __webpack_require__(__webpack_require__.s = "<%-entryId%>");
+  var installedModules = {};
+  function __webpack_require__(moduleId) {
+    if (installedModules[moduleId]) {
+      return installedModules[moduleId].exports;
+    }
+    var module = installedModules[moduleId] = {
+      i: moduleId,
+      l: false,
+      exports: {}
+    };
+    modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+    module.l = true;
+    return module.exports;
+  }
+  return __webpack_require__(__webpack_require__.s = "<%-entryId%>");
 })
-({
-  <%for(let key in modules){%>
+  ({
+    <%for(let key in modules){%>
       "<%-key%>":
-        (function (module, exports, __webpack_require__) {
-            eval(`<%-modules[key]%>`);
-        }),
+          (function (module, exports, __webpack_require__) {
+              eval(`<%-modules[key]%>`);
+          }),
       <%}%>
   });
 ```
@@ -213,3 +213,67 @@ return __webpack_require__(__webpack_require__.s = "<%-entryId%>");
     }
 ```
 * 到这里最简易版的就完成了，之后还会涉及到loader等等需要处理
+
+### loader逻辑处理
+* 在模块编写依赖收集逻辑的地方`moduleDependencies`用到了一个`getCode`方法
+```js
+// 文件/bin/lib/Compiler.js--getCode
+getCode(modulePath) {
+    // 先获取webpack中module.rules的配置
+    let rules = this.config.module.rules
+    let content = fs.readFileSync(modulePath, 'utf8')
+  
+    let rulesLength = rules.length
+    // 遍历所有规则
+    for (let index = 0; index < rulesLength; index++) {
+      let { test, use } = rules[index]
+      let loaderLength = use.length - 1
+      // 对匹配成功的代码内容做修改
+      if (test.test(modulePath)) {
+       // 每个规则可能存在多个loader处理,递归调用，从最后一个 loader 一直处理到第一个 loader
+        function normalLoader() {
+          let loader = require(use[loaderLength--])
+          content = loader(content)
+          // 如果小于零代表全部loader处理完成
+          if (loaderLength >= 0) {
+            normalLoader()
+          }
+        }
+        normalLoader()
+      }
+    }
+    // 经过处理之后的代码，或者不需要处理的代码
+    return content
+  }
+```
+
+### loader简单原理
+* loader一般都是一个函数，入参是需要处理的代码，返回值是处理之后的代码
+* 将loader函数导出
+```js
+let tool = require('引入编译包')
+function customLoader(source){
+  // 伪代码 通过相应的编译包对源代码进行处理
+  let content = tool.render(source)
+
+  // 将处理好的结果返回
+  return content
+}
+module.exports = customLoader
+```
+* 举例 less-loader
+```bash
+npm i less
+```
+```js
+let less = require('less')
+function lessLoader(source){
+  let lessCode = ''
+  less.render(source,function (err,code){
+    lessCode = code.css
+  })
+  lessCode = lessCode.replace(/\n/g, '\\n')
+  return lessCode
+}
+module.exports = lessLoader
+```
