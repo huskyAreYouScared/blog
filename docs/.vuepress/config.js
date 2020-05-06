@@ -35,7 +35,8 @@ module.exports = {
       ],
       '/source/': [
         '',
-        'npmPlugins'
+        'npmPlugins',
+        'webGame'
       ],
       '/HtmlAndCss/': [
         '',
