@@ -27,14 +27,16 @@ module.exports = {
     sidebar: {
       '/subtitle/': [     
         'InitProject', 
+        'small',
         'mac_windows',
         'electronDialog',
         'according-platform-build',
         'user-custom-install'
       ],
       '/source/': [
-        '/',
-        'npmPlugins'
+        '',
+        'npmPlugins',
+        'webGame'
       ],
       '/HtmlAndCss/': [
         '',
@@ -50,7 +52,10 @@ module.exports = {
         'compatibility',
         'stringSummary',
         'inputCapture',
-        'webpack'
+        'webpackConfig',
+        'tapable',
+        'CLI',
+        'webpackPrinciple'
       ],
       '/algorithm/': [
         '',
