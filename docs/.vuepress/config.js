@@ -42,7 +42,7 @@ module.exports = {
         'fontStyle',
         'H5Show',
         'imgCrossDomain',
-        'elementUIUpload',
+        'elementUISummary',
         'unixTimeStamp',
         'babelLoaderError',
         'playFavicon',
