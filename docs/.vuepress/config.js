@@ -53,6 +53,7 @@ module.exports = {
         'stringSummary',
         'inputCapture',
         'webpackConfig',
+        'webpackLoader',
         'tapable',
         'CLI',
         'webpackPrinciple'

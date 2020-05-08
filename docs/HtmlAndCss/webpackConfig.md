@@ -1,5 +1,14 @@
 # webpack.config小记
 ## 常用
+### 生成sourceMap
+```js
+module.exports={
+  ...
+  devtool:'source-map', 
+  ...
+}
+  
+```
 ## 不常用
 
 ### loader类型
