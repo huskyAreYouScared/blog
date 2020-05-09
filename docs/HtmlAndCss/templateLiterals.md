@@ -11,7 +11,7 @@ function details ({name, address, phone}) {
 ## 模板字符串应用二
 * 作为函数实参
 ```js{6}
-function dog (content, weight) {
+function huskyDetails (content, weight) {
   let bodyType = weight > 20 ? 'big' : 'small'
   return `${content[0]} is ${bodyType} dog`
 }
