@@ -5,7 +5,6 @@
   "display": "standalone",
   "background_color": "#fff",
 	"description": "blog of husky are you scared",
-  "scope": "/",
   "theme_color": "#3367D6",
   "icons": [
 		{
