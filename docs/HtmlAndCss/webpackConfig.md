@@ -1,14 +1,179 @@
+---
+sidebarDepth: 3
+---
 # webpack.config小记
 ## 常用
+### 打包分类
+* 图片打包到image目录下
+```js
+module:{
+  rules:[
+    {
+      test:/\.jpe?g|\.png|\.gif/ig,
+      use:{
+        loader:'url-loader',
+        options:{
+          outputPath:'/img/',
+          // 如果图片要发布到cdn上面，可以在url-loader中加入publicPath
+          publicPath:'http://cdn.com'
+        }
+      }
+    }
+  ]
+}
+```
+* css打包到style目录下
+* css单独打包需要插件[mini-css-extract-plugin](https://www.npmjs.com/package/mini-css-extract-plugin)
+```bash
+  npm i mini-css-extract-plugin
+```
+```js
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+module.exports = {
+  plugins: [new MiniCssExtractPlugin({
+    filename:'/style/main.css'
+  })],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: true,
+            },
+          },
+          'css-loader',
+        ],
+      },
+    ],
+  },
+};
+```
+### 多页应用配置
+* 主要是用到`entry`和`html-webpack-plugin`
+```bash
+npm i html-webpack-plugin -D
+```
+```js
+const path = require('path')
+const htmlWebpackPlugin = require('html-webpack-plugin')
+module.exports = {
+  entry:{
+    index:'./src/index.js',
+    main:'./main/main.js'
+  },
+  output:{
+    filename:'[name].js',
+    path:path.resolve(__dirname,'dist')
+  },
+  plugins:[
+    new htmlWebpackPlugin({
+      template:'./public/index.html',
+      filename:'index.html', // 要和entry的键名相同
+      chunks:['index']
+    }),
+    new htmlWebpackPlugin({
+      template:'./public/index.html',
+      filename:'main.html', // 要和entry的键名相同
+      chunks:['main']
+    })
+  ]
+}
+```
 ### 生成sourceMap
+* 会定位到行和列 ，单独生成map文件
 ```js
 module.exports={
-  ...
   devtool:'source-map', 
-  ...
 }
-  
 ```
+* 会定位到行和列 ，不单独生成map文件
+```js
+module.exports={
+  devtool:'eval-source-map', 
+}
+```
+* 不会定位到列 ，单独生成map文件
+```js
+module.exports={
+  devtool:'cheap-module-source-map', 
+}
+```
+* 不会定位到列 ，不单独生成map文件
+```js
+module.exports={
+  devtool:'cheap-module-eval-source-map', 
+}
+```
+### 优化
+#### noParse
+* `webpack`不去解析其中的依赖关系,被忽略的文件不应该有`import`,`require`,`define`或者其他导入机制
+```js
+  module:{
+    noParse:/lodash|jquery/
+    //....
+  }
+```
+#### webpack.IgnorePlugin()插件
+* 可以在使用第三方js插件的时候，限制该插件引入一些文件
+```js
+  plugins:[
+    new webpack.IgnorePlugin(/\.\/locale/,/moment/)
+  ]
+```
+#### webpack 的 DllPlugin()和 DllReferencePlugin()
+##### 第一步
+* 可以将平时开发的框架提前打包好，不用每次都打包
+* 这里先写一下提前打包的准备,需要项目下新建一个`webpack`配置文件
+```js
+// webpack.vue.build.js
+let path = require('path')
+let webpack = require('webpack')
+module.exports ={
+  entry:{
+    // react:['react','react-dom'],
+    vue: ['vue','vuex','vue-router'],
+  },
+  output:{
+    filename: '_dll_[name].js', // 需要`_dll_[name]`名字一致
+    path: path.resolve(__dirname,'dist'),
+    library: '_dll_[name]' // 需要`_dll_[name]`名字一致
+  },
+  plugins:{
+    new webpack.DllPlugin({
+      name: '_dll_[name]', // 需要`_dll_[name]`名字一致
+      path: path.resolve(__dirname,'dist','manifest.json') // 生成单独打包的清单
+    })
+  }
+}
+```
+* 写好配置之后，运行一下
+```bash
+npx webpack --config webpack.vue.build.js
+```
+* 此时就会在`dist`目录下生成`_dll_vue.js`和`manifest`
+
+##### 第二步
+* 做完第一步之后，还需要在`HTML`模板中引入一下打包好的`js`文件
+```html
+<!-- ... -->
+<div id="App"></div>
+<script src="./_dll_vue.js"></script>
+<!-- ... -->
+```
+##### 第三步
+* 在主`webpack.config.js`文件下加入插件，引入单独打包`manifest`清单
+* 如果可以找到就不重新打包`第一步`已经打包的js插件，如果没找到就需要打包
+```js
+  plugins:[
+    new webpack.DllReferencePlugin({
+      manifest: path.resolve(__dirname,'dist','manifest.json')
+    })
+  ]
+```
+
 ## 不常用
 
 ### loader类型
