@@ -66,7 +66,7 @@ class Compiler {
 module.exports = Compiler
 ```
 ### run方法内部逻辑编写
-* 这里`moduleDependencies`，`saveFile`还没有实现，我们先调用后面实现，把基本传参先设定好
+* 这里`moduleDependencies`，`emit`还没有实现，我们先调用后面实现，把基本传参先设定好
 ```js
 // 文件/bin/lib/Compiler.js
 
@@ -76,7 +76,7 @@ module.exports = Compiler
         // 第二个参数：是否为入口文件
         this.moduleDependencies(path.resolve(this.root, this.config.entry), true)
         // 生成最后的打包文件
-        this.saveFile()
+        this.emit()
     }
 ```
 
@@ -162,7 +162,7 @@ npm i babylon @babel/traverse @babel/generator @babel/types
   }
 ```
 
-### saveFile 打包生成文件
+### emit 打包生成文件
 * 这一步我们需要用到字符串模板 `ejs`
 ```bash
     npm i ejs
@@ -202,7 +202,7 @@ npm i babylon @babel/traverse @babel/generator @babel/types
 * `fs.writeFileSync`生成文件
 ```js
 // 文件/bin/lib/Compiler.js
-    saveFile() {
+    emit() {
         let main = path.resolve(__dirname,'./webpackTemplate.ejs')
         let templateString = this.getSource(main)
         let code = ejs.render(templateString, {
@@ -221,7 +221,7 @@ npm i babylon @babel/traverse @babel/generator @babel/types
 getCode(modulePath) {
     // 先获取webpack中module.rules的配置
     let rules = this.config.module.rules
-    let content = fs.readFileSync(modulePath, 'utf8')
+    let source = fs.readFileSync(modulePath, 'utf8')
   
     let rulesLength = rules.length
     // 遍历所有规则
@@ -233,7 +233,7 @@ getCode(modulePath) {
        // 每个规则可能存在多个loader处理,递归调用，从最后一个 loader 一直处理到第一个 loader
         function normalLoader() {
           let loader = require(use[loaderLength--])
-          content = loader(content)
+          source = loader(source)
           // 如果小于零代表全部loader处理完成
           if (loaderLength >= 0) {
             normalLoader()
@@ -243,7 +243,7 @@ getCode(modulePath) {
       }
     }
     // 经过处理之后的代码，或者不需要处理的代码
-    return content
+    return source
   }
 ```
 
@@ -253,10 +253,10 @@ getCode(modulePath) {
 let tool = require('引入编译包')
 function customLoader(source){
   // 伪代码 通过相应的编译包对源代码进行处理
-  let content = tool.render(source)
+  source = tool.render(source)
 
   // 将处理好的结果返回
-  return content
+  return source
 }
 module.exports = customLoader
 ```
@@ -275,4 +275,21 @@ function lessLoader(source){
   return lessCode
 }
 module.exports = lessLoader
+```
+
+### plugins简单原理
+* 在webpack相应的生命周期，完成相应的任务
+* 每个插件应该实现一个apply方法
+* plugin schema
+```js
+class CustomPlugin{
+  apply(compiler){
+    // 确认插件执行的生命周期
+    compiler.hooks.emit.tap('CustomPlugin',(compilation)=>{
+      // compilation 包含很多信息
+      // 需要完成的功能
+    })
+  }
+}
+module.exports = CustomPlugin
 ```

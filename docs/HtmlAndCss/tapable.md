@@ -1,7 +1,7 @@
 ---
 sidebarDepth: 3
 ---
-# webpack tapable原理学习
+# tapable原理学习
 
 ## tapable
 ### SyncHook 同步钩子
