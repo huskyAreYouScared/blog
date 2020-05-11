@@ -173,6 +173,67 @@ npx webpack --config webpack.vue.build.js
     })
   ]
 ```
+#### happypack 多线程打包
+* `happypack` 是一个插件,适用于比较大的项目
+```bash
+npm i happypack -D
+```
+* 需要多线程打包的文件，先改写`loader`中的写法
+```js
+const Happypack = require('happypack')
+module.exports = {
+  ...
+  module:{
+    rules:[
+      {
+        test:/\.js$/,
++        use:'Happypack/loader?id=is'
+-        use:'babel-loader'
+      }
+    ]
+  }
+  ...
+}
+```
+* 改写完`loader`配置还需要写插件配置，将原有的`loader`和打包的文件类型配置到该插件中
+```js
+ plugins:[
+   new Happypack({
+     id:'js',
+     use:[{
+       loader:'babel-loader',
+       options:{
+         presets:[
+           '@babel/preset-env'
+         ]
+       }
+     }]
+   })
+ ]
+```
+* 上面是以`js`为例，这里在写一下`css`的例子
+
+```js
+const Happypack = require('happypack')
+// ... 省略很多代码 ...
+  module:{
+    rules:[
+      {
+        test:/\.css$/,
+        use:'Happypack/loader?css'
+      }
+    ]
+  },
+  plugins:[
+    new Happypack({
+      id:'css',
+      use:['style-loader','css-loader']
+    })
+  ]
+```
+#### tree-shaking
+* `webpack`自带的优化,将没有使用到的代码不打包进最后的文件中，`webpack4`的`production`模式下
+* `es6`的`import xxx from 'xxx'`语法才支持，`require`是不支持`tree-shaking`的
 
 ## 不常用
 
