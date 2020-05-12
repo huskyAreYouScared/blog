@@ -67,6 +67,8 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [滚动视差插件](https://scroll-out.github.io/)
 * [移动端模拟控制台 eruda](https://github.com/liriliri/eruda)
 * [全景图片预览插件 panolens.js](https://pchen66.github.io/Panolens/)
+* [PixiJS H52d创造引擎](https://www.pixijs.com/)
+
 ## 实战
 * [Let's Encrypt 安装免费的 HTTPS 证书](https://www.jitao.tech/blog/2020/01/sre-lets-encrypt/)[certbot官网](https://certbot.eff.org)
 
@@ -77,6 +79,7 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [markdown备忘录](https://segmentfault.com/markdown)
 * [Vugel](https://vugel.planning.nl/)Vugel is a WebGL runtime for Vue3
 * [Vue3.0 Composition API RFC](https://composition-api.vuejs.org/#summary)
+* [深入浅出webpack](https://www.pixijs.com/)
 
 ## 有趣网站分享
 * [3D风格的网站分享网站（套娃）](https://bruno-simon.com/)
