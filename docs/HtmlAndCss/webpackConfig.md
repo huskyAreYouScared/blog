@@ -235,6 +235,62 @@ const Happypack = require('happypack')
 * `webpack`自带的优化,将没有使用到的代码不打包进最后的文件中，`webpack4`的`production`模式下
 * `es6`的`import xxx from 'xxx'`语法才支持，`require`是不支持`tree-shaking`的
 
+### 提取公共代码 
+* 多页应用抽离公共代码
+```js
+  optimization:{ // 优化
+    splitChunks:{ // 分割代码块
+      cacheGroups:{ // 缓存组
+        common:{ // 公共的模块
+          chunks:'initial', // 从初始化的时候开始
+          minSize:0, // 大于多少字节需要抽离
+          minChunks:2 // 有二次引用就抽离
+        }
+      }
+    }
+  }
+```
+* 抽离第三方的插件代码
+```js
+  optimization:{
+    splitChunks:{
+      cacheGroups:{
+        vendor:{
+          priority:1,// 优先处理
+          chunks:'initial', // 从初始化的时候开始
+          minSize:0, // 大于多少字节需要抽离
+          minChunks:2 // 有二次引用就抽离
+        }
+      }
+    }
+  }
+```
+### 懒加载模块
+* 需要下载babel插件
+```bash
+npm i @babel/plugin-syntax-dynamic-import -D
+```
+* 需要在配置babel的地方使用，写在webpack.config.js或者单独的babel配置文件都可以
+```js{8}
+  use:[{
+       loader:'babel-loader',
+       options:{
+         presets:[
+           '@babel/preset-env'
+         ],
+         plugins:[
+           '@babel/plugin-syntax-dynamic-import'
+         ]
+       }
+     }]
+```
+* 配置好之后我们就可以在Script中使用了
+```js
+  import('./xxx.js').then(data=>{
+    // data.default 此时就可以使用default下的脚本了
+  })
+```
+
 ## 不常用
 
 ### loader类型
