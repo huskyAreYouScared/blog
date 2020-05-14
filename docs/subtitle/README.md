@@ -8,7 +8,8 @@
 * ffmpeg
 * node 
 * sass
-
+## 需要使用的插件
+* subtitle.js
 ## 项目地址
 [Github](https://github.com/huskyAreYouScared/subtitle)
 

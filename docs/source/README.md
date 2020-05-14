@@ -7,6 +7,7 @@
 * [github徽章-badgen](https://badgen.net/)
 * [github中文项目排行榜](https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts)
 * [canva设计网站](https://www.canva.com/join/heads-locate-foam)
+* [数学公式生成网站](https://www.mathjax.org/)
 
 ## 工具类
 * [svg在线编辑网站](https://www.zhangxinxu.com/sp/svg/)
@@ -80,6 +81,7 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [Vugel](https://vugel.planning.nl/)Vugel is a WebGL runtime for Vue3
 * [Vue3.0 Composition API RFC](https://composition-api.vuejs.org/#summary)
 * [深入浅出webpack](https://www.pixijs.com/)
+* [git基础操作列表-阮一峰](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
 
 ## 有趣网站分享
 * [3D风格的网站分享网站（套娃）](https://bruno-simon.com/)
