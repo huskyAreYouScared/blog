@@ -56,7 +56,8 @@ module.exports = {
         'webpackLoader',
         'tapable',
         'CLI',
-        'webpackPrinciple'
+        'webpackPrinciple',
+        'proton'
       ],
       '/algorithm/': [
         '',
