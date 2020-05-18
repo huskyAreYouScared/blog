@@ -191,3 +191,109 @@ let pool = new Proton.Pool(context)
 // 粒子开始渲染时候是五倍的大小，随着生命周期而变小，变为原大小
 emitter.addBehaviour(new Proton.Scale(5,0,Infinity,  Proton.easeOutQuart))
 ```
+
+## 加载图片
+* 用法
+```js
+  // import source -- use react demo
+  import star from './assets/img/star.png'
+
+  // 使用引入的图片给粒子进行初始化
+  emitter.addInitialize(new Proton.Body(star))
+```
+
+## 生成烟花
+* 用react举例，这里默认先用create-react-app初始化了一个react项目
+* 需要安装的插件
+```bash
+  yarn add af-manager proton-engine
+```
+* 先准备HTML部分
+```js
+  // ...
+  return (
+    <div className="container">
+      <canvas ref={canvasEL} onClick={particle} className="main-bg"></canvas>
+    </div>
+  );
+}
+export default App;
+```
+* 引入该引入的包
+```js
+import React, { useEffect, useRef } from 'react';
+import Proton from 'proton-engine'
+import RAF from 'raf-manager'
+```
+* 初始化全局变量
+```js
+  const proton = new Proton() // 初始化粒子引擎实例
+  const emitter = new Proton.Emitter() // 定义emitter实例
+  let canvasEL = useRef('') // 获取canvas标签
+  let context = null // 初始化canvas的上下文
+```
+* 在组件加载的时候执行的代码 core
+```js
+  useEffect(() => {
+    canvasInit() // 初始化canvas
+    canvasResize() // canvas 根据window大小改变而改变
+    particleAnimation()
+  })
+
+  function canvasInit () {
+    canvasEL.current.width = window.innerWidth
+    canvasEL.current.height = window.innerHeight
+    context = canvasEL.current.getContext('2d')
+  }
+
+  function canvasResize () {
+    window.onresize = function (e) {
+      canvasEL.current.width = window.innerWidth
+      canvasEL.current.height = window.innerHeight
+      emitter.p.x = canvasEL.current.width / 2
+      emitter.p.y = canvasEL.current.height / 2
+    }
+  }
+
+  function particleAnimation() {
+    //set Rate
+    emitter.rate = new Proton.Rate(Proton.getSpan(20, 40))
+    //add Initialize
+    emitter.addInitialize(new Proton.Radius(0.5, 3))
+    emitter.addInitialize(new Proton.Life(10))
+    emitter.addInitialize(new Proton.Mass(1))
+    emitter.addInitialize(new Proton.Velocity(new Proton.Span(1, 2),
+      new Proton.Span(0, 360), 'polar'))
+    let forceBehaviour = new Proton.Force(0, 0);
+    emitter.addBehaviour(forceBehaviour, new Proton.Gravity(.9))
+    emitter.addBehaviour(new Proton.Color('random', 'random', '#cccccc55', Infinity, Proton.easeOutQuart))
+    emitter.addBehaviour(new Proton.Alpha(1, 0, Infinity, Proton.easeOutQuart))
+    emitter.addBehaviour(new Proton.Scale(5, 0, Infinity, Proton.easeOutQuart))
+    //set emitter position
+    emitter.p.x = canvasEL.current.width / 2;
+    emitter.p.y = canvasEL.current.height / 2;
+    emitter.emit('once')
+    //add emitter to the proton
+    proton.addEmitter(emitter)
+    // add canvas renderer
+    const renderer = new Proton.CanvasRenderer(canvasEL.current)
+    renderer.onProtonUpdate = () => {
+      context.fillStyle = "rgba(0, 0, 0, 0.1)";
+      context.fillRect(0, 0, canvasEL.current.width, canvasEL.current.height);
+    }
+    proton.addRenderer(renderer)
+    // 用来执行proton的更新渲染方法
+    RAF.add(() => {
+      proton.update()
+    }, 1000)
+  }
+```
+* 最后注册点击事件,绑定在canvas上
+```js
+  const particle = (event) => {
+    emitter.p.x = event.clientX // 指定粒子发射x轴位置
+    emitter.p.y = event.clientY // 指定粒子发射y轴位置
+    emitter.emit('once') // 粒子发射一次
+    event.persist()
+  }
+```
