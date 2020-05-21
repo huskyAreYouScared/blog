@@ -45,6 +45,7 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [keyframes.app在线制作css动画](https://keyframes.app/)
 * [360查字体，是否可以免费商用](https://fonts.safe.360.cn/)
 * [浏览器自动化脚本语言和运行时 kasaya](https://github.com/syscolabs/kasaya)
+* [对图片进行随机合成和加工，生成不可思议的艺术图片](https://artbreeder.com/browse)
 
 ## 音乐
 * [artlist](https://artlist.io)
