@@ -8,6 +8,8 @@
 * [github中文项目排行榜](https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts)
 * [canva设计网站](https://www.canva.com/join/heads-locate-foam)
 * [数学公式生成网站](https://www.mathjax.org/)
+* [动画数学教学视频-3blue1brown](https://www.3blue1brown.com)
+* [设计网站-dribbble](https://dribbble.com)可以用来寻找灵感
 
 ## 工具类
 * [svg在线编辑网站](https://www.zhangxinxu.com/sp/svg/)
@@ -46,6 +48,8 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [360查字体，是否可以免费商用](https://fonts.safe.360.cn/)
 * [浏览器自动化脚本语言和运行时 kasaya](https://github.com/syscolabs/kasaya)
 * [对图片进行随机合成和加工，生成不可思议的艺术图片](https://artbreeder.com/browse)
+* [正则表达式分析网站](https://regexper.com/)
+
 
 ## 音乐
 * [artlist](https://artlist.io)
