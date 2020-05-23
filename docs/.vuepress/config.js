@@ -57,7 +57,8 @@ module.exports = {
         'tapable',
         'CLI',
         'webpackPrinciple',
-        'proton'
+        'proton',
+        'qrcodeDemo'
       ],
       '/algorithm/': [
         '',
