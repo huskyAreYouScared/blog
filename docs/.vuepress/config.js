@@ -58,7 +58,8 @@ module.exports = {
         'CLI',
         'webpackPrinciple',
         'proton',
-        'qrcodeDemo'
+        'qrcodeDemo',
+        'jestSummary'
       ],
       '/algorithm/': [
         '',
