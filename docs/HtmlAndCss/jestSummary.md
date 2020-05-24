@@ -296,3 +296,145 @@ test('fetchData async', async () => {
   expect(response.data).not.toBeNull()
 })
 ```
+
+## 辅助函数
+
+### beforeEach
+* 每个测试之前的钩子函数，支持异步，和测试用例中解决异步的方式一样，`done`参数或者返回一个`promise`
+```js
+beforeEach(()=>{
+  // 每个测试的前置钩子
+  console.log('start')
+})
+```
+### afterEach
+* 这个和`beforeEach` 钩子函数相反，是在每个测试之后调用的钩子函数
+```js
+afterEach(()=>{
+  // 每个测试的前置钩子
+  console.log('start')
+})
+``` 
+
+### beforeAll
+* 每个测试文件最开始的时候只执行一次
+```js
+beforeAll(() => {
+  console.log('start once')
+})
+```
+
+### afterAll
+* 每个测试文件最后的时候只执行一次
+```js
+beforeAll(() => {
+  console.log('end once')
+})
+```
+
+## 作用域 describe
+* 可以将一个测试文件中的不同测试进行分组
+```js
+beforeEach(()=>{
+  console.log('global start each')
+})
+
+describe('group 1',()=>{
+  beforeEach(()=>{
+    console.log('group 1 start each')
+  })
+  test('test 1',()=>{
+    expect(true).toBeTruthy()
+  })
+  test('test 2',()=>{
+    expect(true).toBeTruthy()
+  })
+})
+
+```
+* 全局钩子函数依然作用于该文件的全部`test`,`describe`分组中的钩子只对该分组有效果
+* 全局钩子前置钩子优先于组内前置钩子，后置钩子相反
+## describe和test的执行顺序
+* 该文件的全部describe先执行，按照定义的顺序先执行，除了test里面的方法，describe中的代码全部先执行
+* 然后 test 再按照定义的顺序进行执行
+* 官网给了一下例子帮助理解[传送门](https://jestjs.io/docs/zh-Hans/setup-teardown#desribe%E5%92%8Ctest%E5%9D%97%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F)
+```js
+describe('outer', () => {
+  console.log('describe outer-a');
+
+  describe('describe inner 1', () => {
+    console.log('describe inner 1');
+    test('test 1', () => {
+      console.log('test for describe inner 1');
+      expect(true).toEqual(true);
+    });
+  });
+
+  console.log('describe outer-b');
+
+  test('test 1', () => {
+    console.log('test for describe outer');
+    expect(true).toEqual(true);
+  });
+
+  describe('describe inner 2', () => {
+    console.log('describe inner 2');
+    test('test for describe inner 2', () => {
+      console.log('test for describe inner 2');
+      expect(false).toEqual(false);
+    });
+  });
+  console.log('describe outer-c');
+});
+// describe outer-a
+// describe inner 1
+// describe outer-b
+// describe inner 2
+// describe outer-c
+// test for describe inner 1
+// test for describe outer
+// test for describe inner 2
+```
+## test.only
+* 只执行该测试用例
+```js
+test.only('only test',()=>{
+  expect(true).toBeTruthy()
+})
+test('basic test',()=>{
+  expect(1+1).toBeGreaterThanOrEqual(2)
+})
+```
+
+## Mock Functions
+* 通俗易懂的解释：可以对代码的每一个执行环节进行测试
+### 使用 mock 函数
+* 使用 `jest.fn()` 定义 `mock` 函数
+```js
+function increment (target, cb) {
+  cb(target)
+}
+
+test('123', () => {
+  let result = 0
+  // 定义 mock 函数
+  const mockCallback = jest.fn((target)=>{
+    result += target
+  })
+  increment(2, mockCallback)
+  increment(2, mockCallback)
+  increment(2, mockCallback)
+  // // 此 mock 函数被调用了两次
+  // expect(mockCallback.mock.calls.length).toBe(2)
+
+  // 第一次调用函数时的第一个参数是 2
+  expect(mockCallback.mock.calls[0][0]).toBe(2)
+  // 第二次调用函数时的第一个参数是 2
+  expect(mockCallback.mock.calls[1][0]).toBe(2)
+  // 第三次调用函数时的第一个参数是 2
+  expect(mockCallback.mock.calls[2][0]).toBe(2)
+  // 递增结束最后 arr 预期值 6
+  expect(result === 6).toBeTruthy()
+})
+
+```
