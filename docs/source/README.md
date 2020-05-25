@@ -10,7 +10,7 @@
 * [数学公式生成网站](https://www.mathjax.org/)
 * [动画数学教学视频-3blue1brown](https://www.3blue1brown.com)
 * [设计网站-dribbble](https://dribbble.com)可以用来寻找灵感
-
+* [nginx配置网站](https://www.digitalocean.com/community/tools/nginx)
 ## 工具类
 * [svg在线编辑网站](https://www.zhangxinxu.com/sp/svg/)
 * [用衍生艺术生成占位符图片占位符](https://generative-placeholders.glitch.me/)
