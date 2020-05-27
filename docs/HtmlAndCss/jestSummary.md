@@ -1,5 +1,6 @@
 # jest单元测试小记
 
+* [官网](https://jestjs.io/zh-Hans/)
 * 环境安装
 ```bash
   yarn add jest -D
