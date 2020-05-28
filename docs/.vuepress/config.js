@@ -35,8 +35,9 @@ module.exports = {
       ],
       '/source/': [
         '',
+        'vueEcosphere',
         'npmPlugins',
-        'webGame'
+        'webGame',
       ],
       '/HtmlAndCss/': [
         '',

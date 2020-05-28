@@ -4,3 +4,4 @@
 
 * H5唤起app插件[callapp-lib](https://www.npmjs.com/package/callapp-lib)
 * 生成二维码的插件[qrcode](https://www.npmjs.com/package/qrcode)[使用小记](/HtmlAndCss/qrcodeDemo)
+* [模拟阻止（适用于PC，移动端）](https://www.npmjs.com/package/vue-prevent-browser-back)
