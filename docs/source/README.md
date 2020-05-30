@@ -52,7 +52,7 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [页面加载性能分析网站](https://developers.google.com/speed/pagespeed/insights/)
 * [临时分享文件的服务网站-sendfiles](https://sendfiles.online/)
 * [可以提取图片上的文字服务的网站-白描](https://web.baimiaoapp.com/)
-* [借助GitHub issue实现的轻量blog评论小部件](https://utteranc.es/)
+* [utteranc-借助GitHub issue实现的轻量blog评论小部件](https://utteranc.es/)
 
 ## 音乐
 * [artlist](https://artlist.io)
