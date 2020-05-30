@@ -50,7 +50,9 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [对图片进行随机合成和加工，生成不可思议的艺术图片](https://artbreeder.com/browse)
 * [正则表达式分析网站](https://regexper.com/)
 * [页面加载性能分析网站](https://developers.google.com/speed/pagespeed/insights/)
-
+* [临时分享文件的服务网站-sendfiles](https://sendfiles.online/)
+* [可以提取图片上的文字服务的网站-白描](https://web.baimiaoapp.com/)
+* [借助GitHub issue实现的轻量blog评论小部件](https://utteranc.es/)
 
 ## 音乐
 * [artlist](https://artlist.io)
@@ -91,3 +93,6 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 
 ## 有趣网站分享
 * [3D风格的网站分享网站（套娃）](https://bruno-simon.com/)
+
+
+<Utterances :id="3"/>
