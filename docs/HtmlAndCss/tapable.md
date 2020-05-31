@@ -3,8 +3,7 @@ sidebarDepth: 3
 ---
 # tapable原理学习
 
-## tapable
-### SyncHook 同步钩子
+## SyncHook 同步钩子
 * 按照添加函数添加的顺序执行
 ```js
 class SyncHook {
@@ -34,7 +33,7 @@ syncHook.tap(function(task){
 syncHook.call('process')
 ```
 
-### SyncBailHook 同步保险钩子
+## SyncBailHook 同步保险钩子
 * 为了保险，在每个函数钩子执行之后，判断是否返回非undefined得值，如果返回则不继续往下执行
 ```js
 class SyncBailHook{
@@ -68,7 +67,7 @@ syncBailHook.call('process')
 // 只输出 process 1，因为第一个注册的函数返回了非undifined的值
 ```
 
-### SyncWaterfallHook 同步瀑布流钩子
+## SyncWaterfallHook 同步瀑布流钩子
 * 将前一个任务输出的结果传递给下一个任务，像瀑布一样向下流转
 * 这里运用了 `Array` 的 `reduce` 来处理数据向下流转
 ```js
@@ -102,7 +101,7 @@ SyncWaterfallHook.tap('写字', function (data) {
 
 hook.call('small husky')
 ```
-### SyncLoopHook  同步循环钩子
+## SyncLoopHook  同步循环钩子
 * 每个注册的任务执行后，只要返回值不为`undefined`就会一直循环执行当前任务
 
 ::: tip
@@ -127,9 +126,9 @@ class SyncLoopHook {
 }
 ```
 
-### AsyncParalleHook 异步并行钩子
+## AsyncParalleHook 异步并行钩子
 
-#### (1) use callback
+### (1) use callback
 * 当所有任务并行完成后才执行最后的回调方法
 * 每个任务完成之后，都会调用回调，在回调函数中进行判断是否全部的任务执行完成
 * 主要实现方式，在`callAsync`中定义一个变量`currentTaskTotal`，用来保存有多少个任务执行完成了，每次任务执行完成都会调用回调函数`done`来对`currentTaskTotal++`，并且判断`currentTaskTotal`是否和总任务数量相等，相等则代表全部的任务执行完成，执行最后的`callAsync`的回调
@@ -179,7 +178,7 @@ AsyncParallelHook.callAsync('end',()=>{
 2
 over
 ```
-#### (2) use promise
+### (2) use promise
 * 注册的任务都返回`promise`
 * 通过`Promise`的`All`方法来处理来给出任务终止
 ```js
@@ -224,9 +223,9 @@ asyncParallelHookPromise.promise('end').then(() => {
 over
 ```
 
-### AsyncSeriersHool 异步串行钩子
+## AsyncSeriersHool 异步串行钩子
 
-#### (1) use callbask
+### (1) use callbask
 * 执行完一个任务之后才能执行下一个任务，所有任务完成，调最终回调
 * 使用 `next函数` `index` 变量来实现
 ```js
@@ -268,7 +267,7 @@ asyncSeriesHook.callAsync('end',() => {
 })
 ```
 
-#### (2) use promise
+### (2) use promise
 * 借助`Array`的`reduce`来将上一个执行的函数的返回值向下传递
 * `lastPromise` ：我当前要执行的`promise`，`nextTask`：为下一个任务
 * 最终返回
@@ -311,7 +310,7 @@ asyncSeriesPromiseHook.promise('end').then(() => {
 })
 ```
 
-### AsyncSeriesWaterfallHook 异步串行瀑布流钩子
+## AsyncSeriesWaterfallHook 异步串行瀑布流钩子
 
 ```js
 // 异步串行钩子

@@ -17,4 +17,4 @@
 * [项目初始化](./InitProject.html)
 * [mac和windows区别记录](./mac_windows.html)
 * [dialog记录](./electronDialog.html)
-* husky-subtitle V1.0.0 完成后，开发文档持续更新...(距离1.0.0版本涉及到的全部功能，已经开发60%)
+* husky-subtitle V1.0.0 完成后，开发文档持续更新...

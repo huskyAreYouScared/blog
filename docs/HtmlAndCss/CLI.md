@@ -111,8 +111,8 @@ program.parse(process.argv)
 #### 定义 init 命令
 * 这里我们以初始化项目模板功能进行演示，首先需要介绍几个API
 1. command 命令名称
-  * <require> 代表必填参数
-  * [option] 代表可选参数
+  * `<require>` 代表必填参数
+  * `[option]` 代表可选参数
 2. description 命令描述
 3. action 执行该命令的方法
 
@@ -188,3 +188,107 @@ program.parse(process.argv)
 ```
 
 * 此时执行 chromeCli init basic demo就会将github上面的模板下载下来
+
+## 命令行交互
+### 需要借助 inquirer
+* 首先来安装 [inquirer](https://github.com/SBoudrias/Inquirer.js)
+```bash
+yarn add inquirer
+```
+* inquirer 插件提供了很多的交互方式,这里已最常见的多选，输入，确认为例
+```js
+const { program } = require('commander')
+const inquirer = require('inquirer')
+
+program
+  .command('create')
+  .action(()=>{
+    inquirer
+      .prompt([
+        {
+          type: 'confirm',
+          name: 'isDefaultImg',
+          message: 'default image is husky image'
+        },
+        {
+          type: 'checkbox',
+          name: 'type',
+          choices: ['cat', 'dog', 'birde'],
+          message: 'default image is husky image'
+        },
+        {
+          type: 'input',
+          name: 'name',
+          choices: ['cat', 'dog', 'birde'],
+          message: 'default image is husky image'
+        }
+      ])
+      .then(answers => {
+        console.log(answers);
+        
+      })
+      .catch(error => {
+        if (error.isTtyError) {
+          // Prompt couldn't be rendered in the current environment
+        } else {
+          // Something else when wrong
+        }
+      });
+  })
+program.parse(process.argv);
+```
+
+* prompt 用户执行完操作后返回一个promise对象,将用户的选择结果已对象的方式进行返回(answers)
+```bash
+? default image is husky image Yes
+? default image is husky image cat
+? default image is husky image twohaha
+{ isDefaultImg: true, type: [ 'cat' ], name: 'twohaha' }
+```
+
+## 命令行交互优化
+
+### loading效果
+* 这里需要[ora](https://github.com/sindresorhus/ora)插件来帮忙
+* 使用也很简单
+```js
+const ora = require('ora')
+
+let spinner = ora('正在初始化...')
+spinner.start()
+setTimeout(()=>{
+  // spinner.fail() 下载失败提示
+  spinner.succeed() 下载成功提示
+},2000)
+
+```
+
+### 终端字符串样式
+* github地址[chalk](https://github.com/chalk/chalk)
+```bash
+yarn add chalk
+```
+```js
+const chalk = require('chalk')
+const ora = require('ora')
+
+let loading = chalk.cyan('正在初始化...') // 加载过程中是蓝色
+  let spinner = ora(loading)
+  spinner.start()
+  setTimeout(()=>{
+    spinner.succeed(chalk.green('正在初始化...')) // 成功设置字符为绿色
+  },2000)
+```
+* 还有很多的样式详情可以去这里[传送门](https://github.com/chalk/chalk)
+
+### 日志图标 log-symbols
+```bash
+yarn add log-symbols
+```
+* 一共有四种类型<br>
+![一共有四种类型,info,success,warning,error](https://raw.githubusercontent.com/sindresorhus/log-symbols/master/screenshot.png)
+```js
+const logSymbols = require('log-symbols');
+
+console.log(logSymbols.success, 'Finished successfully!');
+```
