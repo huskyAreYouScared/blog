@@ -53,6 +53,7 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [临时分享文件的服务网站-sendfiles](https://sendfiles.online/)
 * [可以提取图片上的文字服务的网站-白描](https://web.baimiaoapp.com/)
 * [utteranc-借助GitHub issue实现的轻量blog评论小部件](https://utteranc.es/)
+* [免费的github、npm、wordpress资源CND服务](https://www.jsdelivr.com/)
 
 ## 音乐
 * [artlist](https://artlist.io)
