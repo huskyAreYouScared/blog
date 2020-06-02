@@ -8,7 +8,9 @@
 
 ### PC端
 * [Element](https://element.eleme.cn/#/zh-CN)
+
+## 模板
 * [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/)成熟的后台管理模板（花裤衩大佬的开源项目）
 
-### vue其他插件
+## 插件
 * 单元测试[vue-test-utils](https://vue-test-utils.vuejs.org/zh/)

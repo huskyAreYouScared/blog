@@ -54,7 +54,11 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [可以提取图片上的文字服务的网站-白描](https://web.baimiaoapp.com/)
 * [utteranc-借助GitHub issue实现的轻量blog评论小部件](https://utteranc.es/)
 * [免费的github、npm、wordpress资源CND服务](https://www.jsdelivr.com/)
-
+* [图壳](https://imgkr.com/)免费的图床网站，这个是我试传的图片[https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png](https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png)
+* [提供短链接网址](https://urlify.cn/)
+* [微信公众号排版工具](https://mdnice.com/)
+* [数据可视化工具网站](https://flourish.studio/examples/)
+* [提供多种浏览器的页面截图网站-BrowserFrame](https://browserframe.com/)这个是我上传的该网站的预览图![preview](https://imgkr.cn-bj.ufileos.com/099293cb-def4-4e2d-97fa-cd62ad5814a6.png)
 ## 音乐
 * [artlist](https://artlist.io)
 * [freemusicarchive](https://freemusicarchive.org/)免版权
@@ -78,6 +82,7 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [移动端模拟控制台 eruda](https://github.com/liriliri/eruda)
 * [全景图片预览插件 panolens.js](https://pchen66.github.io/Panolens/)
 * [PixiJS H52d创造引擎](https://www.pixijs.com/)
+* [HammerJS-添加手势的插件](https://hammerjs.github.io/)
 
 ## 实战
 * [Let's Encrypt 安装免费的 HTTPS 证书](https://www.jitao.tech/blog/2020/01/sre-lets-encrypt/)[certbot官网](https://certbot.eff.org)

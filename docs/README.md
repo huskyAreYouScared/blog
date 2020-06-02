@@ -16,5 +16,8 @@ footer: MIT Licensed | Copyright © 2018-present huskyAreYouScared
 ### B站视频教程
 * [传送门](https://space.bilibili.com/28125784)
 
+### 本站短链接地址 https://urlify.cn/uuaUrq
+* [传送门](https://urlify.cn/uuaUrq)
+
 
 <a style="color:#666;position:absolute;top:1140px;left:50%;transform:translateX(-50%);" target="_blank" href="http://www.beian.miit.gov.cn">辽IPC备19010161号-1</a>
