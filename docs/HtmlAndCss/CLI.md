@@ -1,4 +1,4 @@
-# 做一个自己的CLI
+# 命令行工具开发小记CLI
 ::: tip
 英语：command-line interface
 缩写：CLI

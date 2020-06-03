@@ -4,7 +4,8 @@
 * [github emoji 表情列表](https://www.cnblogs.com/takeurhand/p/6940135.html)
 * [插图网站](https://undraw.co/illustrations)可商用
 * [免费的视频图片素材网站Pexels](https://www.pexels.com/zh-cn/)
-* [github徽章-badgen](https://badgen.net/)
+* [徽章生成服务-badgen](https://badgen.net/)
+* [徽章生成服务-forthebadge](https://forthebadge.com/)
 * [github中文项目排行榜](https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts)
 * [canva设计网站](https://www.canva.com/join/heads-locate-foam)
 * [数学公式生成网站](https://www.mathjax.org/)
