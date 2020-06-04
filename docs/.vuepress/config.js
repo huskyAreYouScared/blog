@@ -31,7 +31,8 @@ module.exports = {
         'mac_windows',
         'electronDialog',
         'according-platform-build',
-        'user-custom-install'
+        'user-custom-install',
+        'vueElectronInitSummary'
       ],
       '/source/': [
         '',

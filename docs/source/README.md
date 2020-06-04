@@ -74,7 +74,6 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [AtJs](https://github.com/ichord/At.js)自动提示-已经不在维护了
 * [TributeJS](https://github.com/zurb/tribute)自动提示
 * [复制到剪切板](https://clipboardjs.com/)
-* [vue实现的各种验证码](前端复制插件)
 * [boardgame.io开源游戏框架](https://boardgame.io/)
 * [appleple很多移动端小工具](https://appleple.github.io/)
 * [swup页面转场效果](https://github.com/swup/swup)
@@ -84,6 +83,7 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [全景图片预览插件 panolens.js](https://pchen66.github.io/Panolens/)
 * [PixiJS H52d创造引擎](https://www.pixijs.com/)
 * [HammerJS-添加手势的插件](https://hammerjs.github.io/)
+* [H5唤起客户端的插件](https://github.com/suanmei/callapp-lib)
 
 ## 实战
 * [Let's Encrypt 安装免费的 HTTPS 证书](https://www.jitao.tech/blog/2020/01/sre-lets-encrypt/)[certbot官网](https://certbot.eff.org)

@@ -21,6 +21,9 @@
 * 防抖[vue-debounce](https://www.npmjs.com/package/vue-debounce)
 * 通过transitions实现了很多现成的过渡动画[vue2-transitions](https://github.com/BinarCode/vue2-transitions)
 * 用vue2.0和grid布局制作的，响应网格系统，具有顺利排序、拖放和重新排序功能[vue-js-grid](https://github.com/euvl/vue-js-grid)[预览地址传送门](https://euvl.github.io/vue-js-grid/)
+* [vue实现的各种验证码](https://github.com/mizuka-wu/vue2-verify)
+* [中国-省-市-县的distpicker](https://github.com/jcc/v-distpicker)
+* [图片懒加载插件vue-lazyload](https://www.npmjs.com/package/vue-lazyload)
 
 ## vue相关知识文章
 * 在vue中使用lodash的工具函数[在vue中使用lodash的debounce和throttle](https://www.digitalocean.com/community/tutorials/vuejs-lodash-throttle-debounce)
