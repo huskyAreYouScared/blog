@@ -24,6 +24,7 @@
 * [vue实现的各种验证码](https://github.com/mizuka-wu/vue2-verify)
 * [中国-省-市-县的distpicker](https://github.com/jcc/v-distpicker)
 * [图片懒加载插件vue-lazyload](https://www.npmjs.com/package/vue-lazyload)
+* 调起浏览器的打印面板，根据element的ID来打印或者保存成PDF的vue指令插件[vue-print-nb](https://www.npmjs.com/package/vue-print-nb)
 
 ## vue相关知识文章
 * 在vue中使用lodash的工具函数[在vue中使用lodash的debounce和throttle](https://www.digitalocean.com/community/tutorials/vuejs-lodash-throttle-debounce)
