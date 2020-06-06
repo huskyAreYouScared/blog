@@ -69,7 +69,8 @@ module.exports = {
         'webpackPrinciple',
         'proton',
         'qrcodeDemo',
-        'jestSummary'
+        'jestSummary',
+        'nginxSummary'
       ],
       '/algorithm/': [
         '',
