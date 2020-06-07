@@ -46,7 +46,9 @@ module.exports = {
         'operationTutorial',
         'interestingSite',
         'autoCodeing',
-        'webGame',
+        'devOps',
+        'httpProtol',
+        'webGame'
       ],
       '/HtmlAndCss/': [
         '',
