@@ -71,8 +71,7 @@ module.exports = {
         'webpackPrinciple',
         'proton',
         'qrcodeDemo',
-        'jestSummary',
-        'nginxSummary'
+        'jestSummary'
       ],
       '/algorithm/': [
         '',
@@ -87,7 +86,9 @@ module.exports = {
         'mac_npm_error',
         'auto_watch_video',
         'conventional_changelog',
-        'steam_community'
+        'steam_community',
+        'nginxSummary',
+        'dockerSummary'
       ],
       '/': [
         ''
