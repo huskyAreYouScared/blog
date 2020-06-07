@@ -3,7 +3,7 @@
 * 本次学习nginx使用的是Ubuntu系统
 
 ## install nginx
-
+* nginx下载地址[传送门](http://nginx.org/en/download.html)
 ```bash
 sudo apt-get install nginx
 ```
@@ -161,27 +161,42 @@ location / {
 }
 ```
 
-### 通过路径匹配来控制权限
-* 举例允许用户访问/static目录
-```bash
-location /static {
-  allow all;
-}
-```
+## location匹配
 ### 精确匹配 “=”
+* `=` 匹配的优先级最高
 * 不允许用户访问后台管理
 ```bash
 location =/back-stage {
-  deny all;
+        root /data/blog/dist;
+        index index.html index.htm;
+}
+```
+### 精确匹配 “^~”
+* `^~` 匹配的优先级次于`=`
+```bash
+location ^~/back-stage {
+        root /data/blog/dist;
+        index index.html index.htm;
 }
 ```
 ### 正则匹配 “~”
-* 不允许用户访问mov文件
+* `~` 匹配的优先级次于`^~`
 ```bash
 location ~\.mov$ {
-  deny all;
+        root /data/blog/dist;
+        index index.html index.htm;
 }
 ```
+### 匹配任何查询
+* 优先级最低
+```bash
+location / {
+        root /data/blog/dist;
+        index index.html index.htm;
+        allow all;
+}
+```
+
 ## 设置虚拟主机
 
 ### 通过域名设置虚拟主机
@@ -227,7 +242,17 @@ server {
 }
 ```
 * 反向代理还有很多配置可以看nginx的官网[传送门](http://nginx.org/en/docs/http/ngx_http_proxy_module.html)
-
+### 将/test匹配代理到目标域名的/配置技巧
+```bash
+server {
+    listen 80;
+    server_name test.woniuwnwn.top;
+    location /test/ {
+            proxy_pass xx.xx.xx.xx:xxxx/;
+    }
+}
+```
+* 由上面这个例子可以看出，技巧就是将`/test`后面加上`/`，在`proxy_pass`的代理域名后面也加一个`/`
 ## 适配PC或mobile设备，来跳转不同域名
 ### 通过$http_user_agent来做判断
 ```
@@ -247,4 +272,31 @@ server {
 - 这个自适应是nginx帮我们进行不同平台进行不同页面的加载
 - 和前端的的自适应不是一回事，通过nginx可以帮助前端来做适配，就不用把适配的代码都写到一个工程里面了，相当于减小包体积，增加加载速度，减小白屏时间
 :::
+## 负载均衡
+### upstream
+* 简单配置一个负载均衡的小案例
+```bash
+upstream group1{
+        server xx.xx.xx.xx.端口1;
+        server xx.xx.xx.xx.端口2;
+}
+server {
+    listen 80;
+    server_name www.woniuwnwn.top;
+    location / {
+            proxy_pass http://group1
+    }
+}
+```
+### weight 负载均衡加权
+# 服务器性能好设置权重大一些，利于资源分配合理化
+```bash
+upstream group1{
+        server xx.xx.xx.xx.端口1 weight = 1;
+        server xx.xx.xx.xx.端口2 weight = 1;
+}
+```
+
+## 相关
+* [OpenResty](http://openresty.org/cn/) 基于 NGINX 和 LuaJIT 的 Web 平台。
 <Utterances :id="3"/>
