@@ -15,3 +15,4 @@
 * [nginx配置网站](https://www.digitalocean.com/community/tools/nginx)
 * 可以生成好看的背景图片[cool backgrounds](https://coolbackgrounds.io/black-background/)
 ![cool backgrounds生成的图片预览](https://imgkr.cn-bj.ufileos.com/24bfd30d-dd97-4bbe-999a-94d3ff4741cf.png)
+* 获取emoji的网站[传送门](http://getemoji.com/)
