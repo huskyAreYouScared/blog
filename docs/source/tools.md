@@ -2,12 +2,19 @@
 :::tip
 本模块记录一些实用的工具网站
 :::
+
+## 常用
+* [图壳](https://imgkr.com/)免费的图床网站，这个是我试传的图片[https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png](https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png)
+* 十分钟邮箱[10minutemail](https://10minutemail.net/)
+* [生成代码图片](https://carbon.now.sh/)
+* [很强大的流程图在线绘制draw.io](https://www.draw.io/)
+* [加速下载](https://d.serctl.com/)eg:例如 GitHub的releases文件
+## 必备
 * [svg在线编辑网站](https://www.zhangxinxu.com/sp/svg/)
 * [用衍生艺术生成占位符图片占位符](https://generative-placeholders.glitch.me/)
 * [adobe.color](https://color.adobe.com/zh/create/color-wheel/)还可以拖入图片识别里面的颜色值
-* [生成代码图片](https://carbon.now.sh/)
 * [手绘风格流程图](https://excalidraw.com)
-* [很强大的流程图在线绘制draw.io](https://www.draw.io/)
+
 * [在线查看github仓库网站](https://sourcegraph.com)只需要在该网址后面加上GitHub仓库地址就可以了
 ```
   eg: https://sourcegraph.com/加上GitHub项目地址
@@ -26,7 +33,7 @@
 // 使用方式：https://gitmemory.com/<账号>/<开源仓库名>
 eg:https://gitmemory.com/huskyareyouscared/subtitle
 ```
-* [加速下载](https://d.serctl.com/)eg:例如 GitHub的releases文件
+
 * [设计稿转前端代码`imgcook`](https://www.imgcook.com/)
 * [局域网代码实时预览工具keppler](https://brunosimon.github.io/keppler/)
 * [命令行终端录制回访工具](https://github.com/JavaCS3/xterm-player)
@@ -44,13 +51,11 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [可以提取图片上的文字服务的网站-白描](https://web.baimiaoapp.com/)
 * [utteranc-借助GitHub issue实现的轻量blog评论小部件](https://utteranc.es/)
 * [免费的github、npm、wordpress资源CND服务](https://www.jsdelivr.com/)
-* [图壳](https://imgkr.com/)免费的图床网站，这个是我试传的图片[https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png](https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png)
 * [提供短链接网址](https://urlify.cn/)
 * [微信公众号排版工具](https://mdnice.com/)
 * [数据可视化工具网站](https://flourish.studio/examples/)
 * [提供多种浏览器的页面截图网站-BrowserFrame](https://browserframe.com/)这个是我上传的该网站的预览图![preview](https://imgkr.cn-bj.ufileos.com/099293cb-def4-4e2d-97fa-cd62ad5814a6.png)
 * [buymeacoffee](https://www.buymeacoffee.com/)打赏网站buymeacoffee
-
 * 生成字符画的网站[传送门](http://patorjk.com/software/taag/#p=display&f=3D%20Diagonal&t=husky%20are%0Ayou%20scared) 下图为3D版的husky are you scared
 ```bash          
   ,---,                                    ,-.                                                           
