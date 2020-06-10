@@ -17,12 +17,11 @@ module.exports = {
       { text: '主页', link: '/' },
       { text: 'husky字幕', link: '/subtitle/' },
       { text: '前端日志', link: '/HtmlAndCss/' },
-      { text: '算法', link: '/algorithm/' },
+      // { text: '算法', link: '/algorithm/' },
       { text: '资源', link: '/source/' },
       { text: '技术杂谈', link: '/other/' },
       { text: 'Github', link: 'https://github.com/huskyAreYouScared/' },
-      { text: '国内地址', link: 'https://husky_are_you_scared.gitee.io/blog/' },
-
+      { text: '国内地址', link: 'https://husky_are_you_scared.gitee.io/blog/' }
     ],
     sidebar: {
       '/subtitle/': [     
@@ -71,7 +70,8 @@ module.exports = {
         'webpackPrinciple',
         'proton',
         'qrcodeDemo',
-        'jestSummary'
+        'jestSummary',
+        'regExpSummary'
       ],
       '/algorithm/': [
         '',
