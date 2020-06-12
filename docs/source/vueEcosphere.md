@@ -26,6 +26,6 @@
 * [图片懒加载插件vue-lazyload](https://www.npmjs.com/package/vue-lazyload)
 * 调起浏览器的打印面板，根据element的ID来打印或者保存成PDF的vue指令插件[vue-print-nb](https://www.npmjs.com/package/vue-print-nb)
 * Vue 2和3的基本 Vue 组合 API 应用程序集[vueUse](https://github.com/antfu/vueuse)
-
+* vuedraggable[vue强大的拖拽插件](https://www.npmjs.com/package/vuedraggable)
 ## vue相关知识文章
 * 在vue中使用lodash的工具函数[在vue中使用lodash的debounce和throttle](https://www.digitalocean.com/community/tutorials/vuejs-lodash-throttle-debounce)

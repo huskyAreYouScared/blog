@@ -24,7 +24,7 @@ let regObj = new RegExp("\\.\\d")
 * \w 代表匹配一个数字或者字母或者下划线（"_"）
 * \W 代表匹配一个除了数字或者字母或者下划线（"_"）的字符
 
-## .
+## . 匹配
 * 用来匹配除了换行之外的其他字符
 ```js
 /^.+$/.test('\nsad\n') // false
@@ -106,6 +106,115 @@ console.log(reg.lastIndex) // 1
 // 在执行 
 reg.exec(str) // ["士", index: 1, input: "哈士奇你怕吗", groups: undefined]
 console.log(reg.lastIndex) // 2
+```
+## ^ 排除匹配
+* 通过 `^` 和 `[]` 来做排除匹配，匹配下面字符串中的中文
+```js
+let str = 'husky are 二 you  哈 scared'
+console.log(str.match(/[^\w ]/g)) // 这里我们排出数字字母和空格
+// ["二", "哈"]
+```
+## 原子表特殊字符不解析
+* 在正则中 `.` `+` `()`等等都有特殊的含义，一般要匹配这些特殊的字符要在其前面加上 `\`来转译
+* 但是放到原子组中就不用转译了可以直接匹配
+```js
+let str = '(husky).com+'
+console.log(str.match(/[().+]/g))
+// ["(", ")", ".", "+"]
+```
+
+## 原子组
+* 用`（）`包裹的一段符合匹配的内容
+```js
+let str = 'name:husky,age:18'
+let result = str.match(/((\w*):(\w*))/)
+console.log(result)
+// 0: "name:husky"
+// 1: "name:husky"    // 匹配的第一组信息
+// 2: "name"          // 匹配的第二组信息
+// 3: "husky"         // 匹配的第三组信息
+// groups: undefined
+// index: 0
+// input: "name:husky,age:18"
+// length: 4
+```
+### ?: 来对已经匹配的原子组进行忽略
+* 举例
+```js
+let str = 'husky are you scared'
+// 不忽略空格，就会在结果中进行记录
+console.log(str.match(/(\w*( ))/))
+// ["husky ", "husky ", " ", index: 0, input: "husky are you scared", groups: undefined]
+
+// 忽略匹配空格的原子组
+console.log(str.match(/(\w*(?: ))/))
+// ["husky ", "husky ", index: 0, input: "husky are you scared", groups: undefined]
+```
+
+## 重复匹配的符号 * +
+* `*`代表匹配0个或者多个
+```js
+let str = '@husky @you @'
+console.log(str.match(/@\w*/gi))
+// ["@husky", "@you", "@"]
+```
+* `+`代表匹配一个或者多个
+```js
+let str = 'husky are you scared'
+console.log(str.match(/ \w+/gi))
+// [" are", " you", " scared"] 由于husky前面没有空格所以匹配不到
+```
+## ? 禁止贪婪
+* 首先如果单独实用 `?` 代表匹配 `0` 或者 `1` 个
+* 限制 `+` 的贪婪匹配 就这样使用 `+?`,同样 `*?` 也一样会被限制, 同样`{1,}?` 也会被限制
+```js
+let str = 'husky are you haaaaaaaaaa'
+console.log(str.match(/ha+/))
+// ["haaaaaaaaaa", index: 14, input: "husky are you haaaaaaaaaa", groups: undefined]
+console.log(str.match(/ha+?/))
+// ["ha", index: 14, input: "husky are you haaaaaaaaaa", groups: undefined]
+
+console.log(str.match(/ha*?/))
+// ["h", index: 0, input: "husky are you haaaaaaaaaa", groups: undefined]
+
+console.log(str.match(/ha{1,}?/))
+// ["ha", index: 14, input: "husky are you haaaaaaaaaa", groups: undefined]
+```
+* 通过上面的三个例子可以看出 在贪婪匹配中加上 `?` 就会取它们`(*,+,{1,})`中的做小匹配值进行匹配
+* 举例
+```js
+let str = `
+  <p>husky</p>
+  <p>are</p>
+  <p>you</p>
+  <p>scared</p>
+`
+// 不加禁止贪婪
+console.log(str.match(/<(p)>[\d\D]+<\/\1>/ig))
+// ["<p>husky</p>↵  <p>are</p>↵  <p>you</p>↵  <p>scared</p>"] 
+// 直接从头匹配到尾忽略了中间的</p>
+
+
+// 加上禁止贪婪
+console.log(str.match(/<(p)>[\d\D]+?<\/\1>/ig))
+//  ["<p>husky</p>", "<p>are</p>", "<p>you</p>", "<p>scared</p>"]
+```
+
+## exec 利用全局匹配
+* 这里面利用了正则的 lastIndex属性和exec方法来实现
+```js
+function searchAll(str,reg){
+  // 这里我们就不校验参数了
+  let result = []
+  let res = ''
+  while((res = reg.exec(str))){
+    result.push(res[0])
+  }
+  return result
+}
+// 这里有个主意正则表达式必须有全局修饰符g否则进入死循环
+console.log(searchAll('aaa,ddd,asda,a,sd,',/a+/g));
+// ["aaa", "a", "a", "a"]
 ```
 
 ## ?= 用人话解释“后面是什么”
