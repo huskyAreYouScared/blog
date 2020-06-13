@@ -41,6 +41,7 @@ module.exports = {
         'frontDocument',
         'jsPlugins',
         'sourceSummary',
+        'vscodePlugins',
         'musicSummary',
         'operationTutorial',
         'interestingSite',

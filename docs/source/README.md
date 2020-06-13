@@ -1,29 +1,31 @@
 # Cheat Sheet
-## vue生态圈
+* vue生态圈
 [传送门](./vueEcosphere)
-## npm插件分享
+* npm插件分享
 [传送门](./npmPlugins)
-## 工具类
+* 工具类
 [传送门](./tools)
-## 前端技术文档
+* 前端技术文档
 [传送门](./frontDocument)
-## js库插件
+* js库插件
 [传送门](./jsPlugins)
-## 资源类
+* 资源类
 [传送门](./sourceSummary)
-## 音乐
+* vscode实用插件
+[传送门](./vscodePlugins)
+* 音乐
 [传送门](./musicSummary)
-## 实战
+* 实战
 [传送门](./operationTutorial)
-## 有趣网站分享
+* 有趣网站分享
 [传送门](./interestingSite)
-## 前端样式代码生成工具网站
+* 前端样式代码生成工具网站
 [传送门](./autoCodeing)
-## 运维
+* 运维
 [传送门](./devOps)
-## 网络、http
+* 网络、http
 [传送门](./httpProtol)
-## web游戏
+* web游戏
 [传送门](./webGame)
 
 <Utterances :id="3"/>
