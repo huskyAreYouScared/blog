@@ -52,6 +52,7 @@ module.exports = {
       ],
       '/HtmlAndCss/': [
         '',
+        'pointSummary',
         'css',
         'fontStyle',
         'H5Show',
