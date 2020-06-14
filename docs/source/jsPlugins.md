@@ -20,3 +20,4 @@
 * [PixiJS H52d创造引擎](https://www.pixijs.com/)
 * [HammerJS-添加手势的插件](https://hammerjs.github.io/)
 * [H5唤起客户端的插件](https://github.com/suanmei/callapp-lib)
+* 记录和回访web的操作[record and replay the web](https://github.com/rrweb-io/rrweb)[中文文档](https://github.com/rrweb-io/rrweb/blob/master/README.zh_CN.md)
