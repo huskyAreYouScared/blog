@@ -61,3 +61,44 @@ let a = require('./a.js')
 ```
 * 这个时候需要注意了使用`require`引入`es6`的模块，`export` 导出的属性或者函数会在`a`对象下
 * `export default `导出的属性或者函数会在`a`对象的`default`属性下
+
+
+## 模块化管理demo
+:::tip
+只是简单写一下思想，可能不是很严谨
+:::
+```js
+// 定义模块化管理主逻辑
+let customModule = (function(){
+  let moduleList = []
+  function define (name, dependence, action) {
+    // 依赖关联
+    dependence.map((moduleItem,moduleIndex)=>{
+      dependence[moduleIndex] = moduleList[moduleItem]
+    })
+    // 收集模块
+    moduleList[name] = action.apply(null, dependence)
+  }
+
+  return {
+    define
+  }
+})()
+
+// 定义比较模块
+customModule.define('husky-compare',[],function () {
+  return {
+    max (arr){
+      return arr.sort((a,b)=>a - b)[arr.length - 1]
+    },
+    min (arr){
+      return arr.sort((a,b)=>b - a )[arr.length - 1]
+    }
+  }
+})
+
+customModule.define('xiaoge', ['husky-compare'],function (husky) {
+  console.log(husky.max([5,9,8,7,6,4,8,7,-100,5,100,5]));
+  console.log(husky.min([5,9,8,7,6,4,8,7,-100,5,100,5]));
+})
+```
