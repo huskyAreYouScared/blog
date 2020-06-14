@@ -1,5 +1,19 @@
 # 正则小记
 
+## 前置知识
+* 字符串中可以使用正则的方法
+  * search
+  * match
+  * matchAll
+  * split
+  * replace
+* 正则对象 RegExp
+  * 正则对象方法
+    * test
+    * exec
+  * 正则对象属性
+    * lastIndex
+
 ## 转译
 * 在字面量定义的正则用`\`转译，在正则表达式对象RegExp中转译要用`\\`
 ```js
@@ -150,6 +164,66 @@ console.log(str.match(/(\w*( ))/))
 console.log(str.match(/(\w*(?: ))/))
 // ["husky ", "husky ", index: 0, input: "husky are you scared", groups: undefined]
 ```
+### $ 来替换正则原子组中的匹配值
+* 举例：我们给下面的字符串换一种展现方式
+```js
+let str = 'name:husky,name:cat,name:twohaha'
+console.log(str.replace(/(name):(\w+)/g,'$1--$2'))
+// name--husky,name--cat,name--twohaha
+```
+### $&、 $`、 $' 
+* $&  代表匹配到的内容
+* $`  代表匹配到的内容的左边
+```js
+let str = 'huskyareyouscared'
+console.log(str.replace(/husky/,'small$`$&'))
+// smallhuskyareyouscared
+```
+* $'  代表匹配到的内容的右边
+```js
+let str = '@#%'
+console.log(str.replace(/#/,"$'"))
+// @%%
+```
+### ?<name> 给原子组起别名
+#### 别名案例一
+```js
+let str = 'husky @ you scared'
+let reg = /(?<name>@)/gi
+console.log(str.replace(reg,'<span>$<name></span>'))
+// husky <span>@</span> you scared
+```
+
+#### 别名案列二
+* 首先我们先准备一段字符串。将str对象通过JSON.stringify将它序列化
+```js
+let str = [
+  {name:'张三'},
+  {name:'李四'},
+  {name:'husky'}
+]
+let jsonStr = JSON.stringify(str)
+console.log(jsonStr)
+// [{"name":"张三"},{"name":"李四"},{"name":"husky"}]
+```
+* 通过正则原子组别名的方式还原回去
+```js
+function parse (arrStr) {
+  let tempArr = []
+  let reg = /\{(").*?\1:\1(?<name>.+?)\1\}/ig 
+  for(let item of arrStr.matchAll(reg)){
+    tempArr.push(item.groups)
+  }
+  return tempArr
+}
+
+console.log(parse(jsonStr))
+// (3) [{…}, {…}, {…}]
+// 0: {name: "张三"}
+// 1: {name: "李四"}
+// 2: {name: "husky"}
+
+```
 
 ## 重复匹配的符号 * +
 * `*`代表匹配0个或者多个
@@ -255,7 +329,7 @@ console.log(result)
 // husky@ husky@ two ha ha¥
 ```
 
-## ?! 用人话解释“前面不是什么”
+## ?<! 用人话解释“前面不是什么”
 * 给出下面一段字符，我们要前面不是`@`符号的`husky`,将其替换为`two ha ha`
 ```js
 let text = '#husky @husky &husky'
@@ -266,3 +340,4 @@ let result = text.replace(reg,'two ha ha')
 console.log(result)
 // #two ha ha @husky &two ha ha
 ```
+

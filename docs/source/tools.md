@@ -6,9 +6,10 @@
 ## 常用
 * [图壳](https://imgkr.com/)免费的图床网站，这个是我试传的图片[https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png](https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png)
 * 十分钟邮箱[10minutemail](https://10minutemail.net/)
-* [生成代码图片](https://carbon.now.sh/)
+* carbon[生成代码图片](https://carbon.now.sh/)
 * [很强大的流程图在线绘制draw.io](https://www.draw.io/)
 * [加速下载](https://d.serctl.com/)eg:例如 GitHub的releases文件
+* 当你想要开发自己的项目时，可以在这个网站找设计灵感[nodesign](https://nodesign.dev/)
 ## 必备
 * [svg在线编辑网站](https://www.zhangxinxu.com/sp/svg/)
 * [用衍生艺术生成占位符图片占位符](https://generative-placeholders.glitch.me/)
@@ -98,3 +99,5 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 ```
 * 将图片转换成字符画的工具网站[IMG2TXT](https://www.degraeve.com/img2txt.php)
 ![huskyareyouscared](https://imgkr.cn-bj.ufileos.com/be15be3a-29b0-44d5-a872-b7f6a40fd7aa.png)
+
+* 可用于开发移动端真机不方便调试来使用[远程调试工具-chii](https://github.com/liriliri/chii/)
