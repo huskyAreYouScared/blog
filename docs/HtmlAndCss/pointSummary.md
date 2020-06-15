@@ -17,3 +17,16 @@ print('husky'); // husky
 print(); // 报错
 print(null); // null
 ```
+
+### 校验是否为JSON字符串
+```js
+export function isJsonString(str) {
+  try {
+    if (typeof JSON.parse(str) === 'object') {
+      return true
+    }
+  } catch (e) {
+    return false
+  }
+}
+```
