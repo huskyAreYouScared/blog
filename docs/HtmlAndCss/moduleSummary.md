@@ -1,4 +1,4 @@
-# 关于js的模块导入导出
+# js模块模块化
 
 ## es6的模块导出
 ### 单个导出和倒入
@@ -101,4 +101,22 @@ customModule.define('xiaoge', ['husky-compare'],function (husky) {
   console.log(husky.max([5,9,8,7,6,4,8,7,-100,5,100,5]));
   console.log(husky.min([5,9,8,7,6,4,8,7,-100,5,100,5]));
 })
+```
+
+## 给script增加type="module"属性，声明为模块
+```html
+<script type="module">
+
+</script>
+```
+* 在`<script>`标签声明为模块时，会被延迟解析，并且标签内部`JS`代码变为严格模式
+
+## 按需加载
+* 通过出发某个事件来执行按需加在的逻辑
+```js
+document.getElementById('button').onclick=()=>{
+  import('xx/xx/path').then(({fun1, fun2})=>{
+    // 在这里就可以使用了
+  })
+}
 ```

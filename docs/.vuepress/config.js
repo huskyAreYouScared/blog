@@ -60,6 +60,7 @@ module.exports = {
         'elementUISummary',
         'unixTimeStamp',
         'babelLoaderError',
+        'moduleSummary',
         'playFavicon',
         'templateLiterals',
         'compatibility',
