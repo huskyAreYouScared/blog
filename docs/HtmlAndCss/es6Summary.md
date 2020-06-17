@@ -73,3 +73,62 @@ console.log(husky.name)
 // at Husky.set name [as name] (<anonymous>:9:32)
 // at <anonymous>:14:12
 ```
+
+### 使用Symbol来定义受保护的属性
+* 使用Symbol定义class中的私有属性，这个class和继承了这个class的class可以使用这个私有属性
+```js
+const protecteds = Symbol()
+class Person{
+  constructor(){
+    this[protecteds] = {}
+    this[protecteds].type = 'humans' 
+  }
+}
+
+class Student extends Person{
+  constructor(){
+    super()
+    console.log(this[protecteds].type)
+  }
+}
+```
+
+* 这个时候直接通过`.protecteds`赋值和使用这个值就访问不到了，可以通过`get`和`set`访问器的形式修改这个值q
+
+### 使用WeakMap来定义受保护的属性
+* 这个方法要配合模块化来使用，否则没有效果
+```js
+const protecteds = new WeakMap()
+class Person{
+  constructor(){
+    protecteds.set(this,{
+      ...protecteds, type:'humans'
+    }) 
+  }
+  get type(){
+    return protecteds.get(this).type
+  }
+  set type(value){
+    protecteds.set(this,{...protecteds,type:value})
+  }
+}
+let humans = new Person()
+console.log(humans.type)
+```
+
+### 使用#定义私有属性
+* 使用#定义私有属性
+```js
+
+class Person{
+  #type='humans'
+  get type(){
+    return this.#type
+  }
+  set type(value){
+    this.#type = value
+  }
+}
+let person = new Person()
+console.log(person.type)
+```
