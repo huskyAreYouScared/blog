@@ -116,7 +116,7 @@ let humans = new Person()
 console.log(humans.type)
 ```
 
-### 使用#定义私有属性
+### 使用 # 定义私有属性
 * 使用#定义私有属性
 ```js
 
@@ -132,3 +132,38 @@ class Person{
 let person = new Person()
 console.log(person.type)
 ```
+
+### super()解决的问题
+* 原型攀升，防止this指向混乱
+```js
+
+let basic = {
+  name:'basic',
+  getName(){
+    console.log(this.name)
+  }
+}
+let husky = {
+   __proto__: basic,
+  name:'husky',
+  getName(){
+    // console.log(this.__proto__.getName.call(this))
+    // 此时的this指的是子类twohaha，所以他继续调用husky类的getName方法，进入死循环
+    super().getName()
+  }
+}
+
+let twohaha = {
+  __proto__: husky,
+  name: 'twohaha',
+  getName(){
+    // console.log(this.__proto__.getName.call(this))
+    // 使用上面方式只能实现父子结构继承，不能更多了，防止死循环
+    // 所以引出了super关键字来做原型攀升，避免this指向混乱
+    super().getName()
+  }
+}
+twohaha.getName()
+```
+* 在子类中执行super()执行的是父类的constructor方法
+* 可以使用super.getName()的方式调用父类方法
