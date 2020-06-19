@@ -55,6 +55,7 @@ module.exports = {
         'pointSummary',
         'css',
         'fontStyle',
+        'jsPrototype',
         'H5Show',
         'imgCrossDomain',
         'elementUISummary',
