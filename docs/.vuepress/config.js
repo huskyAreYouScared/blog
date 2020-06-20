@@ -92,7 +92,8 @@ module.exports = {
         'conventional_changelog',
         'steam_community',
         'nginxSummary',
-        'dockerSummary'
+        'dockerSummary',
+        'authorization'
       ],
       '/': [
         ''

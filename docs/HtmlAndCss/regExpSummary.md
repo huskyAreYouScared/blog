@@ -136,7 +136,6 @@ let str = '(husky).com+'
 console.log(str.match(/[().+]/g))
 // ["(", ")", ".", "+"]
 ```
-
 ## 原子组
 * 用`（）`包裹的一段符合匹配的内容
 ```js
@@ -185,7 +184,8 @@ let str = '@#%'
 console.log(str.replace(/#/,"$'"))
 // @%%
 ```
-### ?<name> 给原子组起别名
+###  给原子组起别名
+* 通过在原子组中加入`?<别名>`来声明别名，通过`$<别名>`的方式来配合获取原子组的内容
 #### 别名案例一
 ```js
 let str = 'husky @ you scared'
@@ -216,13 +216,11 @@ function parse (arrStr) {
   }
   return tempArr
 }
-
 console.log(parse(jsonStr))
 // (3) [{…}, {…}, {…}]
 // 0: {name: "张三"}
 // 1: {name: "李四"}
 // 2: {name: "husky"}
-
 ```
 
 ## 重复匹配的符号 * +
@@ -290,8 +288,8 @@ function searchAll(str,reg){
 console.log(searchAll('aaa,ddd,asda,a,sd,',/a+/g));
 // ["aaa", "a", "a", "a"]
 ```
-
-## ?= 用人话解释“后面是什么”
+## 进阶小技巧
+### ?= 用人话解释“后面是什么”
 * 给出下面一段字符，我们要匹配`husky`但是后面要是`=`号的`husky`,将其替换为`two ha ha`
 ```js
 let text = 'husky! husky= husky$'
@@ -305,7 +303,7 @@ console.log(result)
 :::tip
 断言只作为条件，不再匹配的结果里面
 :::
-## ?<= 用人话解释“前面是什么“
+### ?<= 用人话解释“前面是什么“
 * 给出下面一段字符，我们要匹配前面是`@`符号的`husky`,将其替换为`two ha ha`
 ```js
 let text = '@husky #husky ¥husky'
@@ -317,7 +315,7 @@ console.log(result)
 // @two ha ha #husky ¥husky
 ```
 
-## ?! 用人话解释“后面不是什么”
+### ?! 用人话解释“后面不是什么”
 * 给出下面一段字符，我们要匹配后面不是`@`符号的`husky`,将其替换为`two ha ha`
 ```js
 let text = 'husky@ husky@ husky¥'
@@ -329,7 +327,7 @@ console.log(result)
 // husky@ husky@ two ha ha¥
 ```
 
-## ?<! 用人话解释“前面不是什么”
+### ?<! 用人话解释“前面不是什么”
 * 给出下面一段字符，我们要前面不是`@`符号的`husky`,将其替换为`two ha ha`
 ```js
 let text = '#husky @husky &husky'
@@ -340,4 +338,3 @@ let result = text.replace(reg,'two ha ha')
 console.log(result)
 // #two ha ha @husky &two ha ha
 ```
-
