@@ -3,6 +3,9 @@
 本模块记录一些实用的js插件
 :::
 
+## 常用
+* 报错日志收集系统[sentry](https://sentry.io/)
+
 * [minimap](https://github.com/lrsjng/pagemap)
 
 * [各种版本的Todo-List](http://todomvc.com/)

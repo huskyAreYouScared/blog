@@ -27,6 +27,7 @@ docker images
 * `-p`指定端口映射 -p 80:80
 * `--name`指定运行后的容器的名字
 * `-v` 指定外部和容器内部的文件映射  `pwd`:/xx/xxx
+* `--link` 将一个容器的地址写入另一个容器的`hosts`文件中，就可以通过名称访问了,使用方式 --link 其他容器的名字名:本容器写入hosts文件和ip对应的名字 ，`eg: --link nginx1:nginx1`
 * `docker run` + `一些列参数` + `需要运行的镜像名`
 ```bash
 docker run -d -p 80：80 nginx
@@ -94,3 +95,5 @@ docker save nginx > nginx.tar
 ```bash
 docker load < nginx.tar
 ```
+## docker-compose
+* 后面补充
