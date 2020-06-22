@@ -167,3 +167,15 @@ twohaha.getName()
 ```
 * 在子类中执行super()执行的是父类的constructor方法
 * 可以使用super.getName()的方式调用父类方法
+
+### instanceof 检测对象的实现
+* 该方法还可以检测原型链中的继承实现
+```js
+class Basic{}
+class Husky extends Basic{}
+let husky = new Husky()
+console.log(husky instanceof Husky) 
+// true
+console.log(husky instanceof Basic) 
+// true
+```
