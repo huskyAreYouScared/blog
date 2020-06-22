@@ -55,6 +55,7 @@ module.exports = {
         'pointSummary',
         'css',
         'fontStyle',
+        'jsPrototype',
         'H5Show',
         'imgCrossDomain',
         'elementUISummary',
@@ -91,7 +92,8 @@ module.exports = {
         'conventional_changelog',
         'steam_community',
         'nginxSummary',
-        'dockerSummary'
+        'dockerSummary',
+        'authorization'
       ],
       '/': [
         ''
