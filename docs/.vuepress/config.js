@@ -42,6 +42,7 @@ module.exports = {
         'jsPlugins',
         'sourceSummary',
         'vscodePlugins',
+        'interview',
         'musicSummary',
         'operationTutorial',
         'interestingSite',
