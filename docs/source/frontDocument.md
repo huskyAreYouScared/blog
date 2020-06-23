@@ -10,3 +10,4 @@
 * [Vue3.0 Composition API RFC](https://composition-api.vuejs.org/#summary)
 * [深入浅出webpack](https://www.pixijs.com/)
 * [git基础操作列表-阮一峰](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+* [ES6 入门教程 阮一峰](https://es6.ruanyifeng.com/)
