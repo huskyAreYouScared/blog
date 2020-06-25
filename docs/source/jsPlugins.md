@@ -4,7 +4,7 @@
 :::
 
 ## 常用
-* 报错日志收集系统[sentry](https://sentry.io/)
+* 报错日志收集系统[sentry](https://sentry.io/)国外的，这里还有一个国内的[fundebug](https://www.fundebug.com/)每个月都有免费的次数，用于个人开源项目应该够用
 
 * [minimap](https://github.com/lrsjng/pagemap)
 

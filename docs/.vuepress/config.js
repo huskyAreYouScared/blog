@@ -75,7 +75,8 @@ module.exports = {
         'proton',
         'qrcodeDemo',
         'jestSummary',
-        'regExpSummary'
+        'regExpSummary',
+        'jsBridgeSummary'
       ],
       '/algorithm/': [
         '',
