@@ -1,4 +1,4 @@
-# es6+ 小记
+# JS 进阶小记
 
 ## Class
 
@@ -167,3 +167,72 @@ twohaha.getName()
 ```
 * 在子类中执行super()执行的是父类的constructor方法
 * 可以使用super.getName()的方式调用父类方法
+
+### instanceof 检测对象的实现
+* 该方法还可以检测原型链中的继承实现
+```js
+class Basic{}
+class Husky extends Basic{}
+let husky = new Husky()
+console.log(husky instanceof Husky) 
+// true
+console.log(husky instanceof Basic) 
+// true
+```
+
+## 对象
+
+### 深拷贝
+* 1.简单深拷贝，特殊情况暂不考虑
+```js
+function deepCopy(obj){
+  let res = obj instanceof Array ? [] : {}
+  for(let [key,value] of Object.entries(obj)){
+    res[key] = typeof value === 'object' ? deepCopy(value) : value
+  }
+  return res
+}
+```
+
+### 工厂函数，创建一类对象
+* 定义好工厂函数后就可以，定量生产对象了
+```js
+function dog (type, name) {
+  return {
+    type,
+    name,
+    info () {
+      console.log(`品种：${this.type}，名字：${this.name}`)
+    }
+  }
+}
+
+let twohaha = dog('husky', 'twohaha')
+twohaha.info()
+// 品种：husky，名字：twohaha
+
+let keji = dog('keji', 'keke')
+keji.info()
+//  品种：keji，名字：keke
+```
+
+### 利用闭包，防止外部改变内部变量
+
+```js
+function Dog (type, name) {
+  let data = { type, name }
+  let getType = function () {
+    return data.type
+  }
+  this.getInfo = function () {
+    return getType()
+  }
+}
+
+let twohaha = new Dog('husky', 'twohaha')
+twohaha.getType = function(){
+  return 'keji'
+}
+console.log(twohaha.getInfo())
+// husky
+```

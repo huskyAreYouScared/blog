@@ -8,6 +8,8 @@
 
 * [minimap](https://github.com/lrsjng/pagemap)
 
+* [p2 - 2d物理引擎](https://www.npmjs.com/package/p2) 可用于前端交互动画
+
 * [各种版本的Todo-List](http://todomvc.com/)
 
 * [protonJS](https://drawcall.github.io/Proton/)前端粒子插件，粒子一般多用于视频特效，游戏特效
@@ -42,7 +44,9 @@
 
 * 记录和回访web的操作[record and replay the web](https://github.com/rrweb-io/rrweb)[中文文档](https://github.com/rrweb-io/rrweb/blob/master/README.zh_CN.md)
 
-* 斯坦福开源的JS加密库[sjcl](https://github.com/bitwiseshiftleft/sjcl/)
 
 ## 不常用
+
 * 生成表格的插件[gridjs](https://gridjs.io/)
+
+* 斯坦福开源的JS加密库[sjcl](https://github.com/bitwiseshiftleft/sjcl/)
