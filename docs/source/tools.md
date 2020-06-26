@@ -144,3 +144,5 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 
 * 在线版各种浏览器的预览工具，免费版有时长限制[browserstack](https://live.browserstack.com/)
 [![预览图](https://imgkr.cn-bj.ufileos.com/782d916d-092f-495d-8af6-9a35f7011062.png)](https://live.browserstack.com/)
+
+* figma design[figma](https://www.figma.com/)在线设计图工具

@@ -22,7 +22,7 @@
 
 * [复制到剪切板](https://clipboardjs.com/)
 
-* [boardgame.io开源游戏框架](https://boardgame.io/)
+* [boardgame.io开源游戏框架](https://boardgame.io/)适合用于棋类游戏开发
 
 * [appleple很多移动端小工具](https://appleple.github.io/)
 
@@ -43,6 +43,11 @@
 * [H5唤起客户端的插件](https://github.com/suanmei/callapp-lib)
 
 * 记录和回访web的操作[record and replay the web](https://github.com/rrweb-io/rrweb)[中文文档](https://github.com/rrweb-io/rrweb/blob/master/README.zh_CN.md)
+
+* 网页录屏器[TimeCat](https://github.com/oct16/TimeCat)[中文简介](https://github.com/oct16/TimeCat/blob/master/README.cn.md)
+
+* 根据唯一ID生成头像图片的插件
+[![generate-avatar](https://static01.imgkr.com/temp/4f0b005143cc4d6588630b7509650d08.png)](https://github.com/loweisz/generate-avatar)
 
 
 ## 不常用
