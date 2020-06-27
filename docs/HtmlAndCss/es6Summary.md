@@ -236,3 +236,63 @@ twohaha.getType = function(){
 console.log(twohaha.getInfo())
 // husky
 ```
+
+### 属性特征
+#### 获取对象的某个属性特征的方法 `Object.getOwnPropertyDescriptor(Object,'attribute')`
+```js
+let husky ={
+  name: 'husky',
+  age: 18
+}
+console.log(Object.getOwnPropertyDescriptor(husky,'name'))
+// {value: "husky", writable: true, enumerable: true, configurable: true}
+```
+#### 获取对象的全部属性特征的方法 `Object.getOwnPropertyDescriptors(Object)`
+
+#### 灵活配置属性特征 `Object.defineProperty(Object,'attribute',{配置})`
+- writable : 是否可重新赋值
+- enumerable : 是否可遍历
+- configurable : 是否可删除或者是否可重新配置
+* 给对象的属性writable设置为false
+```js
+let husky ={
+  name: 'husky',
+  age: 18
+}
+Object.defineProperty(husky,'name',{
+  writable:false
+})
+husky.name = 'keji'
+console.log(husky.name)
+// husky
+```
+* 给对象的属性enumerable设置为false
+```js
+let husky ={
+  name: 'husky',
+  age: 18
+}
+Object.defineProperty(husky,'name',{
+  enumerable:false
+})
+console.log(Object.keys(husky))
+// ["age"]
+```
+* 给对象的属性configurable设置为false
+```js
+let husky ={
+  name: 'husky',
+  age: 18
+}
+Object.defineProperty(husky,'name',{
+  configurable:false
+})
+// 如果在对husky对象的name属性进行配置，就会报错
+// Object.defineProperty(husky,'name',{
+//   configurable:true
+// })
+delete husky.name // 删除失败
+console.log(husky)
+// {name: "husky", age: 18}
+```
+#### 灵活配置属性特征 `Object.defineProperties(Object,'attribute',{批量配置})`

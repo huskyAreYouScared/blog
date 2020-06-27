@@ -57,6 +57,7 @@ module.exports = {
         'css',
         'fontStyle',
         'jsPrototype',
+        'es6Summary',
         'H5Show',
         'imgCrossDomain',
         'elementUISummary',
