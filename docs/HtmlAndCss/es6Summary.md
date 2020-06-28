@@ -296,3 +296,107 @@ console.log(husky)
 // {name: "husky", age: 18}
 ```
 #### 灵活配置属性特征 `Object.defineProperties(Object,'attribute',{批量配置})`
+
+### 禁止向对象添加新属性
+* 通过`preventExtensions`的处理，对象不能在新增属性了
+```js
+let husky ={
+  name: 'husky',
+  age: 18
+}
+Object.preventExtensions(husky)
+husky.sex = 'male'
+console.log(husky)
+// {name: "husky", age: 18}
+```
+### 判断是否可以添加属性
+* 通过isExtensible来判断对象是否可以添加属性
+```js
+let husky ={
+  name: 'husky',
+  age: 18
+}
+Object.preventExtensions(husky)
+if(Object.isExtensible(husky)){
+  husky.sex = 'male'
+}
+console.log(husky)
+// {name: "husky", age: 18}
+```
+
+### 封闭对象 seal 和 isSealed
+* 通过seal来封闭对象，不能新增属性，不可删除，不可重新配置对象特征 但是 可以重新对已有的对象属性赋值
+* isSealed来判断该对象是否封闭
+```js
+let husky ={
+  name: 'husky',
+  age: 18
+}
+Object.seal(husky)
+console.log(Object.isSealed(husky))
+// true 证明该对象已经封闭
+Object.defineProperty(husky,'name',{
+  writable: true
+})
+husky.sex = 'male'
+husky.name = 'keji'
+delete husky.name
+console.log(husky)
+// {name: "keji", age: 18}
+```
+
+### 冻结对象 freeze 、isFrozen
+* 冻结对象 比 seal还要强，连对已有的对象属性重新赋值都不可以，只可以读取使用，和遍历
+* isFrozen 判断对象是否被冻结
+```js
+let husky ={
+  name: 'husky',
+  age: 18
+}
+Object.freeze(husky)
+console.log(Object.isFrozen(husky))
+// true 证明该对象已经被冻结
+husky.sex = 'male'
+delete husky.name
+console.log(husky)
+// {name: "husky", age: 18}
+```
+
+### 访问器 set get
+* 通过set给对象的属性赋值，可以保证数据的质量
+* get可以对原始数据进行加工
+```js
+let husky ={
+  data:{
+    name: 'husky',
+    age: 2,
+  },
+  set age(value){
+    if(typeof value !== 'number' || value > 300 || value < 0){
+      throw new Error('请赋值正确的年龄')
+    }
+    this.data.age = value
+  },
+  get age(){
+    return this.data.age
+  }
+}
+husky.age = 10
+```
+
+#### 小案例，通过get，set完成本地存储
+```js
+let sessionStorage ={
+  set userInfo(value){
+    sessionStorage.setItem('userInfo',JSON.stringfy(value))
+  },
+  get userInfo(){
+    let userInfo = sessionStorage.get('userInfo')
+    if(userInfo){
+      return userInfo
+    }else{
+      // 未登录重新登录
+    }
+  }
+}
+```
