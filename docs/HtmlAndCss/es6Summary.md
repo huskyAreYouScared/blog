@@ -400,3 +400,108 @@ let sessionStorage ={
   }
 }
 ```
+
+### Proxy 代理
+#### 基本语法
+```js
+let husky ={
+  name: 'husky'
+}
+let proxy = new Proxy(husky,{
+  get(obj,property){
+    return obj[property]
+  },
+  set(obj, property, value){
+    obj[property] = value
+    return true
+  }
+})
+proxy.name = 'keji'
+console.log(husky)
+// {name: "keji"}
+```
+#### 不仅可以代理对象，还可以代理函数
+```js
+function husky(value){
+  console.log(value * value)
+}
+
+let proxy = new Proxy(husky,{
+  apply(func, obj, args){
+    console.log('property is'+args)
+    func.apply(this, args)
+  }
+})
+proxy.apply(null,[100])
+// property is100
+// 10000
+```
+
+#### Proxy 对数组进行代理
+```js
+let husky = ['twohaha', 'keji', 'goldmao']
+let proxy = new Proxy(husky,{
+  get(array, index){
+    return array[index].toUpperCase()
+  }
+})
+console.log(proxy[0])
+// TWOHAHA
+```
+#### Vue3双向数据绑定原理
+```js
+function View(){
+  let proxy = new Proxy({},{
+    get(obj, property){},
+    set(obj, property, value){
+      document.querySelectAll(`[v-model="${property}"]`).
+      forEach(item=>{
+        item.value = value
+      })
+    }
+  })
+  this.init = function(){
+    const els = document.querySelectorAll("[v-model]");
+    els.forEach(item => {
+      item.addEventListener("keyup", function(){
+        proxy[this.getAttribute("v-model")] = this.value
+      })
+    })
+  }
+}
+
+new View().init()
+```
+
+## JSON 
+### toJSON自定义序列化
+* 可以通过给对象怎家toJSON属性，自定义JSON.stringify的序列化数据
+
+```js
+let params = {
+  name:'🐰哈哈',
+  id:1,
+  type:'husky',
+  shortName:'2ha',
+  englishName:'twohaha',
+  toJSON:function(){
+    return [
+      ...Object.keys(this)
+    ]
+  }
+}
+console.log(JSON.stringify(params))
+// ["name","id","type","shortName","englishName","toJSON"]
+```
+
+### JSON.parse自定义解析
+```js
+let husky = `{"name":"🐰哈哈","id":1,"type":"husky","shortName":"2ha","englishName":"twohaha"}`
+let keys = []
+let res = JSON.parse(husky,(key, value)=>{
+  // others logic
+  return value
+})
+console.log(res)
+// {name: "🐰哈哈", id: 1, type: "husky", shortName: "2ha", englishName: "twohaha"}
+```

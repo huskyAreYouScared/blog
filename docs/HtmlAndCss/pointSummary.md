@@ -30,3 +30,18 @@ export function isJsonString(str) {
   }
 }
 ```
+
+### 利用JSON.stringify去除多余的属性
+* 假定我们只需要传给后台name和id属性，可是要传递的对象多了很多属性
+```js
+let params = {
+  name:'🐰哈哈',
+  id:1,
+  type:'husky',
+  shortName:'2ha',
+  englishName:'twohaha'
+}
+params = JSON.parse(JSON.stringify(params,['id','name']))
+console.log(params)
+// {id: 1, name: "twohaha"}
+```
