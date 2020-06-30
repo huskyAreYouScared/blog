@@ -505,3 +505,5 @@ let res = JSON.parse(husky,(key, value)=>{
 console.log(res)
 // {name: "🐰哈哈", id: 1, type: "husky", shortName: "2ha", englishName: "twohaha"}
 ```
+
+## 函数
