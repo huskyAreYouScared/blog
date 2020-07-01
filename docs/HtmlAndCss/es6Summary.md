@@ -506,4 +506,70 @@ console.log(res)
 // {name: "🐰哈哈", id: 1, type: "husky", shortName: "2ha", englishName: "twohaha"}
 ```
 
-## 函数
+## 函数进阶
+
+### 箭头函数中的this指向
+* 箭头函数中的`this`指向的是上下文
+```js
+let husky = {
+  name:'twohaha',
+  getName :function () {
+    return  ()=> {
+      return this.name
+    }
+  }
+}
+console.log(husky.getName()()) // twohaha
+```
+* 如果上面的例子不用箭头函数
+```js
+let husky = {
+  name:'twohaha',
+  getName :function () {
+    return  function() {
+      return this.name
+    }
+  }
+}
+console.log(husky.getName()()) // undefined
+```
+* 因为此时的`this`指向的不再是`husky`对象，而是`window`，所以会输出`undefined`
+
+### call 和 apply
+* 可以改变`this`指向，`apply`的参数要求是数组，`call`正常传参数
+```js
+function Husky(){
+  this.name = name
+  this.getName=function(type){
+    return this.name + '，品种：' + type
+  }
+}
+let keji = new Husky('keji')
+keji.getName.call({name:'twohaha'},'husky')
+// "twohaha，品种：husky"
+
+keji.getName.apply({name:'twohaha'},['husky'])
+// "twohaha，品种：husky"
+```
+
+### bind
+* 同样可以改变`this`指向，返回一个函数
+```js
+function Husky(){
+  this.name = name
+  this.getName=function(type){
+    return this.name + '，品种：' + type
+  }
+}
+let keji = new Husky('keji');
+let twohaha = keji.getName.bind({name:'twohaha'})
+twohaha('哈士奇')
+// "twohaha，品种：哈士奇"
+```
+* 这里有一点需要注意，如果我们在用`bind`的时候直接传了参数，那么之后在传参数就不起作用了，如果在`bind`的时候没传参数，那么后面调用该函数的时候传参数是有效果的
+```js
+
+let twohaha = keji.getName.bind({name:'twohaha'},'husky')
+twohaha('哈士奇') 
+// "twohaha，品种：husky"
+```

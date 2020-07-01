@@ -79,7 +79,8 @@ module.exports = {
         'webpackPrinciple',
         'proton',
         'qrcodeDemo',
-        'jsClosure'
+        'jsClosure',
+        'interview'
       ],
       '/algorithm/': [
         '',
