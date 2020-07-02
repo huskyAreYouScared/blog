@@ -1,11 +1,21 @@
 # 小技巧（百宝箱）
 
+## HTML
+
 ### 禁用鼠标右键
 ```html
 <body oncontextmenu="return false">
   <div></div>
 </body>
 ```
+
+
+## CSS
+
+### 建设中...
+
+
+## JavaScript
 
 ### 函数参数校验器
 ```js
@@ -44,4 +54,17 @@ let params = {
 params = JSON.parse(JSON.stringify(params,['id','name']))
 console.log(params)
 // {id: 1, name: "twohaha"}
+```
+
+### 清除全部cookie
+```js
+export function clearCookie() {
+  // 通过正则匹配到全部的cookie的key
+  const cookieArr = document.cookie.match(/[^ =;]+(?==)/g)
+  if (cookieArr && Object.prototype.toString.call(cookieArr) === '[object Array]') {
+    cookieArr.forEach(item => {
+      Cookies.remove(item) // 开始清除
+    })
+  }
+}
 ```
