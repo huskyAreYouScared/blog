@@ -8,6 +8,8 @@
 
 * [免费的视频图片素材网站Pexels](https://www.pexels.com/zh-cn/)
 
+* 免费的api提供，可用于demo项目测试使用[jsonplaceholder](https://jsonplaceholder.typicode.com/)
+
 ## 精华
 
 * [github emoji 表情列表](https://www.cnblogs.com/takeurhand/p/6940135.html)

@@ -18,6 +18,11 @@
 
 * [Ant Design of Vue](https://www.antdv.com/docs/vue/introduce-cn/)
 
+## 服务端渲染
+
+* [NuxtJS](https://zh.nuxtjs.org/)
+
+
 ## 模板
 
 * [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/)成熟的后台管理模板（花裤衩大佬的开源项目）
@@ -51,6 +56,9 @@
 * vxe-table[vue表格插件](https://github.com/xuliangzhan/vxe-table)
 
 * vue的裁剪图片插件[vue-cropper](https://www.npmjs.com/package/vue-cropperjs)
+
+* vue消息插件[vue-notification](https://github.com/euvl/vue-notification) 
+
 ## vue相关知识文章
 
 * 在vue中使用lodash的工具函数[在vue中使用lodash的debounce和throttle](https://www.digitalocean.com/community/tutorials/vuejs-lodash-throttle-debounce)
