@@ -49,7 +49,8 @@ module.exports = {
         'autoCodeing',
         'devOps',
         'httpProtol',
-        'webGame'
+        'webGame',
+        'money'
       ],
       '/HtmlAndCss/': [
         '',
