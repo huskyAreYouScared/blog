@@ -20,6 +20,8 @@
 
 * [响应检查器](https://www.websiteplanet.com/zh-hans/webtools/responsive-checker/)该网站还提供很多工具，可以找一找实用的唯自己所用
 
+* 算法可视化网站[Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+
 ## 必备
 * [svg在线编辑网站](https://www.zhangxinxu.com/sp/svg/)
 
@@ -146,3 +148,5 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 [![预览图](https://imgkr.cn-bj.ufileos.com/782d916d-092f-495d-8af6-9a35f7011062.png)](https://live.browserstack.com/)
 
 * figma design[figma](https://www.figma.com/)在线设计图工具
+
+* webp2jpg-online[在线的图片转换工具](https://github.com/renzhezhilu/webp2jpg-online)它的原理 用到了canvas的API canvas.toBlob(callback, type, encoderOptions);

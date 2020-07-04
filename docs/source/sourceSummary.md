@@ -10,6 +10,7 @@
 
 * 免费的api提供，可用于demo项目测试使用[jsonplaceholder](https://jsonplaceholder.typicode.com/)
 
+* YouTube上面的教程收集网站[tutorialist](https://www.tutorialist.io/)
 ## 精华
 
 * [github emoji 表情列表](https://www.cnblogs.com/takeurhand/p/6940135.html)
@@ -40,3 +41,6 @@
 * [阿里云镜像站](https://developer.aliyun.com/mirror/ )
 
 * mongodb Nosql数据库服务，注册有免费的存储额度，可用于学习，或用于个人blog存储留言 [传送门](https://www.mongodb.com/)
+
+* 教你用JS绘制艺术画[](https://generativeartistry.com/tutorials/)
+![JS绘制艺术画](https://imgkr.cn-bj.ufileos.com/26f9e5ea-e9d6-421d-9a9f-2e28c6d74338.png)

@@ -49,9 +49,15 @@
 * 根据唯一ID生成头像图片的插件
 [![generate-avatar](https://static01.imgkr.com/temp/4f0b005143cc4d6588630b7509650d08.png)](https://github.com/loweisz/generate-avatar)
 
+* 回到顶部的JS插件，有一种坐电梯的感觉[传送门](https://github.com/tholman/elevator.js)
+
 
 ## 不常用
 
 * 生成表格的插件[gridjs](https://gridjs.io/)
 
 * 斯坦福开源的JS加密库[sjcl](https://github.com/bitwiseshiftleft/sjcl/)
+
+* Textures.js[传送门](https://riccardoscalco.it/textures/)，该插件基于D3.js,可以模拟很多纹理
+
+* 基于node的桌面自动化脚本哭[传送](https://github.com/octalmage/robotjs) 类似于pyautogui，是基于python的

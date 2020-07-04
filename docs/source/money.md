@@ -15,4 +15,4 @@
 
 ## 挖矿挂机
 
-* Crypto Tab[去下载](https://cryptobrowser.site/)
+* Crypto Tab[去下载](https://cryptotabbrowser.com/14505624)

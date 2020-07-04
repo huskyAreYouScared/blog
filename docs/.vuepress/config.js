@@ -47,6 +47,7 @@ module.exports = {
         'operationTutorial',
         'interestingSite',
         'autoCodeing',
+        'framework',
         'devOps',
         'httpProtol',
         'webGame',
