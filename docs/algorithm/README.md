@@ -7,6 +7,8 @@
 ## 排序
 * [快速排序](./quickSort.html)
 * [选择排序](./selectionSort.html)
+* [插入排序](./insertSort.html)
+* [希尔排序](./shellSort.html)
 * [冒泡排序实现Array.sort()](./arraySort.html)
 
 ## 搜索

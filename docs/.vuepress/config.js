@@ -88,6 +88,8 @@ module.exports = {
         '',
         'quickSort',
         'selectionSort',
+        'insertSort',
+        'shellSort',
         'binarySearch',
         'arraySort'
       ],
