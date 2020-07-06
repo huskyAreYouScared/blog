@@ -90,6 +90,7 @@ module.exports = {
         'selectionSort',
         'insertSort',
         'shellSort',
+        'mergeSort',
         'binarySearch',
         'arraySort',
         'dp'
