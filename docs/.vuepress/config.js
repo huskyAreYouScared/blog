@@ -91,7 +91,8 @@ module.exports = {
         'insertSort',
         'shellSort',
         'binarySearch',
-        'arraySort'
+        'arraySort',
+        'dp'
       ],
       '/other/':[
         'vuepress_build',
