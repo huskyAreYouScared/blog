@@ -86,6 +86,7 @@ module.exports = {
       ],
       '/algorithm/': [
         '',
+        'linkedList',
         'quickSort',
         'selectionSort',
         'insertSort',
