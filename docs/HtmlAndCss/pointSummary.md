@@ -68,3 +68,101 @@ export function clearCookie() {
   }
 }
 ```
+
+### 合并多个对象
+```js
+/**
+ * @param {Object} multiple object
+ * @return {Object}  merge object
+ */
+export function merge(target) {
+  for (let i = 1, j = arguments.length; i < j; i++) {
+    const source = arguments[i] || {};
+    for (const prop in source) {
+      if (source.hasOwnProperty(prop)) {
+        const value = source[prop];
+        if (value !== undefined) {
+          target[prop] = value;
+        }
+      }
+    }
+  }
+
+  return target;
+}
+```
+
+### 判断元素是否包含在容器中
+```js
+export const isInContainer = (el, container) => {
+  const elRect = el.getBoundingClientRect()
+  let containerRect
+
+  if ([window, document, document.documentElement, null, undefined].includes(container)) {
+    containerRect = {
+      top: 0,
+      right: window.innerWidth,
+      bottom: window.innerHeight,
+      left: 0
+    };
+  } else {
+    containerRect = container.getBoundingClientRect()
+  }
+
+  return elRect.top < containerRect.bottom &&
+    elRect.bottom > containerRect.top &&
+    elRect.right > containerRect.left &&
+    elRect.left < containerRect.right
+}
+```
+
+### 封装addEventListener
+```js
+export const on = (function() {
+  if (document.addEventListener) {
+    return function(element, event, handler) {
+      if (element && event && handler) {
+        element.addEventListener(event, handler, false);
+      }
+    };
+  } else {
+    return function(element, event, handler) {
+      if (element && event && handler) {
+        element.attachEvent('on' + event, handler);
+      }
+    };
+  }
+})();
+```
+### 封装removeEventListener
+```js
+export const off = (function() {
+  if (document.removeEventListener) {
+    return function(element, event, handler) {
+      if (element && event) {
+        element.removeEventListener(event, handler, false);
+      }
+    };
+  } else {
+    return function(element, event, handler) {
+      if (element && event) {
+        element.detachEvent('on' + event, handler);
+      }
+    };
+  }
+})();
+```
+
+### 封装一次绑定方法once
+* [off](#封装addEventListener) 和 [on](#封装removeEventListener) 用到了上面封装的方法
+```js
+export const once = function(el, event, fn) {
+  var listener = function() {
+    if (fn) {
+      fn.apply(this, arguments);
+    }
+    off(el, event, listener);
+  };
+  on(el, event, listener);
+};
+```
