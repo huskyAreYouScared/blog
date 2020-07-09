@@ -92,7 +92,7 @@ this.indexOf = function(element){
 // ... 省略 ...
 ```
 
-### 实现remoteAt
+### 实现removeAt
 ```js
 // ... 省略 ...
 this.removeAt = function(position){
@@ -115,5 +115,16 @@ this.removeAt = function(position){
   }
 // ... 省略 ...
 ```
+
+### 实现remove
+```js
+// ... 省略 ...
+  this.remove = function(element){
+    let postion = this.indexOf(element)
+    return this.removeAt(postion)
+  }
+// ... 省略 ...
+```
+
 
 ## 链表的应用
