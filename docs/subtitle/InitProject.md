@@ -18,7 +18,7 @@
 ```bash
   registry=https://registry.npm.taobao.org
   sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
-  electron_mirror=https://npm.taobao.org/mirrors/electron
+  electron_mirror=https://npm.taobao.org/mirrors/electron/
 ```
 
 ## electron版本升级到V7.1.9LTS <Badge text="可以选择更高版本的LTS版"/>

@@ -11,10 +11,6 @@
 
 * [markdown备忘录](https://segmentfault.com/markdown)
 
-* [Vugel](https://vugel.planning.nl/)Vugel is a WebGL runtime for Vue3
-
-* [Vue3.0 Composition API RFC](https://composition-api.vuejs.org/#summary)
-
 * [深入浅出webpack](https://www.pixijs.com/)
 
 * [git基础操作列表-阮一峰](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
