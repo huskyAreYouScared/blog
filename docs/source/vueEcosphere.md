@@ -8,6 +8,7 @@
 
 * [Vue3.0 Composition API RFC](https://composition-api.vuejs.org/#summary)
 
+* [Vue CLI Plugin Electron Builder]开发文档(https://nklayman.github.io/vue-cli-plugin-electron-builder/)
 
 ## 组件库
 
