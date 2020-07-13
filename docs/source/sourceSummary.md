@@ -3,6 +3,7 @@
 本模块记录一些可以提供资源的一些实用网站
 :::
 ## 常用
+
 * [免费的在线IDE](https://ide.goorm.io/)同时这个网站还提供 1GB内存 10GB存储空间 可创建五个容器，只可以运行一个容器的免费服务，也支持付费会有相应的配置升级 免费版不支持一直运行，也就是说网页要一直开着才行
 [![goorm](https://imgkr.cn-bj.ufileos.com/9a4a153f-080f-43a4-bd61-561fad4d6364.png)](https://ide.goorm.io/my)
 
@@ -11,6 +12,9 @@
 * 免费的api提供，可用于demo项目测试使用[jsonplaceholder](https://jsonplaceholder.typicode.com/)
 
 * YouTube上面的教程收集网站[tutorialist](https://www.tutorialist.io/)
+
+* [flaticon](https://www.flaticon.com/)免费的图标网站
+
 ## 精华
 
 * [github emoji 表情列表](https://www.cnblogs.com/takeurhand/p/6940135.html)

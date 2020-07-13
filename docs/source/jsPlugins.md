@@ -63,3 +63,11 @@
 * Textures.js[传送门](https://riccardoscalco.it/textures/)，该插件基于D3.js,可以模拟很多纹理
 
 * 基于node的桌面自动化脚本哭[传送](https://github.com/octalmage/robotjs) 类似于pyautogui，是基于python的
+
+### AST解析库
+
+* [esprima](https://esprima.org/)
+
+* [babel](https://www.babeljs.cn/docs/)
+
+* [espree](https://github.com/eslint/espree)

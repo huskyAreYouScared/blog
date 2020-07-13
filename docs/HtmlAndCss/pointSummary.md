@@ -166,3 +166,15 @@ export const once = function(el, event, fn) {
   on(el, event, listener);
 };
 ```
+
+### 获取密码输入框内容
+
+* 方法一
+```js
+document.querySelector('input[type=password]').value
+```
+
+* 方法二
+```js
+document.querySelector('input[type=password]').setAttribute('type','text')
+```
