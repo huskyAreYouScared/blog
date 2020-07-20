@@ -73,7 +73,7 @@
 
 * 在vue中使用lodash的工具函数[在vue中使用lodash的debounce和throttle](https://www.digitalocean.com/community/tutorials/vuejs-lodash-throttle-debounce)
 
-
+* vue实现骨架屏[传送门](https://segmentfault.com/a/1190000014832185)原理就是在id为#app的div中加入自定义的骨架样式，等全加载完了，自然会被虚拟dom中的dom替换掉
 ## 工具
 
 * 通过拖拽的方式开发中后台系统[传送门](http://www.freedomen.cn/#/Introduce)

@@ -12,7 +12,7 @@
 ```
 * 之后会问一些关于初始化项目配置的问题，按照个人需求选择即可
 
-## 首先解决electron下载慢和node-sass失败的问题
+## 首先解决electron、node-sass下载慢
 * 在项目/目录，新建 .npmrc文件
 * :koala: 将仓库指定到国内的taobao源
 ```bash
@@ -20,6 +20,8 @@
   sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
   electron_mirror=https://npm.taobao.org/mirrors/electron/
 ```
+## node-sass安装失败
+* 很有可能是node对node-sass版本的最低限制导致的，在这里可以查看安装相应版本的[node-sass](https://www.npmjs.com/package/node-sass)
 
 ## electron版本升级到V7.1.9LTS <Badge text="可以选择更高版本的LTS版"/>
 * 在package.json文件中将electron的版本 V2.x --> V7.1.9
