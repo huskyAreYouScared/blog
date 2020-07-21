@@ -20,6 +20,8 @@
 
 * [Vant](https://youzan.github.io/vant/#/zh-CN/)有赞
 
+* [Vux](https://github.com/moxiecode/plupload)个人全职维护开发的star量很高
+
 ### PC端
 
 * [Element](https://element.eleme.cn/#/zh-CN)

@@ -16,3 +16,9 @@
 ## 挖矿挂机
 
 * Crypto Tab[去下载](https://cryptotabbrowser.com/14505624)
+
+## 众筹网站
+> 可以用在自己很好的开源项目中
+* [opencollective](https://opencollective.com/)
+
+* [patreon](http://patreon.com/)
