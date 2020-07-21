@@ -126,5 +126,54 @@ this.removeAt = function(position){
 // ... 省略 ...
 ```
 
+### 实现 isEmpty
+* 如果是空返回`true`，否则`false`
+```js
+// ... 省略 ...
+  this.isEmpty = function(){
+    return this.length === 0
+  }
+// ... 省略 ...
+```
 
+### 实现 size
+```js
+// ... 省略 ...
+  this.size = function(){
+    return this.length
+  }
+// ... 省略 ...
+```
+
+### 实现 toString
+
+```js
+// ... 省略 ...
+  this.toString = function() {
+    let current = this.head
+    let str = ''
+    while(current){
+      str +=current.value+(current.next?',':'')
+      current = current.next
+    }
+    return str
+  }
+// ... 省略 ...
+```
+### 测试
+```js
+let list = new LinkedList()
+list.append(1)
+list.append(3)
+
+list.insert(0,4)
+list.insert(0,4)
+
+list.removeAt(1)
+list.remove(3)
+
+console.log(list.size()); // 2
+console.log(list.head.next) // Node { value: 1, next: null }
+console.log(list.toString()) // 4,1
+```
 ## 链表的应用
