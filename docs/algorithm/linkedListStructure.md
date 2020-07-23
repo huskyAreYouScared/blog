@@ -44,7 +44,7 @@ function LinkedList(){
       }
       current.next = newNode
     }
-    this.length += 1
+    this.length++
   }
 }
 ```
@@ -108,6 +108,7 @@ this.removeAt = function(position){
         }
         previous.next = current.next
       }
+      this.length--
       return true
     }else{
       return false
@@ -192,7 +193,7 @@ function LinkedList(){
   }
 }
 ```
-### 双链表 append
+### 双向链表 append
 ```js
 // 向尾部添加新的节点
   this.append = function (value){
@@ -211,7 +212,7 @@ function LinkedList(){
   } 
 ```
 
-### 双链表 insert
+### 双向链表 insert
 ```js
   // 向链表特定位置插入元素；
   this.insert=function(position, element) {
@@ -251,3 +252,75 @@ function LinkedList(){
     }
   } 
 ```
+
+### 双向链表 indexOf
+* 这个方法和但链表的一致
+```js
+// 返回链表中某元素的索引，如果没有返回-1；
+  this.indexOf=function(element) {
+    let current = this.head
+    let index = 0
+    while(current){
+      if(current.value === element){
+        return index
+      }
+      current = current.next
+      index++
+    }
+    return -1
+  }
+```
+
+### 双向链表 removeAt
+```js
+// 从特定位置移除一项；
+  this.removeAt=function(position) {
+    let current = this.head
+    if(position>=0&&position < this.length){
+      if(position === 0){
+        this.head = current.next
+        this.head.prev = null
+      } else {
+
+        let prev = null
+        while(position--){
+          prev = current
+          current = current.next
+        }
+
+        prev.next = current.next
+
+        if(current.next&&current.next.prev){ // 如果current.next是null则不做处理
+          current.next.prev = prev
+        }
+      }     
+      this.length--
+      return true
+    } else {
+      return false
+    }
+  }
+
+```
+
+### 双向链表 remove
+* 该方法也和单链表一致，需要调用自身的indexOf和removeAt来实现
+```js
+ // 从链表移除一项；
+  this.remove=function(element) {
+    let index = this.indexOf(element)
+    if(index !== -1){
+      this.removeAt(index)
+      return true
+    }
+    return false
+  }
+```
+### isEmpty 和 size 和 toString 和单链表一样
+
+## 环形链表 即 最后一个元素的 next 指向 head
+
+## 链表常见算法题
+
+### 反转链表
+### 俩俩翻转链表
