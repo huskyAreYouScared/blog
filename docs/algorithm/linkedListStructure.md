@@ -323,4 +323,20 @@ function LinkedList(){
 ## 链表常见算法题
 
 ### 反转链表
+```js
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+function reverse(head){
+  let newHead = null
+  while(head){
+    let temp = head
+    head = head.next
+    temp.next = newHead
+    newHead = temp
+  }
+  return newHead
+}
+```
 ### 俩俩翻转链表
