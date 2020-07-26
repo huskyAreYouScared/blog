@@ -339,4 +339,45 @@ function reverse(head){
   return newHead
 }
 ```
-### 俩俩翻转链表
+### 俩俩交换链表数据
+:::tip
+1->2->3->4     swapPairs   2->1->4->3
+:::
+* 解决方案一  循环迭代的方式
+```js
+function swapPairs(head){
+  let dummy = head.next
+  let prev = null
+  while(head && head.next){
+    
+    let firstNode = head
+    let secondNode = head.next
+    // 和上一轮的最后一位关联
+    prev?prev.next = secondNode:''
+
+    // swap
+    firstNode.next = secondNode.next
+    secondNode.next = firstNode
+    
+    // 准备下一轮赋值
+    head = firstNode.next
+    prev = firstNode
+  }
+  return dummy
+}
+```
+
+* 解决方案二  递归的方式
+```js
+function swapPairs(head) {
+  if(!head || !head.next) return head
+
+  let firstNode = head
+  let secondNode = head.next
+
+  firstNode.next =  swapPairs(secondNode.next)
+  secondNode.next = firstNode
+
+  return secondNode
+}
+```
