@@ -381,3 +381,36 @@ function swapPairs(head) {
   return secondNode
 }
 ```
+
+### 检测链表中是否有环
+* 如果有环输出该环的head，如果没有则返回null
+* 主要利用了快满指针的思想
+```js
+var detectCycle = function(head) {
+    let fast = head,slow = head;
+    // 边界值判断
+    if(!head||!head.next){
+        return null
+    }
+    // 快慢指针循环，如果有相等的情况则代表有环
+    while(fast&&fast.next){
+        slow = slow.next
+        fast = fast.next.next
+        if(slow == fast){
+            break
+        }
+    }
+    // 上面的循环结束后，如果fast和slow不想等则代表没有环
+    if(fast!= slow){
+        return null
+    }
+    // 将slow指向链表最开始的位置
+    slow = head
+    // 接下来fast和slow每次循环走一步，直到相等后，就找到了有环链表的head
+    while(fast!=slow){
+        fast= fast.next
+        slow = slow.next
+    }
+    return slow
+};
+```
