@@ -13,5 +13,14 @@ features:
 footer: MIT Licensed | Copyright © 2018-present huskyAreYouScared
 ---
 
-### B站视频教程
+
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=huskyareyouscared&repo=subtitle)](https://github.com/huskyareyouscared/subtitle)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=huskyareyouscared&repo=fly-key)](https://github.com/huskyareyouscared/fly-key)
+
+
+![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=huskyareyouscared&show_icons=true&theme=cobalt)
+
+### B站视频
 * [传送门](https://space.bilibili.com/28125784)
+
+

@@ -15,6 +15,8 @@
 
 * [flaticon](https://www.flaticon.com/)免费的图标网站
 
+* UI灵感网站，可以在里面找设计灵感[collectui](https://collectui.com/)
+
 ## 精华
 
 * [github emoji 表情列表](https://www.cnblogs.com/takeurhand/p/6940135.html)

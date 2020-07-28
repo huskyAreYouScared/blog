@@ -6,6 +6,14 @@
 ## 常用
 * [图壳](https://imgkr.com/)免费的图床网站，这个是我试传的图片[https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png](https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png)
 
+* 可以获取Github状态的统计报表,项目图钉,语言排行榜，用markdown的方式使用，如下图[使用教程教程 github-readme-stats](https://github.com/anuraghazra/github-readme-stats)
+
+![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=huskyareyouscared&show_icons=true&theme=cobalt)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=huskyareyouscared&layout=compact)](https://github.com/huskyareyouscared/subtitle)
+
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=huskyareyouscared&repo=subtitle)](https://github.com/huskyareyouscared/subtitle)
+
 * 十分钟邮箱[10minutemail](https://10minutemail.net/)
 
 * carbon[生成代码图片](https://carbon.now.sh/)
