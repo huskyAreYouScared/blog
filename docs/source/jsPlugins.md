@@ -67,6 +67,8 @@
 * 根据唯一ID生成头像图片的插件
 [![generate-avatar](https://static01.imgkr.com/temp/4f0b005143cc4d6588630b7509650d08.png)](https://github.com/loweisz/generate-avatar)
 
+* 简单实现WebRTC 视频、音频、数据的频道的插件[simple-peer](https://github.com/feross/simple-peer)
+
 ### AST解析库
 
 * [esprima](https://esprima.org/)

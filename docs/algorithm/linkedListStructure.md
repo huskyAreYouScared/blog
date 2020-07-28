@@ -1,7 +1,7 @@
 # 链表
 
 ## 用JS实现链表
-* 先写一下链表所需要的属性和方法的框架
+* 先写一下链表所需要的属性和方法
 ```js
 function LinkedList(){
   this.head = null // 链表的首位
