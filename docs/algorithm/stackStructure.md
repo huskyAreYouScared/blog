@@ -5,7 +5,11 @@
 ## 数据结构特点
 * 先进后出（LIFO）last in first out
 ## 实现
+
 ### 基础属性和方法介绍
+:::tip
+  每个方法的实现方式不唯一，如有优化建议，请大神指导，感谢🙏  
+:::
 * 先写一下栈所需要的属性和方法
 ```js
 const LinkedList = require('../链表/index.js') // 这里我们引入之前实现的链表数据结构
@@ -38,3 +42,50 @@ Stack.prototype.push = function (element) {
   }
 }
 ```
+### pop
+```js
+Stack.prototype.pop = function () {
+  let removeElement = this.items.removeAt(this.length - 1)
+  this.length--
+  return removeElement
+}
+```
+### peek
+```js
+Stack.prototype.peek = function () {
+  let head = this.items.head
+  let length = this.length
+  while(--length){
+    head = head.next
+  }
+  return head
+}
+```
+
+### isEmpty
+```js
+Stack.prototype.isEmpty = function () {
+  return this.length === 0
+}
+```
+
+### clear
+```js
+Stack.prototype.clear = function () {
+  this.length = 0
+  this.items.head = null
+}
+```
+
+### size 和 print
+```js
+
+Stack.prototype.size = function () {
+  return this.length
+}
+Stack.prototype.print = function () {
+  return this.items.toString()
+}
+```
+
+* 到这里栈的方法和属性基本完成，这里借用了好多链表的方法

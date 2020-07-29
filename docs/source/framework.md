@@ -4,6 +4,7 @@
 
 * [tauri](https://github.com/tauri-apps/tauri) 一个类似 Electron 的跨平台桌面应用开发框架，但是基于各平台自带的 WebView，所以应用打包出来的体积比较小
 
+* 基于deno开发的http server[Servest](https://servestjs.org/)
 ## 实用
 
 * 很多的express插件，有很多轮子，不用我们重新解决了，当不满足的时候，可以查看源码自行改造[传送门](https://github.com/wabg/awesome-express)

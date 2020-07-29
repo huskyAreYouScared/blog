@@ -98,7 +98,9 @@ this.indexOf = function(element){
 this.removeAt = function(position){
     let current = this.head
     if(position>=0 && position<=this.length){
+      let returnValue = null
       if(position === 0){
+        returnValue = current
         this.head = current.next
       } else{
         let previous = null
@@ -106,10 +108,11 @@ this.removeAt = function(position){
           previous = current
           current = current.next
         }
+        returnValue = current
         previous.next = current.next
       }
       this.length--
-      return true
+      return returnValue
     }else{
       return false
     }

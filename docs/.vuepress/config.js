@@ -17,7 +17,7 @@ module.exports = {
       { text: '主页', link: '/' },
       { text: 'husky字幕', link: '/subtitle/' },
       { text: '前端日志', link: '/HtmlAndCss/' },
-      // { text: '算法', link: '/algorithm/' },
+      { text: '算法', link: '/algorithm/' },
       { text: '资源', link: '/source/' },
       { text: '技术杂谈', link: '/other/' },
       { text: 'Github', link: 'https://github.com/huskyAreYouScared/' },
@@ -87,6 +87,8 @@ module.exports = {
       '/algorithm/': [
         '',
         'linkedListStructure',
+        'stackStructure',
+        'queueStructure',
         'quickSort',
         'selectionSort',
         'insertSort',
