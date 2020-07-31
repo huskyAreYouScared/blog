@@ -12,6 +12,11 @@
 * [归并排序](./mergeSort.html)
 * [冒泡排序实现Array.sort()](./arraySort.html)
 
+## 数据结构
+* [链表](./linkedListStructure.html)
+* [栈](./stackStructure.html)
+* [队列](./queueStructure.html)
+
 ## 搜索
 * [二分查找](./binarySearch.html)
 
