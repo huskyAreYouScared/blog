@@ -89,6 +89,7 @@ module.exports = {
         'linkedListStructure',
         'stackStructure',
         'queueStructure',
+        'treeStructure',
         'quickSort',
         'selectionSort',
         'insertSort',
