@@ -90,6 +90,7 @@ module.exports = {
         'stackStructure',
         'queueStructure',
         'treeStructure',
+        'dictionaryStructure',
         'quickSort',
         'selectionSort',
         'insertSort',

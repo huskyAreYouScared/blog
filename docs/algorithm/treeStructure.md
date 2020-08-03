@@ -233,6 +233,7 @@ isValidBST(){
 
 ### 按照树的深度，一层一层的遍历
 * 如下图，最后输出的值为
+
 ![树](https://static01.imgkr.com/temp/e84865915159490ebc1f20de40ce873f.png)
 ```js
 [ 
