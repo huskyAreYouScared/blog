@@ -12,20 +12,36 @@ function Graph() {
   this.adjacentList = {}
 }
 // 录入顶点
-Graph.prototype.addVertices = function (v) {}
+Graph.prototype.addVertex = function (v) {}
 // 录入边
 Graph.prototype.addEdge = function (first, second) {}
 // 打印当前图的结构
 Graph.prototype.print = function (first, second) {}
 ```
 
-### addVertices
+### addVertex
 * 录入当图的顶点
 ```js
-Graph.prototype.addVertices = function (v) {
+Graph.prototype.addVertex = function (v) {
   if(!this.vertices.includes(v)) return new Error('顶点重复')
   this.vertices.push(v)
   this.adjacentList[v] = []
+}
+```
+### removeVertex
+* 删除顶点别忘了同时也要删除，边中的关系
+```js
+Graph.prototype.removeVertex = function (v) {
+  // 删除顶点
+  if(this.vertices.includes(v)) {
+    this.vertices.splice(this.vertices.indexOf(v))
+  } 
+  // 删除相关边
+  Object.keys(this.adjacentList).forEach(item=>{
+    if (this.adjacentList[item].includes(v)){
+      this.adjacentList[item].splice(this.adjacentList[item].indexOf(v))
+    }
+  })
 }
 ```
 
@@ -33,13 +49,29 @@ Graph.prototype.addVertices = function (v) {
 ```js
 Graph.prototype.addEdge = function (first, second) {
   // 但录入边信息时，判断顶点在不在，如果不在，自动添加该顶点信息
-  if (!this.adjacentList[first]) this.addVertices(first)
-  if (!this.adjacentList[second]) this.addVertices(second)
+  if (!this.adjacentList[first]) this.addVertex(first)
+  if (!this.adjacentList[second]) this.addVertex(second)
 
   !this.adjacentList[first].includes(second)
     ? this.adjacentList[first].push(second) : undefined
   !this.adjacentList[second].includes(first) 
     ? this.adjacentList[second].push(first) : undefined
+}
+```
+### removeEdge
+* 删除边，要删除两个顶点中的相互依赖数据
+```js
+/**
+ * @params source {*} 顶点一
+ * @params destination {*} 顶点二
+ */
+Graph.prototype.removeEdge = function (source, destination) {
+  if (this.adjacentList[source] && this.adjacentList[source].includes(destination)) {
+    let destinationIndex = this.adjacentList[source].indexOf(destination)
+    this.adjacentList[source].splice(destinationIndex,1)
+    let sourceIndex = this.adjacentList[destination].indexOf(source)
+    this.adjacentList[destination].splice(sourceIndex,1)
+  }
 }
 ```
 
@@ -123,12 +155,12 @@ Graph.prototype.BFS = function (v, callback) {
 ### 测试
 ```js
 let gg = new Graph()
-gg.addVertices('a')
-gg.addVertices('b')
-gg.addVertices('c')
-gg.addVertices('d')
-gg.addVertices('e')
-gg.addVertices('f')
+gg.addVertex('a')
+gg.addVertex('b')
+gg.addVertex('c')
+gg.addVertex('d')
+gg.addVertex('e')
+gg.addVertex('f')
 
 gg.addEdge('a','b')
 gg.addEdge('a','c')
@@ -145,11 +177,33 @@ gg.BFS('b',function (value) {
   console.log(`------------${value} 已探索--------------`);
 })
 
-------------b 以探索--------------
-------------a 以探索--------------
-------------f 以探索--------------
-------------e 以探索--------------
-------------d 以探索--------------
-------------c 以探索--------------
-------------r 以探索--------------
+------------b 已探索--------------
+------------a 已探索--------------
+------------f 已探索--------------
+------------e 已探索--------------
+------------d 已探索--------------
+------------c 已探索--------------
+------------r 已探索--------------
+```
+
+## 深度优先遍历
+```js
+Graph.prototype._DFSHandler = function (v,color,callback) {
+  color[v] = 'gray'
+  let currentEdge = this.adjacentList[v] 
+  // 遍历找到符合递归条件的顶点
+  currentEdge.forEach(edge => {
+    if (color[edge] === 'black') {
+      this._DFSHandler(edge,color,callback)
+    }
+  });
+  color[v] = 'white'
+  callback && callback(v)
+}
+
+Graph.prototype.DFS = function (v,callBack){
+  let color = this._initColor()
+  this._DFSHandler(v, color, callBack)
+}
+
 ```
