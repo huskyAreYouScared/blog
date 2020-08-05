@@ -8,6 +8,18 @@
 
 * [minimap](https://github.com/lrsjng/pagemap)
 
+* [fullPageJS](https://alvarotrigo.com/fullPage/zh/)可以用于制作全屏滚动的网页，横屏和竖屏都可以，可以在Vue.js、react.js和angularjs中使用
+
+* [screenfull.js](https://github.com/sindresorhus/screenfull.js)控制全屏的js插件
+
+* [masonry](https://masonry.desandro.com/)级联网格布局（瀑布流）JS插件，可以很方便的实现瀑布流
+
+* [popperJS](https://popper.js.org/)工具提示，弹出框插件popperJS
+
+* [slick](https://kenwheeler.github.io/slick/)轮播图插件slick
+
+* [swiper](https://www.swiper.com.cn/)轮播图插件swiper
+
 * [p2 - 2d物理引擎](https://www.npmjs.com/package/p2) 可用于前端交互动画
 
 * [各种版本的Todo-List](http://todomvc.com/)

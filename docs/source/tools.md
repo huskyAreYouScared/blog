@@ -158,3 +158,5 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * figma design[figma](https://www.figma.com/)在线设计图工具
 
 * webp2jpg-online[在线的图片转换工具](https://github.com/renzhezhilu/webp2jpg-online)它的原理 用到了canvas的API canvas.toBlob(callback, type, encoderOptions);
+
+* 分享文本的网站，分享的内容支持加密和阅后即焚（类似qq闪照）[pasteme](https://pasteme.cn/)

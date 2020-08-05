@@ -6,3 +6,6 @@
 
 * 一个有掷骰子的方式占领地盘的回合制游戏[territories](https://lehasvv2009.github.io/territories/#/)支持在线、AI、自己和自己玩三种模式
 ![territories 胜利图](https://static01.imgkr.com/temp/bcbfa6e4583a4714a0d2a438f628419b.png)
+
+* 建造类小游戏，截图放在下面
+[![建造类小游戏](https://static01.imgkr.com/temp/ddf7327fd31d4de88eb37c03f9ad76f9.png)](http://oskarstalberg.com/game/house/index.html)

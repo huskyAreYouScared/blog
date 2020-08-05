@@ -30,6 +30,8 @@
 
 * [Ant Design of Vue](https://www.antdv.com/docs/vue/introduce-cn/)
 
+* [shoelace](https://shoelace.style/)一个通用性组件库，vue，react，angular都可以使用，不同框架会有不同的引入和使用方式
+
 ## 服务端渲染
 
 * [NuxtJS](https://zh.nuxtjs.org/)
@@ -70,6 +72,8 @@
 * vue的裁剪图片插件[vue-cropper](https://www.npmjs.com/package/vue-cropperjs)
 
 * vue消息插件[vue-notification](https://github.com/euvl/vue-notification) 
+
+* vue轮播图插件[vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)
 
 ## vue相关知识文章
 
