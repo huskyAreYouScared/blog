@@ -178,3 +178,31 @@ document.querySelector('input[type=password]').value
 ```js
 document.querySelector('input[type=password]').setAttribute('type','text')
 ```
+
+### 模板字符串应用一
+* 配合对象解构赋值效果更佳
+```js
+function details ({name, address, phone}) {
+  return `name:${name}, address:${address}, phone:${phone}`
+}
+```
+
+### 模板字符串应用二
+* 作为函数实参
+```js{6}
+function huskyDetails (content, weight) {
+  let bodyType = weight > 20 ? 'big' : 'small'
+  return `${content[0]} is ${bodyType} dog`
+}
+
+huskyDetails`husky${25}`
+// husky is big dog
+```
+
+### 根据数字返回星期
+
+```js
+function backDate( number ) {
+  return number <= 7?`星期${'日一二三四五六日'.charAt(number)}`:''
+}
+```

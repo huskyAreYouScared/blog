@@ -7,9 +7,13 @@
 * [免费的在线IDE](https://ide.goorm.io/)同时这个网站还提供 1GB内存 10GB存储空间 可创建五个容器，只可以运行一个容器的免费服务，也支持付费会有相应的配置升级 免费版不支持一直运行，也就是说网页要一直开着才行
 [![goorm](https://imgkr.cn-bj.ufileos.com/9a4a153f-080f-43a4-bd61-561fad4d6364.png)](https://ide.goorm.io/my)
 
+* [SVG搜索引擎](https://www.svgrepo.com/)
+
 * [免费的视频图片素材网站Pexels](https://www.pexels.com/zh-cn/)
 
 * 免费的api提供，可用于demo项目测试使用[jsonplaceholder](https://jsonplaceholder.typicode.com/)
+
+* [生成随机的虚假数据,以便更容易地开发和测试](https://random-data-api.com/)
 
 * YouTube上面的教程收集网站[tutorialist](https://www.tutorialist.io/)
 

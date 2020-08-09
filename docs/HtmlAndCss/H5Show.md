@@ -250,8 +250,8 @@
   }
 anime1()
 ```
-* animejs 的教程我在B站录了教学视频，有兴趣的可以看一下，官网在这了，[传送门](https://www.animejs.cn/documentation/)
+* animejs 的教程我在B站录了教学视频，有兴趣的可以看一下[传送门](https://www.bilibili.com/video/BV18J41147Cy)
 ## 效果演示
 <img style="width:300px;" :src="$withBase('/image/H5show-over.gif')" alt="dock">
 
-## 到这里就结束了，可以自由发挥了，加油！
+* 到这里就结束了，可以自由发挥了，加油！
