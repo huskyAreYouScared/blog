@@ -15,7 +15,7 @@ module.exports = {
     logo: '/logo/logo.gif',
     nav: [
       { text: '主页', link: '/' },
-      { text: 'husky字幕', link: '/subtitle/' },
+      { text: '开源作品', link: '/openSource/' },
       { text: '前端日志', link: '/HtmlAndCss/' },
       { text: '算法', link: '/algorithm/' },
       { text: '资源', link: '/source/' },
@@ -24,14 +24,13 @@ module.exports = {
       { text: '国内地址', link: 'https://husky_are_you_scared.gitee.io/blog/' }
     ],
     sidebar: {
-      '/subtitle/': [     
+      '/openSource/': [
+        '',
         'InitProject', 
-        'small',
         'mac_windows',
         'electronDialog',
         'according-platform-build',
-        'user-custom-install',
-        'vueElectronInitSummary'
+        'user-custom-install'
       ],
       '/source/': [
         '',
@@ -102,6 +101,7 @@ module.exports = {
         'dp'
       ],
       '/other/':[
+        '',
         'vuepress_build',
         'mac_terminal',
         'mac_npm_error',

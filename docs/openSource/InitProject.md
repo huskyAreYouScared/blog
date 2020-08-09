@@ -1,5 +1,5 @@
-# 项目初始化，升级electron
-
+# 项目初始化
+[[toc]]
 ## 简介
 * 开发husky-subtitle是基于electron-vue这个脚手架进行开发的，有些插件和配置比较老，所以会遇到一些坑在这里记录一下
 * [electron-vue GitHub传送门](https://github.com/SimulatedGREG/electron-vue)
@@ -65,7 +65,7 @@ electron.exe
 ```
 * 此时就可以运行了，当然也可能别的错误，如果有请继续往下看
 
-## 运行npm run dev,如果又遇到了process报错
+## process报错
 :koala:
 <img :src="$withBase('/image/electron-process-error.png')" alt="dock">
 
@@ -134,7 +134,7 @@ electron.exe
 ```
 ## npm run dev eslint导致报错
 * 只是代码格式的问题，不影响运行
-## 以为什么都ok了，结果又发现require报错
+## require报错
 
 ### 解决办法
 * 在/src/main/index.js文件中加入代码
@@ -152,6 +152,52 @@ electron.exe
 * 默认集成node是false,所以我们改成true即可 
 [相应文档](https://electronjs.org/docs/api/browser-window#new-browserwindowoptions)
 
-## 到这里项目就可以正常通过 npm run dev 启动了
+ >到这里项目就可以正常通过 npm run dev 启动了
 
+## 遇到HMR 不能正常工作
+* 打开控制台发现renderer.js的请求一直是pending状态
+### 解决办法
+* 进入 .electron-vue目录中的dev-runner.js文件中[issue](https://github.com/SimulatedGREG/electron-vue/issues/437)
+```js
+const server = new WebpackDevServer(
+      compiler,
+      {
+        contentBase: path.join(__dirname, '../'),
+        quiet: true,
+        before (app, ctx) {
+          app.use(hotMiddleware)
+          ctx.middleware.waitUntilValid(() => {
+            resolve()
+          })
+        }
+      }
+    )
+```
+* 改写成
+```js
+const server = new WebpackDevServer(
+      compiler, {
+        contentBase: path.join(__dirname, '../'),
+        quiet: true,
+        hot: true, // <-- the fix!
+        before(app, ctx) {
+          // app.use(hotMiddleware) // <-- not necessary!
+          ctx.middleware.waitUntilValid(() => {
+            resolve()
+          })
+        }
+      }
+    )
+```
+
+
+## electron-builder打包遇到报错
+### Fatal error：Unable to commit changes
+* 这个报错是模板初始化的时候选择了electron-builder的情况
+![electron-builder打包报错](https://imgkr.cn-bj.ufileos.com/5a36cd50-ab99-4adc-9f28-b0bf57ad9c6b.png)
+* 解决办法，electron-builder github issue中已经有开发者回答了[传送门](https://github.com/electron-userland/electron-builder/issues/3122#issuecomment-509110200)
+* 也就是说需要更新electron-builder的版本，这个时候只需要下载最新版本即可
+```bash
+yarn add electron-builder@latest -D
+```
 ##### :koala: 考拉 因为澳大利亚大火很多动物遇难，希望大火早日熄灭 --2020.1.19

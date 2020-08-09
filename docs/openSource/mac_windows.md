@@ -15,5 +15,10 @@
 * 在mac中要用 “/” 否则打开文件的时候会报错
 * windows中 “/” ， “\” 都可以所以统一用“/”来拼接文件路径
 
-## 由于目前只适配了windows版，mac目前还没有进行
+## ffmpeg-static根据不同平台进行打包
+[ffmpeg-static打包](./according-platform-build.html)
+
+
+## 开发时候的用户文件位置
+* windows平台开发在：`C:\Users\这里是用户名\AppData\Roaming\Electron` 中
 

@@ -1,4 +1,7 @@
-# ffmpeg-static根据不同平台进行打包
+# ffmpeg-static打包
+:::tip
+  ffmpeg-static根据不同平台进行打包
+:::
 [[toc]]
 ## 1.webpack.renderer.config修改
 * path .electron-vue->webpack-renderer.config
