@@ -206,7 +206,7 @@ emitter.addBehaviour(new Proton.Scale(5,0,Infinity,  Proton.easeOutQuart))
 * 用react举例，这里默认先用create-react-app初始化了一个react项目
 * 需要安装的插件
 ```bash
-  yarn add af-manager proton-engine
+  yarn add raf-manager proton-engine
 ```
 * 先准备HTML部分
 ```js

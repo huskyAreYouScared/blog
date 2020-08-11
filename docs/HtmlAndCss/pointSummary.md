@@ -1,20 +1,5 @@
 # 小技巧（百宝箱）
 
-## HTML
-
-### 禁用鼠标右键
-```html
-<body oncontextmenu="return false">
-  <div></div>
-</body>
-```
-
-
-## CSS
-
-### 建设中...
-
-
 ## JavaScript
 
 ### 函数参数校验器
@@ -205,4 +190,113 @@ huskyDetails`husky${25}`
 function backDate( number ) {
   return number <= 7?`星期${'日一二三四五六日'.charAt(number)}`:''
 }
+```
+
+## HTML
+
+### 禁用鼠标右键
+```html
+<body oncontextmenu="return false">
+  <div></div>
+</body>
+```
+
+
+## CSS
+
+### 居中
+* `.container` 为容器 `.item` 未子元素
+* 布局中没写宽和高，但是其实是有的这里省略，除非必须要用到宽高
+#### flex
+```css
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
+#### position: absolute + transform: translate 
+```css
+.container{
+  position: relative;
+}
+.item{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+```
+
+#### position: absolute + margin 负值
+```css
+.container{
+  position: relative;
+}
+.item{
+  --width:100px;
+  --height:100px;
+  width: var(--width);
+  height: var(--height);
+  background-color:lightsalmon;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: calc(var(--width) / -2);
+  margin-top: calc(var(--height) / -2);
+}
+```
+
+#### position: absolute + margin: auto
+```css
+.container{
+  position: relative;
+}
+.item{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+```
+
+#### grid
+```css
+.container{
+  display: grid;
+}
+.item{
+  align-self: center;
+  justify-self: center;
+}
+```
+
+#### table-cell
+```css
+.container{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.item{
+  display: inline-block;
+}
+```
+
+#### line-height + text-align + veri
+* 用于子元素是行内元素 或者行内块元素
+```css
+.container{
+      width: 300px;
+      height: 300px;
+      line-height: 300px;
+      text-align: center;
+    }
+    .item{
+      display: inline-block;
+      vertical-align: middle;
+      line-height: initial; /* 防止子元素继承父元素的line-height*/
+    }
 ```
