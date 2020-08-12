@@ -54,6 +54,7 @@ module.exports = {
       ],
       '/HtmlAndCss/': [
         '',
+        'designPattern',
         'pointSummary',
         'css',
         'fontStyle',

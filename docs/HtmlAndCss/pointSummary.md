@@ -1,3 +1,6 @@
+---
+sidebarDepth: 3
+---
 # 小技巧（百宝箱）
 
 ## JavaScript
@@ -299,4 +302,22 @@ function backDate( number ) {
       vertical-align: middle;
       line-height: initial; /* 防止子元素继承父元素的line-height*/
     }
+```
+
+### 省略号
+```css
+/* 显示一行，省略号 */
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+word-break: break-all;
+ 
+/* 显示两行，省略号 */
+text-overflow: -o-ellipsis-lastline;
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+line-clamp: 2;
+-webkit-box-orient: vertical;
 ```
