@@ -1,3 +1,6 @@
+---
+sidebarDepth: 3
+---
 # React全家桶
 
 ## React
@@ -243,9 +246,9 @@ let DemoCompenent = React.createClass({
 })
 ReactDOM.render(<DemoCompenent/>,document.getElementById('container'))
 ```
-* `Vue`中是`this.$refs` `react`中是`this.refs`
+* `Vue`中是`this.$refs`，`react`中是`this.refs`
 
-### 表单注意事项（-） bind
+### 表单注意事项 bind
 * 主要注意表单绑定的事件，需要通过bind方法,来传递除了event的参数,如果不需要多余的参数传递进去，那么就正常绑定事件
 * label的for属性要写成htmlFor
 ```js
@@ -276,7 +279,10 @@ ReactDOM.render(<DemoCompenent/>,document.getElementById('container'))
 ```
 
 ### 动态渲染 style
-* 需要注意的是 `style = {{background:this.state.bg}}` 需要这样写，而不是`style = "background:{this.state.bg}"`
+```js
+  style={{background:this.state.bg}} // 正确写法
+  style="background:{this.state.bg}" // 错误写法
+```
 * 下面这个示例，通过在输入框中输入`RGB`的值来动态改变父容器的背景色
 ```js
 let DemoCompenent = React.createClass({
@@ -302,6 +308,7 @@ let DemoCompenent = React.createClass({
 });
 ReactDOM.render(<DemoCompenent />, document.getElementById("container"));
 ```
+
 ### 使用脚手架
 * 正常在工作中为了提高开发效率，项目的初始化，都使用脚手架来完成
 * 全局安装`create-react-app`
@@ -318,21 +325,21 @@ yarn config set registry https://registry.npm.taobao.org
 ```
 * 构建之后会产生如下文件
 ```sh
-│   .gitignore
-│   package.json
-│   README.md
-│   yarn.lock
-│ ── node_modules
-│ ── public
-│ ── src
-        App.css
-        App.js
-        App.test.js
-        index.css
-        index.js
-        logo.svg
-        serviceWorker.js
-        setupTests.js
+.gitignore
+package.json
+README.md
+yarn.lock
+node_modules
+public
+src
+  App.css
+  App.js
+  App.test.js
+  index.css
+  index.js
+  logo.svg
+  serviceWorker.js
+  setupTests.js
 ```
 * src下有很多文件，为了清晰的由浅入深，我们只留`index.js`文件，其余删除
 
@@ -498,8 +505,250 @@ Child.defaultProps = {
 };
 ```
 
-## React Router
+### 生命周期性能优化
+* 通过shouldComponentUpdate生命周期函数来判断属性是否变换，如果没变不进行重新渲染
+```js
+shouldComponentUpdate(nextProps,nextState) {
+    if(nextProps.name!==this.props.name){
+      return true
+    }else {
+      return false
+    }
+  }
+  render() {
+    return <p onClick={this.handleDelete}>{this.props.name}</p>;
+  }
+```
 
 ## Redux
+
+### 准备环节
+* 首先我们需要安装[redux](http://cn.redux.js.org/)
+```sh
+yarn add redux -S
+```
+* 在使用之前，我们先写一些UI来配合使用`redux`，我们安装[antd UI](https://ant-design.gitee.io/index-cn)
+```sh
+yarn add antd -S
+```
+
+### 界面搭建
+* 我们用一个常用案例`TodoList` 来演示
+```js
+import React, { Component } from 'react'
+import 'antd/dist/antd.css'
+import { Input, Button, Card, Divider } from "antd"
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      list: []
+    }
+  }
+  render() { 
+    return (
+      <div style={{ width: "50%", margin: "20px auto" }}>
+        <div style={{ display: "flex", justifyContent: "space-between"}}>
+          <Input style={{ width: "80%" }} />
+          <Button type="primary">添加</Button>
+        </div>
+        <Divider dashed />
+          {this.state.list.map((item, index) => {
+            return (
+              <Card key={index + 1} style={{marginTop: 10}}>
+                <p>{item}</p>
+              </Card>
+            )
+          })}
+      </div>
+    )
+  }
+}
+export default App;
+```
+
+### 使用 redux devtools
+* 到`Google`商店下载，或者去`GitHub`下载[redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension)
+* 代码中要写一段逻辑配合`redux devtools`起效果
+```js{3}
+const store = createStore(
+  reducer,
++ window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+```
+
+### 创建createStore、reducer 
+* 在`src`中新建`store`目录
+* 在`store`中新建`index.js` 和 新建 `reducer.js`
+```js
+// index.js
+import {createStore} from 'redux'
+import reducer from './reducer';
+
+const store = createStore(reducer);
+
+export default store
+```
+* 这里我们给一个默认值
+```js
+// reducer.js
+let defaultState = {
+  value: "",
+  list: [1, 2, 3],
+};
+export default (state = defaultState, action) => {
+  return state;
+};
+
+```
+
+### 给UI绑定点击事件，并触发store.dispatch来改变数据
+* 接下来我们对上面的`Todo`代码进行改进
+```js
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = store.getState(); // 初始化数据状态
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.storeChange = this.storeChange.bind(this);
+    this.handleAddClick = this.handleAddClick.bind(this);
+    store.subscribe(this.storeChange); // 对store进行订阅，一旦数据改变，调用storeChange改变组件内状态
+  }
+  render() {
+    return (
+      <div style={{ width: "50%", margin: "20px auto" }}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <Input style={{ width: "80%" }} value={this.state.value} onChange={this.handleInputChange} />
+          <Button type="primary" onClick={this.handleAddClick}>
+            添加
+          </Button>
+        </div>
+        <Divider dashed />
+        {this.state.list.map((item, index) => {
+          return (
+            <Card
+              onClick={this.handleDeleteClick.bind(this, index)}
+              key={index + 1}
+              style={{ marginTop: 10 }}
+            >
+              <p>{item}</p>
+            </Card>
+          );
+        })}
+      </div>
+    );
+  }
+
+  // 监听输入框的值变化
+  handleInputChange(e) {
+    const action = {
+      type: "changeInput",
+      value: e.target.value,
+    };
+    store.dispatch(action);
+  }
+
+  // 增加一项
+  handleAddClick() {
+    const action = {
+      type: "add"
+    };
+    store.dispatch(action);
+  }
+  // 删除一项
+  handleDeleteClick(index) {
+    console.log(arguments);
+    const action = {
+      type: "delete",
+      value: index,
+    };
+    store.dispatch(action);
+  }
+  // 数据改变 同时 改变组件内状态
+  storeChange() {
+    this.setState(store.getState());
+  }
+}
+export default App;
+
+```
+
+### 修改reducer中的action逻辑
+* 我们需要给对应的`dispatch`传递的`action`进行处理，来对数据进行修改
+```js
+export default (state = defaultState, action) => {
+  let newState = JSON.parse(JSON.stringify(state));
+  switch (action.type) {
+    case 'changeInput':
+      newState.value = action.value
+      return newState
+    case 'add':
+      newState.list.push(newState.value)
+      newState.value =''
+      return newState
+    case 'delete':
+      newState.list.splice(action.value, 1);
+      return newState
+    default:
+      break
+  }
+  return state
+};
+```
+### 优化 action 和 actionType
+* 首先我们新建两个文件 `actionTypes` 和 `actionCreators` 两个文件
+* 先来声明`actionType`常量
+```js
+// actionTypes
+export const CHANGE_INPUT = 'changeInput'
+export const DELETE_ITEM = 'deleteItem'
+export const ADD_ITEM = 'addItem'
+```
+* 在抽离`action`的逻辑
+```js
+// actionCreators
+import { CHANGE_INPUT, DELETE_ITEM, ADD_ITEM } from "./actionTypes"
+
+export const changeInputAction = (value)=>{
+  return {
+    type: CHANGE_INPUT,
+    value
+  }
+}
+export const addItemAction = () => {
+  return {
+    type: ADD_ITEM,
+  };
+};
+
+export const deleteItemAction = (value) => {
+  return {
+    type: DELETE_ITEM,
+    value,
+  };
+};
+```
+* 做了上面的优化，我们来改写一下`Todo`的绑定事件代码，将`action`抽离出来单独管理
+```js
+
+import { changeInputAction, addItemAction, deleteItemAction } from './store/actionCreators';
+
+
+  handleInputChange(e) {
+    const action = changeInputAction(e.target.value)
+    store.dispatch(action);
+  }
+  handleAddClick() {
+    const action = addItemAction()
+    store.dispatch(action);
+  }
+  handleDeleteClick(index) {
+    const action = deleteItemAction(index)
+    store.dispatch(action);
+  }
+```
+
+## React Router
 
 ## React Hook
