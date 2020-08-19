@@ -749,6 +749,293 @@ import { changeInputAction, addItemAction, deleteItemAction } from './store/acti
   }
 ```
 
+### 优化：将UI和业务逻辑分离
+* 首先我们在src目录下新建一个ToDoUI.js来放UI代码
+* 将原来的App.js中的UI部分抽离出来
+```js
+// ToDoUI.js
+import React, { Component } from 'react'; 
+
+import { Input, Button, Card, Divider } from "antd";
+class ToDoUI extends Component {
+
+  render() { 
+    return (
+      <div style={{ width: "50%", margin: "20px auto" }}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <Input
+            style={{ width: "80%" }}
+            value={this.props.value}
+            onChange={this.props.handleInputChange}
+          />
+          <Button type="primary" onClick={this.props.handleAddClick}>
+            添加
+          </Button>
+        </div>
+        <Divider dashed />
+        {this.props.list.map((item, index) => {
+          return (
+            <Card
+              onClick={() => {this.props.handleDeleteClick(index)}}
+              key={index}
+              style={{ marginTop: 10 }}
+            >
+              <p>{item}</p>
+            </Card>
+          );
+        })}
+      </div>
+    );
+  }
+}
+export default ToDoUI;
+```
+* UI组件中需要的属性和方法将通过属性的方式传递过来
+* 那么接下来改造业务逻辑部分,没有太大变化，主要是讲UI部分单独提出去，在这里面已组件的方式引入，并传递需要的props
+```js
+import React, { Component } from 'react'
+import store from './store';
+import { changeInputAction, addItemAction, deleteItemAction } from './store/actionCreators';
+import ToDoUI from './ToDoUI'
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = store.getState();
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.storeChange = this.storeChange.bind(this);
+    this.handleAddClick = this.handleAddClick.bind(this);
+    this.handleDeleteClick = this.handleDeleteClick.bind(this);
+    store.subscribe(this.storeChange);
+  }
+  render() {
+    return (
+      <ToDoUI
+        value={this.state.value}
+        handleInputChange={this.handleInputChange}
+        handleAddClick={this.handleAddClick}
+        handleDeleteClick={this.handleDeleteClick}
+        list={this.state.list}
+      />
+    );
+  }
+  handleInputChange(e) {
+    const action = changeInputAction(e.target.value)
+    store.dispatch(action);
+  }
+  handleAddClick() {
+    const action = addItemAction()
+    store.dispatch(action);
+  }
+  handleDeleteClick(index) {
+    console.log(index);
+    const action = deleteItemAction(index)
+    store.dispatch(action);
+  }
+  storeChange() {
+    this.setState(store.getState());
+  }
+}
+export default App;
+```
+### 优化：UI组件改为无状态组件提高性能
+* 无状态组件通过`function`方式定义并将j`sx`的`UI`部分`return`即可
+* `props` 作为`function`的形参传入
+```js
+import React, { Component } from 'react'; 
+import { Input, Button, Card, Divider } from "antd";
+
+function ToDoUI(props){
+  return (
+    <div style={{ width: "50%", margin: "20px auto" }}>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <Input
+          style={{ width: "80%" }}
+          value={props.value}
+          onChange={props.handleInputChange}
+        />
+        <Button type="primary" onClick={props.handleAddClick}>
+          添加
+        </Button>
+      </div>
+      <Divider dashed />
+      {props.list.map((item, index) => {
+        return (
+          <Card
+            onClick={() => {props.handleDeleteClick(index)}}
+            key={index}
+            style={{ marginTop: 10 }}
+          >
+            <p>{item}</p>
+          </Card>
+        );
+      })}
+    </div>
+  )
+}
+export default ToDoUI;
+```
+
+### redux-thunk中间件
+* 使用redux-thunk可以让您编写与store交互的异步逻辑
+* 首先安装redux-thunk
+```sh
+yarn add redux-thunk -S
+```
+* 接下来去store目录中使用redux-thunk中
+
+```js
+import {createStore, applyMiddleware} from 'redux'
+import reducer from './reducer';
+import thunk from 'redux-thunk';
+const store = createStore(reducer, applyMiddleware(thunk));
+```
+
+* 因为我们要适配redux-devtools所以要引入compose，来实现增强函数
+
+```js
+import {createStore, compose, applyMiddleware} from 'redux'
+import reducer from './reducer';
+import thunk from 'redux-thunk';
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
+  : compose
+
+const enhancer = composeEnhancers(applyMiddleware(thunk));
+
+const store = createStore(reducer, enhancer);
+
+export default store
+```
+
+### redux-thunk 示例
+* 首先我们需要准备模拟请求的网站，这里我们使用[一言](https://hitokoto.cn/#)提供的接口
+* 一言提供了接口可以根据传递不同参数返回不同的数据，这里我们已最简单的接口进行演示
+* get 请求 https://v1.hitokoto.cn/，返回数据格式如下
+```sh
+{
+"id": 5859,
+"uuid": "df187911-1d7f-46e5-8c62-ad156d9227f0",
+"hitokoto": "合抱之木，生于毫末；九层之台，起于累土；千里之行，始于足下。",
+"type": "i",
+"from": "老子·德经·第六十四章",
+"from_who": null,
+"creator": "a632079",
+"creator_uid": 1044,
+"reviewer": 4756,
+"commit_from": "web",
+"created_at": "1586398126",
+"length": 30
+}
+```
+* 接下来我们在actionTypes中声明请求列表的action Type
+```js
++ export const GET_LIST = 'getList'
+```
+* 在actionCreators中声明action
+* 这里我们要写两个，一个是异步请求数据的action，一个是改变触发store更新的action
+```js
+export const getList = (value) => {
+  return {
+    type: GET_LIST,
+    value
+  };
+};
+
+export const getAsyncList = (value) => {
+  return (dispatch)=>{
+    Axios.get("https://v1.hitokoto.cn/").then(res=>{
+      let action = getList(res.data)
+      dispatch(action)
+    })
+  }
+};
+```
+* 准备工作都做好了，接下来在Todo的业务逻辑层的componentDidMount中执行
+```js
+import { /*...*/, getAsyncList } from './store/actionCreators';
+componentDidMount() {
+    let action =  getAsyncList()
+    store.dispatch(action)
+  }
+```
+
+### react-redux 改造 redux使用起来更简单
+* 首先进入项目的入口处全局增加Provider
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "antd/dist/antd.css";
++ import {Provider} from 'react-redux'
++ import store from './store'
+
++ const main= (
++   <Provider store={store}>
++     <App />
++   </Provider>
++ )
+ReactDOM.render(main, document.getElementById("root"));
+```
+
+* 接下来我们再去ToDoUI文件中改造
+* 主要改造部分就是export default的时候connect一下，主要作用，就是将原来通过props传递过来的属性在这里进行一次转换
+* 通过 connect 的 第一个参数 stateToProps，将state中的属性转换为当前组件props的属性
+* 通过 connect 的 第二个参数 dispatchToProps ，将父组件中触发dispatch的函数挪到这一层，不需要父组件传递相应dispatch方法，直接通过connect的方式在props上增加相应的方法
+* 也就是说，父组件中不需要给当前组件传递任何值，就可以完成之前的todo交互
+```js
+const stateToProps = (state)=>{
+  return {
+    value: state.value, 
+    list: state.list
+  };
+}
+const dispatchToProps = (dispatch)=>{
+  return {
+    handleInputChange(e) {
+      let action = changeInputAction(e.target.value);
+      dispatch(action);
+    },
+    handleAddClick(e) {
+      let action = addItemAction();
+      dispatch(action);
+    },
+    initGetAsyncList() {
+      let action = getAsyncList();
+      dispatch(action);
+    },
+    handleDeleteClick(index) {
+      let action = deleteItemAction(index);
+      dispatch(action);
+    },
+  };
+}
+
+export default connect(stateToProps, dispatchToProps)(ToDoUI);
+```
+* 可以删除 给`<ToDoUI>`组件传递的属性了，和dispatch还有store的逻辑都可以删掉了
+```js
+// ... 省略 ...
+render() {
+    return (
+      <ToDoUI
+-       value={this.state.value}
+-       handleInputChange={this.handleInputChange}
+-       handleAddClick={this.handleAddClick}
+-       list={this.state.list}
+-       handleDeleteClick={this.handleDeleteClick}
+      />
+    );
+  }
+// ... 省略 ...
+```
+
 ## React Router
+
+### 安装 react-router
+```sh
+yarn add react-router -S
+```
+### 按照传统，准备组件资源
 
 ## React Hook
