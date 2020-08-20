@@ -238,9 +238,9 @@ isValidBST(){
 ![树](https://static01.imgkr.com/temp/e84865915159490ebc1f20de40ce873f.png)
 ```js
 [ 
-  [ 3 ], 
-  [ 2, 5 ], 
-  [ 1, 3 ] 
+  [ 5 ], 
+  [ 3, 8 ], 
+  [ 6, 9 ] 
 ]
 ```
 ```js

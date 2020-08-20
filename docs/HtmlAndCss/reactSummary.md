@@ -838,7 +838,7 @@ class App extends Component {
 }
 export default App;
 ```
-### 优化：UI组件改为无状态组件提高性能
+### 优化：UI组件改为无状态组件
 * 无状态组件通过`function`方式定义并将j`sx`的`UI`部分`return`即可
 * `props` 作为`function`的形参传入
 ```js
@@ -877,12 +877,12 @@ export default ToDoUI;
 ```
 
 ### redux-thunk中间件
-* 使用redux-thunk可以让您编写与store交互的异步逻辑
-* 首先安装redux-thunk
+* 使用`redux-thunk`可以让您编写与`store`交互的异步逻辑
+* 首先安装`redux-thunk`
 ```sh
 yarn add redux-thunk -S
 ```
-* 接下来去store目录中使用redux-thunk中
+* 接下来去`store`目录中使用`redux-thunk`中
 
 ```js
 import {createStore, applyMiddleware} from 'redux'
@@ -891,7 +891,7 @@ import thunk from 'redux-thunk';
 const store = createStore(reducer, applyMiddleware(thunk));
 ```
 
-* 因为我们要适配redux-devtools所以要引入compose，来实现增强函数
+* 因为我们要适配`redux-devtools`所以要引入`compose`，来实现增强函数
 
 ```js
 import {createStore, compose, applyMiddleware} from 'redux'
@@ -911,7 +911,7 @@ export default store
 ### redux-thunk 示例
 * 首先我们需要准备模拟请求的网站，这里我们使用[一言](https://hitokoto.cn/#)提供的接口
 * 一言提供了接口可以根据传递不同参数返回不同的数据，这里我们已最简单的接口进行演示
-* get 请求 https://v1.hitokoto.cn/，返回数据格式如下
+* ``get`` 请求 ``https://v1.hitokoto.cn/``，返回数据格式如下
 ```sh
 {
 "id": 5859,
@@ -928,12 +928,12 @@ export default store
 "length": 30
 }
 ```
-* 接下来我们在actionTypes中声明请求列表的action Type
+* 接下来我们在`actionTypes`中声明请求列表的`action Type`
 ```js
 + export const GET_LIST = 'getList'
 ```
-* 在actionCreators中声明action
-* 这里我们要写两个，一个是异步请求数据的action，一个是改变触发store更新的action
+* 在`actionCreators`中声明`action`
+* 这里我们要写两个，一个是异步请求数据的`action`，一个是改变触发`store`更新的`action`
 ```js
 export const getList = (value) => {
   return {
@@ -951,7 +951,7 @@ export const getAsyncList = (value) => {
   }
 };
 ```
-* 准备工作都做好了，接下来在Todo的业务逻辑层的componentDidMount中执行
+* 准备工作都做好了，接下来在`Todo`的业务逻辑层的`componentDidMount`中执行
 ```js
 import { /*...*/, getAsyncList } from './store/actionCreators';
 componentDidMount() {
@@ -960,8 +960,8 @@ componentDidMount() {
   }
 ```
 
-### react-redux 改造 redux使用起来更简单
-* 首先进入项目的入口处全局增加Provider
+### 使用react-redux
+* 首先进入项目的入口处全局增加`Provider`
 ```js
 import React from "react";
 import ReactDOM from "react-dom";
@@ -978,11 +978,11 @@ import "antd/dist/antd.css";
 ReactDOM.render(main, document.getElementById("root"));
 ```
 
-* 接下来我们再去ToDoUI文件中改造
-* 主要改造部分就是export default的时候connect一下，主要作用，就是将原来通过props传递过来的属性在这里进行一次转换
-* 通过 connect 的 第一个参数 stateToProps，将state中的属性转换为当前组件props的属性
-* 通过 connect 的 第二个参数 dispatchToProps ，将父组件中触发dispatch的函数挪到这一层，不需要父组件传递相应dispatch方法，直接通过connect的方式在props上增加相应的方法
-* 也就是说，父组件中不需要给当前组件传递任何值，就可以完成之前的todo交互
+* 接下来我们再去`ToDoUI`文件中改造
+* 主要改造部分就是`export default`的时候`connect`一下，主要作用，就是将原来通过`props`传递过来的属性在这里进行一次转换
+* 通过 `connect` 的 第一个参数 `stateToProps`，将`state`中的属性转换为当前组件`props`的属性
+* 通过 `connect` 的 第二个参数 `dispatchToProps` ，将父组件中触发`dispatch`的函数挪到这一层，不需要父组件传递相应`dispatch`方法，直接通过`connect`的方式在`props`上增加相应的方法
+* 也就是说，父组件中不需要给当前组件传递任何值，就可以完成之前的`todo`交互
 ```js
 const stateToProps = (state)=>{
   return {
@@ -1013,7 +1013,7 @@ const dispatchToProps = (dispatch)=>{
 
 export default connect(stateToProps, dispatchToProps)(ToDoUI);
 ```
-* 可以删除 给`<ToDoUI>`组件传递的属性了，和dispatch还有store的逻辑都可以删掉了
+* 可以删除 给`<ToDoUI>`组件传递的属性了，和`dispatch`还有`store`的逻辑都可以删掉了
 ```js
 // ... 省略 ...
 render() {
@@ -1037,5 +1037,476 @@ render() {
 yarn add react-router -S
 ```
 ### 按照传统，准备组件资源
+* 首先写着我们上面写`ToDo`的例子写
+* 新建一个`other.js`无状态组件
+```js
+import React from 'react';
+function Other () {
+  return (
+    <h1>other page</h1>
+  )
+}
+export default Other;
+```
+* 新建一个`AppRouter.js`文件用来定义菜单组件，我们主要的路由就是在这里面配置
+```js
+import React, { Component } from "react"; 
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import { Menu } from 'antd';
+import ToDo from "./ToDo";
+import Other from "./other";
+
+class AppRouter extends Component {
+  state = {
+    current: 'mail',
+  };
+
+  handleClick = e => {
+    console.log('click ', e);
+    this.setState({ current: e.key });
+  };
+  render() {
+    const { current } = this.state;
+    return (
+      <Router>
+        <Menu
+          onClick={this.handleClick}
+          selectedKeys={[current]}
+          mode="horizontal"
+        >
+          <Menu.Item key="mail">
+            <Link to="/">todo</Link>
+          </Menu.Item>
+          <Menu.Item key="app">
+            <Link to="/other/">other</Link>
+          </Menu.Item>
+        </Menu>
+        <Route path="/" exact component={ToDo} />
+        <Route path="/other/" component={Other} />
+      </Router>
+    );
+  }
+}
+export default AppRouter;
+```
+* 我们通过`Router、Route、Link`三个组件的配合，完成了最简单的路由配置
+
+### 动态传值
+* 首先设置动态传值的规则，在`Route`组件上
+* 我们在`path`中使用`:xxx`的方式设置动态路由参数
+```js
+<Route path="/" exact component={ToDo} />
+<Route path="/other/:title" component={Other} />
+```
+* 修改`ToDo`的代码，加上`Link`标签来跳转到`other`并动态传入参数
+```js
+  {props.list.map((item, index) => {
+    return (
+      <Card
+        onClick={() => {props.handleDeleteClick(index)}}
+        key={index}
+        style={{ marginTop: 10 }}
+      >
+        <p>{item}</p>
++       <Link to={`/other/`+item}>查看详情</Link>
+      </Card>
+    );
+  })}
+```
+* 动态路由传入后，对应的路由页面可以在`props`中拿到传入的参数
+* 具体在 `props` 的` match`属性的`params`属性中，在具体取值就是我们定义规则的时候`:xxx`的变量名
+```js
+import React from 'react';
+function Other(props) {
+  return <h1>title:{props.match.params.title}</h1>;
+}
+export default Other;
+```
+
+### redirect
+* 在`react-router-dom`中引入`Redirect`组件进行重定向
+```js
+function Other(props) {
+  return (
+    <div>
+      <Redirect to="/"></Redirect>
+      <h1>title:{props.match.params.title}</h1>;
+    </div>
+  );
+}
+```
+* 通过`js` `props.history.push`的方式进行重定向
+```js
+function Other(props) {
+  props.history.push('/')
+  return (
+    <div>
+      <h1>title:{props.match.params.title}</h1>;
+    </div>
+  );
+}
+```
+### 嵌套路
+* 嵌套路由很简单，就是在第一层`Route`路由的组件中重新再配置一套`Route`规则即可
+* `page1`和`page2`为简单的为无状态组件
+```js
+import React, { Component } from 'react';
+import { Menu } from "antd";
+import {Route,Link} from "react-router-dom"
+import page1 from './views/page1';
+import page2 from './views/page2';
+const { SubMenu } = Menu;
+
+class other extends Component {
+  handleClick = (e) => {
+    console.log("click ", e);
+  };
+  render() {
+    return (
+      <div>
+        <Menu
+          onClick={this.handleClick}
+          style={{ width: 256 }}
+          mode="vertical"
+        >
+          <SubMenu
+            key="sub1"
+            title={
+              <span>
+                <span>Navigation One</span>
+              </span>
+            }
+          >
+            <Menu.Item key="1">
+              <Link to="/other/page1">page1</Link>
+            </Menu.Item>
+            <Menu.Item key="2">
+              <Link to="/other/page2">page2</Link>
+            </Menu.Item>
+          </SubMenu>
+        </Menu>
+        <div className="childRoute">
+          <Route path="/other/page1" component={page1} />
+          <Route path="/other/page2" component={page2} />
+        </div>
+      </div>
+    );
+  }
+}
+export default other
+```
 
 ## React Hook
+
+### useState
+* 声明带有状态的变量
+* 通过数组解构的方式得到状态变量，和这个状态改变得方法
+```js
+import React, {  useState } from 'react';
+function Page1 () {
+  let [attr1, setAttr1] = useState({
+    name:'husky',
+    age:2
+  });
+  return (
+    <h1 onClick={()=>{setAttr1({ name: "two haha", age: 3 });}}>
+      {attr1.name}
+      {attr1.age}
+    </h1>
+  );
+}
+export default Page1;
+```
+
+### useEffect（一）
+* 代替有状态组件中的`componentDidMount`和`componentDidUpdate`钩子函数
+* 第一次挂在Dom完成的时候执行一次，数据更新之后执行一次
+```js
+function Page1 () {
+  let [attr1, setAttr1] = useState({
+    name:'husky',
+    age:2
+  });
+  useEffect(()=>{
+    console.log("attr1");
+  })
+  return (
+    <h1 onClick={()=>{setAttr1({ name: "two haha", age: 3 });}}>
+      {attr1.name}
+      {attr1.age}
+    </h1>
+  );
+}
+```
+
+### useEffect（二）
+* 通过`useEffect` 模拟 `componentWillUnmount`
+* 通过在`useEffect`第一个匿名函数参数中`return`一个匿名函数的方式来执行，当然还需要在`useEffect`的第二个参数中设置空数组
+* 如果不设置空数组，就代表，只要这个组件内有数据变化，就会再执行一遍
+* 如果在数组中写了某些状态，那就代表只有写在数组中的状态改变时，才会在触发`useEffect`
+```js
+function Page1 () {
+  let [attr1, setAttr1] = useState({
+    name:'husky',
+    age:2
+  });
+  useEffect(()=>{
+    console.log("attr1");
+    return ()=>{
+      console.log('goodbye');
+    }
+  })
+  return (
+    <h1 onClick={()=>{setAttr1({ name: "two haha", age: 3 });}}>
+      {attr1.name}
+      {attr1.age}
+    </h1>
+  );
+}
+```
+* 当切换路由组件销毁的时候就会在控制台打印`goodbye`
+
+### useContext父子组件通信
+* 通过createContext 在父组件中定义并且提供给子组件的状态
+```js
+export const parentContext = createContext() 
+
+return (
+  <div>
+    <parentContext.Provider value={/*父组件要共享给子组件的状态*/}>
+      {/*子组件*/}
+    </parentContext.Provider>
+  </div>
+)
+```
+* 在子组件中用 useContext来接收父组件传递的状态
+```js
+import { parentContext } from "从父组件中引入createContext创建变量";
+
+let name = useContext(parentContext);
+
+return (<h1>{name}</h1>)
+```
+
+### useReducer
+* 类似于`redux`中的`reducer`的功能
+* 接下来使用一个加减数值的案例来了解一下`useReducer`的使用方式
+```js
+import React, { useReducer } from 'react';
+
+function Page1 () {
+  let [count, dispatch] = useReducer((state, action)=>{
+    console.log(action);
+    switch (action.type) {
+      case 'ADD':
+        return ++state;
+      case 'SUB':
+        return --state;
+      default:
+        return state
+    }
+  }, 0)
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button
+        onClick={() => {
+          dispatch({ type: "ADD" });
+        }}
+      >
+        +
+      </button>
+      <button
+        onClick={() => {
+          dispatch({ type: "SUB" });
+        }}
+      >
+        -
+      </button>
+    </div>
+  );
+}
+export default Page1;
+```
+
+### useContext配合useReducer实现状态管理
+* 首先我们将currentContext部分的逻辑单独抽离出来
+```js
+import React, { createContext } from 'react';
+
+export const currentContext = createContext({});
+
+export const ContextContainer = (props)=> {
+  return (
+    <currentContext.Provider value={{bg:'#333'}}>
+      {props.children}
+    </currentContext.Provider>
+  )
+}
+```
+
+* 接下来对currentContext中的代码进行改造，增加reducer部分逻辑
+```js
+import React, { createContext, useReducer } from "react";
+
+export const currentContext = createContext({});
+
+export const ContextContainer = (props)=> {
+
+  let [bg, dispatch] = useReducer(reducer, '#FFF');
+
+  return (
+    <currentContext.Provider value={{ bg, dispatch }}>
+      {props.children}
+    </currentContext.Provider>
+  );
+}
+export const THEME_COLOR_LIGHT = "THEME_COLOR_LIGHT";
+export const THEME_COLOR_DARK = "THEME_COLOR_DARK";
+
+const reducer = (state, action) => {
+  console.log(state);
+  switch (action.type) {
+    case "THEME_COLOR_DARK":
+      return "#333";
+    case "THEME_COLOR_LIGHT":
+      return "#FFF";
+    default:
+      return state;
+  }
+}
+```
+
+* 接下来我们去使用，首先我们声明一个控制按钮组，来控制明暗模式
+* Context文件就是我们最开始声明的一些方法和属性以及组件
+```js
+import React, { useContext } from "react";
+import {
+  currentContext,
+  THEME_COLOR_DARK,
+  THEME_COLOR_LIGHT,
+} from "../Context";
+
+function Ctrl() {
+  let { dispatch } = useContext(currentContext);
+  return (
+    <div>
+      <button
+        onClick={() => {
+          dispatch({ type: THEME_COLOR_DARK });
+        }}>
+        dark
+      </button>
+      <button
+        onClick={() => {
+          dispatch({ type: THEME_COLOR_LIGHT });
+        }}>
+        light
+      </button>
+    </div>
+  );
+}
+
+export default Ctrl;
+```
+
+* 接下来处理显示明暗主题的组件，这个组件主要通过useContext来使用改变的状态
+```js
+import React, { useContext } from "react";
+import { currentContext } from "../Context";
+function Platform() {
+  let { bg } = useContext(currentContext);
+  return <div style={{ width: 200, height: 200, background: bg }}></div>;
+}
+
+export default Platform;
+```
+
+* 两个组件都定义玩了，还需要将他们添加到起初声明的createContext组件中
+```js
+import React from "react";
+import Platform from "./platform";
+import Ctrl from "./ctrl";
+import { ContextContainer } from "../Context";
+function Page1() {
+  return (
+    <div>
+      <ContextContainer>
+        <Platform />
+        <Ctrl />
+      </ContextContainer>
+    </div>
+  );
+}
+export default Page1;
+```
+* 至此我们模拟redux，改变元素主题色的小案例完成
+
+### useMemo
+* 通过这个钩子函数可以解决，当某些组件的状态没有变化时，则这些组件内部逻辑不需要重新执行，相当于缓存
+```js
+import React, { useMemo } from 'react';
+function Page2({ title }) {
+  function upperName(title = '') {
+    return title.toUpperCase();
+  }
+  const result = useMemo(() => upperName(title), [title]);
+  return (
+    <>
+      <h1>{result}</h1>
+    </>
+  );
+}
+```
+* 通过上面这个例子，也就是说，只要`title`值不变，`upperName`方法就不会在执行第二遍了
+
+### useRef
+* 通过`useRef`来获取来获取`dom`元素,通过`useRef`声明的`dom`变量会将`dom`的信息保存在该变量的`current`属性中
+```js
+import React, { useRef } from 'react';
+function Page2() {
+  let h1El = useRef()
+  console.log(h1El); // h1El.current
+  return (
+    <>
+      <h1 ref={h1El}>husky are you scared</h1>
+    </>
+  );
+}
+export default Page2;
+```
+
+### custom hooks
+* 自定义钩子函数，主要就是将一些公共的方法抽离出来，降低耦合性
+* 需要注意的是自定义钩子函数，需要以`use`开头，就像`useState、useContext`一样
+* 接下来使用一个小案例来演示，主要作用就是，判断local storage中是否userInfo信息，如果没有跳转到登录的路由
+```js
+import React, { useState ,useEffect } from 'react';
+
+function useLoginState(props){
+  let [loginState,setState] = useState(false);
+  useEffect(()=>{
+    if (localStorage.getItem("USER_INFO")) {
+      setState(true)
+    } else {
+      props.history.push("/login/");
+      setState(false);
+    }
+  }, [props.history])
+  
+  return loginState;
+}
+
+function Page2(props) {
+  let h1El = useLoginState(props);
+  console.log(h1El);
+  
+  return (
+    <>
+      <h1>husky are you scared</h1>
+    </>
+  );
+}
+export default Page2;
+```
+* 这里为了演示，放到了一起，在项目中可以单独抽离成公共的hook
