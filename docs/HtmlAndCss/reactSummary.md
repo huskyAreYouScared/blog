@@ -1510,3 +1510,5 @@ function Page2(props) {
 export default Page2;
 ```
 * 这里为了演示，放到了一起，在项目中可以单独抽离成公共的hook
+
+<Minimap/>
