@@ -33,3 +33,15 @@
 * [B站传送门](https://www.bilibili.com/video/BV1bA411v75N)
 ### 项目地址
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=huskyareyouscared&repo=fly-key)](https://github.com/huskyareyouscared/fly-key)
+
+
+## chase
+
+:::tip
+  鼠标点击特效小工具
+:::
+
+### 视频演示
+* [B站传送门](https://www.bilibili.com/video/BV1aK4y1Y7Rm)
+### 项目地址
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=huskyareyouscared&repo=chase)](https://github.com/huskyareyouscared/chase)

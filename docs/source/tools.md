@@ -160,3 +160,5 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * webp2jpg-online[在线的图片转换工具](https://github.com/renzhezhilu/webp2jpg-online)它的原理 用到了canvas的API canvas.toBlob(callback, type, encoderOptions);
 
 * 分享文本的网站，分享的内容支持加密和阅后即焚（类似qq闪照）[pasteme](https://pasteme.cn/)
+
+* 生成图片风格的二维码工具网站[qrpicture](https://www.qrpicture.com/)
