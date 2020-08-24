@@ -1,8 +1,9 @@
 # 设计模式
 
 ::: tip
-  每种设计模式都有特定的使用场景，适度使用，有助于提高可维护性和可读性
-  过度使用会带来更多的复杂度，反而不利于维护
+  * 每种设计模式都有特定的使用场景，适度使用，有助于提高可维护性和可读性
+  * 过度使用会带来更多的复杂度，反而不利于维护
+  * 本文可能更注重于代码实现环节，对设计模式的思想可能记录的不够全面
 :::
 ## 单例模式
 :::tip
@@ -475,6 +476,7 @@ Tea.getTea = function (){
     addFruit()
   };
 }()
+
 Tea.getTea = function (){
   let getTea = Tea.getTea
   return ()=>{
@@ -551,3 +553,430 @@ function addEvent(element, type, fn) {
   }
 }
 ```
+
+## 组合模式
+:::tip
+以树形结构来表现`整体和部分`的结构层次,让使用者可以以一致的方式处理组合对象以及部分对象。
+:::
+
+### 定义树状菜单
+* 首先定义菜单类和子菜单类
+* 同时要支持链式调用，通过在`add`方法中返回当前实例的方式来实现
+```js
+class Menu{
+  constructor(name){
+    this.name = name;
+    this._children = []
+  }
+
+  add(MenuOrMenuItem){
+    this._children.push(MenuOrMenuItem);
+    return this
+  }
+
+  search(cb){
+    this._children.forEach((child)=>{
+      child.search(cb)
+    })
+  }
+}
+
+class MenuItem {
+  constructor(name, path) {
+    this.name = name;
+    this.path = path;
+  }
+
+  search(cb) {
+    cb(this)
+  }
+}
+```
+
+* 实例化
+```js
+const menu = new Menu("主页")
+  .add(
+    new Menu("热门")
+      .add(new MenuItem("短视频", "/shortVideo"))
+      .add(new MenuItem("综艺", "/varietyShow"))
+  )
+  .add(
+    new Menu("体育")
+      .add(new MenuItem("篮球", "/basketball"))
+      .add(new MenuItem("足球", "/football"))
+  );
+
+menu.search(function(menuItem){
+  if(menuItem.name === '篮球'){
+    console.log(menuItem.path);
+  }
+})
+```
+
+## 桥接模式
+:::tip
+将抽象部分与它的实现部分分离，使它们都可以独立地变化。使用组合关系代替继承关系，降低抽象和实现两个可变维度的耦合度
+:::
+
+### 简单实现
+* 我们这里以组装电脑为背景进行示例编写
+* 可以根据不同的显卡，CPU，内存来完成不同配置的电脑
+```js
+class Computer {
+  constructor(display, cpu, memory) {
+    this.display = new Display(display);
+    this.cpu = new CPU(cpu);
+    this.memory = new Memory(memory);
+  }
+
+  run() {
+    this.cpu.run();
+    this.memory.run();
+    this.display.run();
+  }
+}
+class Display {
+  constructor(display) {
+    this.display = display;
+  }
+  run() {
+    console.log(this.display + "显示器开始运行");
+  }
+}
+class CPU {
+  constructor(cpu) {
+    this.cpu = cpu;
+  }
+  run() {
+    console.log(this.cpu + "CPU开始运行");
+  }
+}
+class Memory {
+  constructor(memory) {
+    this.memory = memory;
+  }
+  run() {
+    console.log(this.memory + "内存条-开始运行");
+  }
+}
+
+let computer = new Computer("17.3英寸", "i10处理器", "32G");
+computer.run();
+// i10处理器CPU开始运行
+// 32G内存条-开始运行
+// 17.3英寸显示器开始运行
+```
+* 如果在真实需求中，实现一个功能，需要涉及不同几个模块来配合完成，可以使用桥接模式来完成
+* 各个模块可以根据具体的参数来控制具体的属性变化，最终将几个模块合起来，达到最终的目的，而且可复用性强，灵活
+* 比如给页面中的元素动态的变换样式，可以对颜色类的抽象到一起，改变大小的抽象到一起，等等，最后在同意将这些小模块执行即可
+
+## 观察者模式和发布订阅模式
+:::tip
+观察者模式和发布订阅模式，实现的功能类似，接下来分别在示例中进行说明
+:::
+
+### 观察者模式
+* 首先来实现一下观察者模式，观察者模式，设计到两个类，一个是发布者Publisher（被订阅的类），一个是观察者Observer（订阅类）
+* 发布者需要按照订阅的类型，分类保存不同的观察者
+* 发布者需要提供，订阅，取消订阅，广播方法(broadcast)
+```js
+class Publisher {
+  constructor() {
+    this.__subsMap = {};
+  }
+
+  subject(type, observer) {
+    !this.__subsMap[type] && (this.__subsMap[type] = []);
+    this.__subsMap[type].push(observer);
+  }
+
+  unSubject(type, observer) {
+    !this.__subsMap[type] && new Error("为订阅");
+    let index = this.__subsMap[type].indexOf(observer);
+    this.__subsMap[type].splice(index, 1);
+  }
+
+  broadcast(type) {
+    this.__subsMap[type].forEach((observerItem) => {
+      observerItem.receive(type);
+    });
+  }
+}
+```
+* 订阅者需要提供接收广布的方法（receive）
+```js
+class Observer {
+  constructor(subject) {
+    this.subject = subject;
+  }
+
+  receive(type) {
+    console.log(this.subject+'订阅的'+type+'到货了');
+  }
+}
+```
+* 观察者和发布者定义好了，接下来测试
+```js
+let gameStore = new Publisher();
+
+
+let player1 = new Observer('husky')
+let player2 = new Observer('twohaha')
+let player3 = new Observer('柯基')
+
+gameStore.subject("古墓丽影", player1);
+gameStore.subject("古墓丽影", player2);
+
+gameStore.subject("黑神话：悟空", player1);
+gameStore.subject("黑神话：悟空", player2);
+gameStore.subject("黑神话：悟空", player3);
+
+gameStore.broadcast("古墓丽影");
+gameStore.broadcast("黑神话：悟空");
+// husky订阅的古墓丽影到货了
+// twohaha订阅的古墓丽影到货了
+// husky订阅的黑神话：悟空到货了
+// twohaha订阅的黑神话：悟空到货了
+// 柯基订阅的黑神话：悟空到货了
+```
+### 发布订阅模式
+* 和观察者模式相比，其实总体逻辑类似，主要是运用思想上有区别，发布订阅模式更像是观察者模式和单例模式的配合
+* 在整个系统中只实例化一个发布者（事件总线Event Bus），监听和发布都要通过这一个实例来做
+* 接下来我们来更改一下，让它更符合Event Bus的风格
+```js
+class EventBus {
+  constructor() {
+    this.__subsMap = {};
+  }
+
+  on(type, observer) {
+    !this.__subsMap[type] && (this.__subsMap[type] = []);
+    this.__subsMap[type].push(observer);
+  }
+
+  off(type, observer) {
+    !this.__subsMap[type] && new Error("为订阅");
+    let index = this.__subsMap[type].indexOf(observer);
+    this.__subsMap[type].splice(index, 1);
+  }
+
+  emit(type, msg) {
+    this.__subsMap[type].forEach((cb) => {
+      cb(msg);
+    });
+  }
+}
+
+export default new EventBus;
+```
+* 接下来开始测试,首先要引入刚才定义的EventBus
+```js
+import eventBus from './EventBus.js'
+eventBus.on('game',function(msg){
+  console.log('husky:'+msg);
+})
+eventBus.on('game',function(msg){
+  console.log("柯基:" + msg);
+})
+eventBus.on('video',function(msg){
+  console.log("husky:" + msg);
+})
+
+eventBus.emit('game','黑神话：悟空可以玩了')
+eventBus.emit("video", "灵笼更新啦");
+// husky:黑神话：悟空可以玩了
+// 柯基:黑神话：悟空可以玩了
+// husky:灵笼更新啦
+```
+### 参考资料
+* [观察者模式VS订阅发布模式](https://molunerfinn.com/observer-vs-pubsub-pattern/#%E6%A6%82%E8%BF%B0)
+
+
+## 策略模式
+:::tip
+将不同的算法封装在不同的函数中，根据输入判断要调用哪个函数，做到业务实现和使用分离
+:::
+
+### 简单示例
+* 我们通过一个打折的示例来模拟策略模式
+* 不同的折扣方式定义在独立的函数中，通过输入策略和真实价格来返回最终的价格
+```js
+const Strategy = {}
+
+Strategy.discount8 = function(price){
+  return (price * 0.8)
+}
+Strategy.discount9 = function(price){
+  return (price * 0.9)
+}
+Strategy.discount5 = function(price){
+  return (price * 0.5)
+}
+
+function Context (discount, price){
+  let strategy = "discount" + discount
+  return Strategy[strategy] && Strategy[strategy](price);
+}
+
+console.log(Context(9, 100)); // 90
+```
+
+## 模板方法模式
+:::tip
+在父类中搭建固定流程框架，将具体实现延迟到子类中实现
+:::
+
+### 继承方式的模板方法
+* 在父类中将基本的框架搭建完毕，模板父类不可以被实例化，父类中定义的某些灵活的方法，将不能直接调用
+* 不能实例化的类，因为定义的是抽象类，需要子类继承。不能直接调用的方法，因为定义的是抽象方法，需要在继承父类的子类中重写抽象方法
+```js
+class Template{
+  constructor(){
+    if(new.target === Template) {
+      throw new Error('抽象类不能实例化')
+    }
+  }
+  operate1(){console.log('固定流程1')}
+
+  operate2(){throw new Error("抽象方法，不能调用");}
+
+  operate3(){console.log('固定流程2')}
+
+  init(){
+    this.operate1()
+    this.operate2()
+    this.operate3()
+  }
+}
+```
+* 模板方法的抽象类和抽象方法，定义后，需要通过子类类完成后续的具体实现
+```js
+
+class Child extends Template{
+  constructor(){super()}
+  operate2(){
+    console.log("实现抽象方法");
+  }
+}
+
+let child = new Child();
+child.init()
+// 固定流程1
+// 实现抽象方法
+// 固定流程2
+```
+
+### 默认参数方式的模板方法
+* 通过默认参数的方式实现模板方法的抽象类和抽象方法
+```js
+class Template {
+  constructor({
+    operate1 = function () {
+      throw new Error("抽象方法");
+    },
+  }) {
+    this.operate1 = operate1;
+  }
+
+  operate2() {
+    console.log("固定流程2");
+  }
+
+  init() {
+    this.operate1();
+    this.operate2();
+  }
+}
+```
+* 定义好之后，测试
+```js
+let temp = new Template({
+  operate1:function () {
+    console.log('动态流程，重写抽象方法')
+  }
+})
+temp.init()
+// 动态流程，重写抽象方法
+// 固定流程2
+```
+
+## 职责链模式
+
+::: tip
+翻译成大白话就是，一个不断向后找靠山的模式，直到匹配到能处理的人
+:::
+
+### 简单实现
+* 首先我们先将公共方法提取出来，将设置下一个职责链的方法抽离出来
+```js
+class Duty {
+  constructor() {
+    this.nextDuty = null;
+  }
+  setNextDuty(nextDuty) {
+    this.nextDuty = nextDuty;
+    return nextDuty;
+  }
+}
+```
+* 接下来实现具体职责的类,这里面我们定义三种责任人，初级，中等，高级，对处理的贷款额度有所不同
+```js
+class PrincipalPrimary extends Duty {
+  constructor() {
+    super();
+  }
+  handle(money) {
+    if (money < 2000) {
+      console.log("顺利贷款成功 2000元以内金额");
+    } else {
+      this.nextDuty.handle(money);
+    }
+  }
+}
+class PrincipalMiddle extends Duty {
+  constructor() {
+    super();
+  }
+  handle(money) {
+    if (money < 5000) {
+      console.log("顺利贷款成功 5000元以内金额");
+    } else {
+      this.nextDuty.handle(money);
+    }
+  }
+}
+class PrincipalHigh extends Duty {
+  constructor() {
+    super();
+  }
+  handle(money) {
+    if (money < 10000) {
+      console.log("顺利贷款成功 10000元以内金额");
+    } else {
+      console.log("贷款金额上限为10000元");
+    }
+  }
+}
+```
+
+* 接下来开始测试
+```js
+let staffPrimary = new PrincipalPrimary()
+let staffMiddle = new PrincipalMiddle()
+let staffHigh = new PrincipalHigh()
+
+staffPrimary
+  .setNextDuty(staffMiddle)
+  .setNextDuty(staffHigh);
+
+staffPrimary.handle(9999) // 顺利贷款成功 10000元以内金额
+staffPrimary.handle(1999) // 顺利贷款成功 2000元以内金额
+staffPrimary.handle(2999) // 顺利贷款成功 5000元以内金额
+staffPrimary.handle(20000) // 贷款金额上限为10000元
+```
+
+
+
+
+<Minimap/>
