@@ -54,6 +54,7 @@ module.exports = {
       ],
       "/HtmlAndCss/": [
         "",
+        "customNew",
         "designPattern",
         "pointSummary",
         "css",
