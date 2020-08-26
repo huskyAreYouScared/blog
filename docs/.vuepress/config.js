@@ -55,6 +55,7 @@ module.exports = {
       "/HtmlAndCss/": [
         "",
         "customNew",
+        "customCallApplyBind",
         "designPattern",
         "pointSummary",
         "css",
