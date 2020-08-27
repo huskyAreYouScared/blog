@@ -56,6 +56,7 @@ module.exports = {
         "",
         "customNew",
         "customCallApplyBind",
+        "debounceAndThrottle",
         "designPattern",
         "pointSummary",
         "css",
