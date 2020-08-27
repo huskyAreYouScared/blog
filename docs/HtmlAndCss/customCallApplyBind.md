@@ -1,9 +1,9 @@
 ---
 sidebarDepth: 3
 ---
-# 剖析Call、Apply、Bind
+# 剖析call、apply、bind
 
-## Call
+## call
 :::tip
   实现方式可能不是最好的，欢迎指正
 :::
@@ -129,6 +129,8 @@ let args = [...arguments].slice(1)
   Function.prototype.$call = $call
 ```
 
+* 此时我们自定义的`$call`方法就挂载到了`Function`的原型上了
+
 ### 优化版
 
 #### $call核心逻辑优化
@@ -151,64 +153,34 @@ husky.print.call(null, 5) // 5
 husky.print.call(undefined, 5) // 5
 ```
 * 可以看到当我们给`call`传递基本值类型的时候，原生的`call`方法，输出的是这些
-* 那么我们就要改进`$call`,其实也不难，无非就是做一些判断逻辑，我们首先来处理`null`和`undefined`
+* 所以我们要对传入的参数做一下判断
 ```js
 function $call() {
 
-  let arg_1 = arguments[0]
+  let arg_1 = arguments[0];
 
-  let other_args =  [...arguments].slice(1)
+  let target = arg_1 ? Object(arg_1) : window;
 
-  if (arg_1 === null || arg_1 === undefined) {
-    return this(...other_args)
-  }
-  // ...
-}
-```
-* 如果是`null`或者`undefined`就直接执行不走`call`的逻辑了，直接调用改变`this`之前的方法
-* 当然这一步对变量`arg_1`和`other_args`提前声明了，后面会用到
-* 继续来处理其他值类型的逻辑
-```js
-function $call() {
-  let arg_1 = arguments[0]
+  let other_args = [...arguments].slice(1);
 
-  let other_args =  [...arguments].slice(1)
-
-  if (arg_1 === null || arg_1 === undefined) {
-    return this(...other_args)
-  }
-  
-  let target = ['object', 'function'].includes(typeof arg_1)
-    ? arg_1
-    : {}
-  // ...
-}
-```
-* 这一步很简单，`Number,String,Boolean,Symbol`这几种类型，直接给`target`赋值为空对象，这也符合我们最开始的示例，当访问它上面的属性时，会给`undefined`，属性为定义返回`undefined`完全正确
-* 后面逻辑基本上就是变量替换，接下来看一下最后优化的代码
-```js
-function $call() {
-  let arg_1 = arguments[0]
-
-  let other_args =  [...arguments].slice(1)
-
-  if (arg_1 === null || arg_1 === undefined) {
-    return this(...other_args)
-  }
-  
-  let target = ['object', 'function'].includes(typeof arg_1)
-    ? arg_1
-    : {}
-
-  let currentFn = Symbol('$call')
+  let currentFn = Symbol("$call");
 
   target[currentFn] = this;
 
-  let args = other_args
-  
-  return target[currentFn](...args)
+  return target[currentFn](...other_args);
 }
 ```
+* 根据上面原生`call`函数方法执行返回值，分析出，当传入的第一个参数值为`undefined`或`null`的时候，会把`target`赋值为`window`
+* 我们还要看一个实验，为什么要这么处理
+```js
+function test(age) {
+  console.log(this.name, age);
+}
+test('test') // 只输出：test 大家可以试一下
+```
+* 此时这个`this`就相当于是`window`,`window`并没有定义`name`属性，看这个实验`console.log(this.name, age)`中的`this.name`并没有返回`undefined`
+
+* 根据这个特性,就可以解释，为什么当传入第一个参数是`undefined`或者`null`要赋值为`window`了
 
 #### 原型挂载优化
 * 给`$call`方法增加属性配置，使其不可被遍历
@@ -218,3 +190,91 @@ Object.defineProperty(Function.prototype,'$call',{
   enumerable: false
 })
 ```
+
+## apply
+
+### 实现
+* 其实这个方法和我们自定义的$call唯一的区别就是传入的参数，原生的apply需要传入一个数组，所以我们也要传入一个数组
+* 区别二，就是需要对第二个参数进行判断是不是数组，如果不是抛出错误
+```js
+ function $apply() {
+  let arg_1 = arguments[0];
+  
+  let other_args = arguments[1] ? arguments[1] : []
+
+  if (!Array.isArray(other_args) && other_args !== undefined)
+    throw new Error("CreateListFromArrayLike called on non-object");
+
+  let target = arg_1 ? Object(arg_1) : window;
+
+  let currentFn =  Symbol("$apply");
+
+  target[currentFn] = this;
+
+  return target[currentFn](...other_args);
+}
+```
+
+```js
+Function.prototype.$apply = $apply
+Object.defineProperty(Function.prototype,'$apply',{
+  enumerable: false
+})
+```
+* ok是不是很简单，大部分逻辑不同就是在参数上
+
+## bind
+
+### 原生bind回顾
+* 这个就和`call`和`apply`不同了，这个方法是直接返回一个改变了`this`指向的函数，参数可以在改变`this`指向的是传递，也可以在执行这个改变了`this`指向的函数时候再传递参数
+```js
+let husky = {
+  name: "husky",
+  print: function (...age) {
+    console.log(this.name, ...age);
+  },
+};
+
+let keji = {
+  name: "keji",
+};
+
+let hh = husky.print.bind(husky,'test1')
+hh('test1') // husky test1 test1
+```
+
+* ok,我们回顾了基础用法之后，就可以来实现
+
+### 代码实现
+* 首先我们先看代码,可以先看一下代码，带着问题，看解析，效果会更好
+```js
+function $bind() {
+  let target = arguments[0];
+
+  let other_args = [...arguments].slice(1);
+
+  let currentFn = Symbol("$bind");
+
+  target[currentFn] = this
+  
+  return function(){
+    let secondParams = [...arguments]
+    let mergeParams = other_args.concat(secondParams)
+    target[currentFn](...mergeParams)
+  }
+}
+```
+####　前4行代码
+* 前4行代码，我们在$call中已经基本介绍了，这里就不重复讲解了
+#### 第5行到第9行
+* 可以看到，我们这里返回了一个匿名函数，因为原生的bind也是返回一个方法，所以很容易想到，返回值是一个函数
+* 接下来就要处理参数了，首先两处传参的位置，我们是很明确的，一次是bind方法中可以传入，另一次是调用返回的函数时候传入的参数，并且这两次传入参数都有效果，所以我们就要合并两次参数，第7行代码就是这个作用
+* 第8行代码，就很好理解了，改变this指向，传入参数，在自定义$call中也已经分析过了
+
+::: tip
+  OK 到这里已经全部实现完毕了，其实重点将$call的实现研究透彻，$bind和$apply就很简单了
+:::
+
+## 参考资料
+* [这些手写代码会了吗？少年](https://juejin.im/post/6856419501777846279#heading-1)
+* [彻底搞懂闭包，柯里化，手写代码，金九银十不再丢分！](https://juejin.im/post/6856419501777846279#heading-1)

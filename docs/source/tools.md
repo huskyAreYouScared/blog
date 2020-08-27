@@ -20,6 +20,8 @@
 
 * [很强大的流程图在线绘制draw.io](https://www.draw.io/)
 
+* jsDelivr[免费的github、npm、wordpress资源CND服务](https://www.jsdelivr.com/)
+
 * [加速下载](https://d.serctl.com/)eg:例如 GitHub的releases文件
 
 * 免费的在线IDE[codesandbox](https://codesandbox.io/)
@@ -91,8 +93,6 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * [可以提取图片上的文字服务的网站-白描](https://web.baimiaoapp.com/)
 
 * [utteranc-借助GitHub issue实现的轻量blog评论小部件](https://utteranc.es/)
-
-* [免费的github、npm、wordpress资源CND服务](https://www.jsdelivr.com/)
 
 * [提供短链接网址](https://urlify.cn/)
 
