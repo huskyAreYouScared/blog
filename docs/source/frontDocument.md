@@ -18,3 +18,5 @@
 * [ES6 入门教程 阮一峰](https://es6.ruanyifeng.com/)
 
 * [Emmet](https://docs.emmet.io/)快速编写html代码
+
+* [labuladong的算法小炒](https://labuladong.gitbook.io/algo/)

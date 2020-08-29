@@ -288,20 +288,20 @@ function backDate( number ) {
 }
 ```
 
-#### line-height + text-align + veri
+#### line-height + text-align + vertical-align
 * 用于子元素是行内元素 或者行内块元素
 ```css
 .container{
-      width: 300px;
-      height: 300px;
-      line-height: 300px;
-      text-align: center;
-    }
-    .item{
-      display: inline-block;
-      vertical-align: middle;
-      line-height: initial; /* 防止子元素继承父元素的line-height*/
-    }
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  text-align: center;
+}
+.item{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: initial; /* 防止子元素继承父元素的line-height*/
+}
 ```
 
 ### 省略号
