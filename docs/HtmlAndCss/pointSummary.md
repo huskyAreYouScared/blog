@@ -1,9 +1,8 @@
 ---
 sidebarDepth: 3
 ---
-# 小技巧（百宝箱）
+# 小技巧（百宝箱）git
 
-<<<<<<< HEAD
 ## HTML
 
 ### 禁用鼠标右键
@@ -20,8 +19,6 @@ sidebarDepth: 3
 ### 建设中...
 
 
-=======
->>>>>>> d1a1981bf458a3130af6023ec977daac967b749b
 ## JavaScript
 
 ### 函数参数校验器

@@ -32,6 +32,8 @@
 
 * 算法可视化网站[Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 
+* [生成骨架屏的网站-传送门](https://skeletonreact.com/)可以生成react或vue等等不同前端框架的代码
+
 ## 必备
 * [svg在线编辑网站](https://www.zhangxinxu.com/sp/svg/)
 
