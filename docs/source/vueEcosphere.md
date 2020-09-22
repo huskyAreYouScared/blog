@@ -30,6 +30,11 @@
 
 * [Ant Design of Vue](https://www.antdv.com/docs/vue/introduce-cn/)
 
+* [shoelace](https://shoelace.style/)一个通用性组件库，vue，react，angular都可以使用，不同框架会有不同的引入和使用方式
+
+* [fast](https://www.fast.design/)微软开源的Web Components组件库，可以和各大前端框架配合使用
+
+
 ## 服务端渲染
 
 * [NuxtJS](https://zh.nuxtjs.org/)
@@ -71,7 +76,11 @@
 
 * vue消息插件[vue-notification](https://github.com/euvl/vue-notification) 
 
+* vue轮播图插件[vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)
+
 ## vue相关知识文章
+
+* [vue技术解密](https://ustbhuangyi.github.io/vue-analysis/)黄轶大佬编写
 
 * 在vue中使用lodash的工具函数[在vue中使用lodash的debounce和throttle](https://www.digitalocean.com/community/tutorials/vuejs-lodash-throttle-debounce)
 

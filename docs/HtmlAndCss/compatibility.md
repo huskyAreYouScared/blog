@@ -29,11 +29,26 @@
   </svg>
 </template>
 ```
-## 移动端上传图片
-* `android` 不加 `capture` 属性，可以选择，本地文件，相册，或者拍照
-* `IOS` 加 `capture` 属性，可以选择，本地文件，相册，或者拍照
+
+## 移动端拍照上传图片
+
+* `android` 加 `capture` 属性，可以直接打开照相机
+* `IOS` 加 `capture` 属性，可以直接打开照相机
 * 这两个端刚好相反，所以要做一些特殊的处理
+
 ```html
+<input  type="file" capture="camera" accept="image/*">
 ```
 ```js
+var file = document.querySelector('input');
+if (getIos()) {
+    file.removeAttribute("capture");
+}
+function getIos() {
+  if (navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
+      return true;
+  } else {
+      return false;
+  }
+}
 ```

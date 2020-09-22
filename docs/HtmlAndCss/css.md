@@ -22,20 +22,8 @@
 
 * [CSS3 剪切路径（Clip-path）](https://techbrood.com/tool?p=css-clip-path)
 
-### 省略号
-```css
-/* 显示一行，省略号 */
-white-space: nowrap;
-text-overflow: ellipsis;
-overflow: hidden;
-word-break: break-all;
- 
-/* 显示两行，省略号 */
-text-overflow: -o-ellipsis-lastline;
-overflow: hidden;
-text-overflow: ellipsis;
-display: -webkit-box;
--webkit-line-clamp: 2;
-line-clamp: 2;
--webkit-box-orient: vertical;
-```
+* [CSS Gradient Magic](https://www.gradientmagic.com/browse)该网站收集很多渐变效果，支持直接复制CSS代码
+
+## css开源库
+
+* [mvp.css](https://andybrewer.github.io/mvp/) 一个最简化的 CSS 库，不提供任何自定义的类，只给出最基本的 HTML 元素的样式，适合在它的基础上添加自定义的样式

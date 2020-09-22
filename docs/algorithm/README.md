@@ -16,9 +16,12 @@
 * [链表](./linkedListStructure.html)
 * [栈](./stackStructure.html)
 * [队列](./queueStructure.html)
+* [字典](./dictionaryStructure.html)
 * [树](./treeStructure.html)
+* [图](./graphStructure.html)
 
-## 搜索
+
+## 其他
 * [二分查找](./binarySearch.html)
 
 <Utterances :id="5"/>

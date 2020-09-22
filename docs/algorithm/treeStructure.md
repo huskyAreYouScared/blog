@@ -1,12 +1,13 @@
 # 树
 
 :::tip
-  这里我们首先实现简单的二叉搜索树
+  这里我们首先实现简单的二叉搜索树<br>
+  接下来一段时间会补充更多的树的实现
 :::
 
-## 概念
+### 概念
 * 树的概念这里就先不介绍了，我相信你看到这里，概念一定是了解的，只是实现思路还有一丝丝断层，来这里探索灵感
-## 实现
+## 二叉搜索树
 ### 基础方法和属性
 ```js
 class BinarySearchTree{
@@ -208,5 +209,52 @@ class BinarySearchTree{
       current = current.left
     }
     return current
+  }
+```
+
+
+### 如何判断当前树，是否为二叉搜索树
+* 由于二叉搜索树的中序遍历方法，是按照大小顺序进行遍历的
+* 将遍历的节点依次插入临时数组中
+* 最后遍历临时数组是否存在索引小的值大于索引大的值，如果存在代表不是二叉搜索树
+```js
+isValidBST(){
+    let arr = []
+    this.inOrderTravers(function(value){
+      arr.push(value)
+    })
+    for (let index = 1; index < arr.length; index++) {
+      if(arr[index - 1] > arr[index]) {
+        return false
+      }
+    }
+    return true
+  }
+```
+
+### 按照树的深度，一层一层的遍历
+* 如下图，最后输出的值为
+
+![树](https://static01.imgkr.com/temp/e84865915159490ebc1f20de40ce873f.png)
+```js
+[ 
+  [ 5 ], 
+  [ 3, 8 ], 
+  [ 6, 9 ] 
+]
+```
+```js
+  printLevelOrder(){
+    return this.printLevelOrderNode(this.root)
+  }
+  printLevelOrderNode(root, arr = [], i = 0) {
+    if(root){
+      !arr[i] && (arr[i] = [])
+      arr[i].push(root.key)
+      i++
+      root.left && this.printLevelOrderNode(root.left,arr,i)
+      root.right && this.printLevelOrderNode(root.right,arr,i)
+    }
+    return arr
   }
 ```

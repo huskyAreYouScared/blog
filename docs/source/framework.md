@@ -10,3 +10,5 @@
 * 很多的express插件，有很多轮子，不用我们重新解决了，当不满足的时候，可以查看源码自行改造[传送门](https://github.com/wabg/awesome-express)
 
 * node和ffmpeg的相关插件，可以方便我们快速开发音视频相关的工具软件[传送门](https://github.com/transitive-bullshit/awesome-ffmpeg)
+
+* 一个Node.js应用，可以搭建私人的Wiki[wiki.js](https://wiki.js.org/)

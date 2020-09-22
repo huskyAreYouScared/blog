@@ -20,6 +20,8 @@
 
 * [很强大的流程图在线绘制draw.io](https://www.draw.io/)
 
+* jsDelivr[免费的github、npm、wordpress资源CND服务](https://www.jsdelivr.com/)
+
 * [加速下载](https://d.serctl.com/)eg:例如 GitHub的releases文件
 
 * 免费的在线IDE[codesandbox](https://codesandbox.io/)
@@ -92,8 +94,6 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 
 * [utteranc-借助GitHub issue实现的轻量blog评论小部件](https://utteranc.es/)
 
-* [免费的github、npm、wordpress资源CND服务](https://www.jsdelivr.com/)
-
 * [提供短链接网址](https://urlify.cn/)
 
 * [微信公众号排版工具](https://mdnice.com/)
@@ -158,3 +158,7 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * figma design[figma](https://www.figma.com/)在线设计图工具
 
 * webp2jpg-online[在线的图片转换工具](https://github.com/renzhezhilu/webp2jpg-online)它的原理 用到了canvas的API canvas.toBlob(callback, type, encoderOptions);
+
+* 分享文本的网站，分享的内容支持加密和阅后即焚（类似qq闪照）[pasteme](https://pasteme.cn/)
+
+* 生成图片风格的二维码工具网站[qrpicture](https://www.qrpicture.com/)
