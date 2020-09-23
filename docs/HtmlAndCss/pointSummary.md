@@ -1,7 +1,7 @@
 ---
 sidebarDepth: 3
 ---
-# 小技巧（百宝箱）git
+# 小技巧（百宝箱）
 
 ## HTML
 
@@ -13,10 +13,6 @@ sidebarDepth: 3
 ```
 ### 生成骨架屏
 * [传送门](https://skeletonreact.com/)
-
-## CSS
-
-### 建设中...
 
 
 ## JavaScript
@@ -219,7 +215,6 @@ function backDate( number ) {
   <div></div>
 </body>
 ```
-
 
 ## CSS
 

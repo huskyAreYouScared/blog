@@ -68,6 +68,8 @@
 
 * vuedraggable[vue强大的拖拽插件](https://www.npmjs.com/package/vuedraggable)
 
+* vue拖拽缩放的插件[vue-draggable-resizable](https://github.com/mauricius/vue-draggable-resizable)
+
 * veevalidate[表单校验插件](https://logaretm.github.io/vee-validate/)
 
 * vxe-table[vue表格插件](https://github.com/xuliangzhan/vxe-table)
@@ -77,6 +79,9 @@
 * vue消息插件[vue-notification](https://github.com/euvl/vue-notification) 
 
 * vue轮播图插件[vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)
+
+* vue grid布局插件-可以用于可视化大屏[vue-grid-layout](https://github.com/jbaysolutions/vue-grid-layout)
+
 
 ## vue相关知识文章
 
