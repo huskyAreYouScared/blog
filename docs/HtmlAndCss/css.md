@@ -12,6 +12,8 @@
 
 ## css代码生成
 
+* [animista动画生成](https://animista.net/)
+
 * [三角形生成](https://www.dute.org/css-arrow)
 
 * [文本阴影生成（text-shadow）](https://techbrood.com/tool?p=cg-text-shadow)
@@ -23,6 +25,8 @@
 * [CSS3 剪切路径（Clip-path）](https://techbrood.com/tool?p=css-clip-path)
 
 * [CSS Gradient Magic](https://www.gradientmagic.com/browse)该网站收集很多渐变效果，支持直接复制CSS代码
+
+* [CSS 布局收集](https://csslayout.io/)
 
 ## css开源库
 

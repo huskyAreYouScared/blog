@@ -162,3 +162,15 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 * 分享文本的网站，分享的内容支持加密和阅后即焚（类似qq闪照）[pasteme](https://pasteme.cn/)
 
 * 生成图片风格的二维码工具网站[qrpicture](https://www.qrpicture.com/)
+
+* 可以查看git history的网站[https://github.githistory.xyz/](https://github.githistory.xyz/)历史记录比对体验很好
+```bash
+# 首先定位到一个文件
+https://github.com/huskyAreYouScared/blog/blob/master/docs/.vuepress/config.js
+# 只需要改变网址即可
+https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/config.js
+```
+
+* 配色网站[中国古典颜色 CHINESE COLOR](https://colors.ichuantong.cn/)
+
+* linuxcool[linux命令手册](https://www.linuxcool.com/)

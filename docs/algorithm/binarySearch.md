@@ -21,20 +21,19 @@
         first= middle +1
       }
     }
-    return false
+    return -1
   }
 ```
 
 * 首先要拿到有序数组的首末索引
 * 通过首末索引相加来找到中间索引，通过中间索引判断目标元素所在的区域
-* 如果碰巧middle对应的数就是目标，那就直接返回该索引
-* 如果middle索引对应的元素大于target，那么证明target，在以middle分割的数组的前半部分，所以要让末尾索引变成 middle - 1，相反就让首索引变成 middle + 1
-* 查找结束条件，1.就是成功找到目标元素，然后返回相对应的索引，2.没有查找到目标元素，返回false
+* 如果碰巧`middle`对应的数就是目标，那就直接返回该索引
+* 如果`middle`索引对应的元素大于`target`，那么证明`target`，在以`middle`分割的数组的前半部分，所以要让末尾索引变成 `middle - 1`，相反就让首索引变成 `middle + 1`
+* 查找结束条件，1.就是成功找到目标元素，然后返回相对应的索引，2.没有查找到目标元素，返回`-1`
 
 ## 递归方式
 ```js
 function binary_search_recursion(arr, target, start, end) {
-  
   if (start > end) {
     return -1;
   }
@@ -42,7 +41,6 @@ function binary_search_recursion(arr, target, start, end) {
   if (arr[middle] === target) {
     return middle;
   }
-
   if (arr[middle] > target) {
     return binary_search_recursion(arr, target, start, middle - 1);
   } else {

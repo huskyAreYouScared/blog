@@ -60,6 +60,8 @@
 
 * 分片上传的插件[plupload](https://github.com/moxiecode/plupload)
 
+* 图片预览插件[Viewer.js](https://cn.pornhub.com/view_video.php?viewkey=ph5d82aac8b5817)
+
 ## 不常用
 
 * [iohook](https://wilix-team.github.io/iohook/)基于node端可以全局监听键盘鼠标等事件，当然也可以在electron中使用
