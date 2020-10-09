@@ -112,7 +112,7 @@ customModule.define('xiaoge', ['husky-compare'],function (husky) {
 * 在`<script>`标签声明为模块时，会被延迟解析，并且标签内部`JS`代码变为严格模式
 
 ## 按需加载
-* 通过出发某个事件来执行按需加在的逻辑
+* 通过触发某个事件来执行按需加在的逻辑
 ```js
 document.getElementById('button').onclick=()=>{
   import('xx/xx/path').then(({fun1, fun2})=>{

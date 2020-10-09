@@ -22,3 +22,5 @@
 * [labuladong的算法小炒](https://labuladong.gitbook.io/algo/)
 
 * [webRTC简单示例](https://webrtc.github.io/samples/)
+
+* [java23种设计模式全面解析](http://c.biancheng.net/design_pattern/)
