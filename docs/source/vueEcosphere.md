@@ -44,6 +44,8 @@
 
 * [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/)成熟的后台管理模板（花裤衩大佬的开源项目）
 
+* [Vue-vben-admin](https://vvbin.cn/docs/)ant-design风格的管理后台模板(vue3+vite+ts)
+
 * [electron-vue](https://github.com/SimulatedGREG/electron-vue)使用 Vue-cli 脚手架、常用 Vue 插件、 electron-packager/electron-builder, unit/e2e testing, vue-devtools, and webpack[开发文档-中文](https://simulatedgreg.gitbooks.io/electron-vue/content/cn/)
 
 ## 插件
