@@ -3,9 +3,7 @@ sidebarDepth: 3
 ---
 # JS收藏夹
 
-## JavaScript
-
-### 函数参数校验器
+## 函数参数校验器
 ```js
 const isRequired = () => { throw new Error('param is required'); };
 function (name = isRequired()) {
@@ -16,7 +14,7 @@ print(); // 报错
 print(null); // null
 ```
 
-### 校验是否为JSON字符串
+## 校验是否为JSON字符串
 ```js
 export function isJsonString(str) {
   try {
@@ -29,7 +27,7 @@ export function isJsonString(str) {
 }
 ```
 
-### 利用JSON.stringify去除多余的属性
+## 利用JSON.stringify去除多余的属性
 * 假定我们只需要传给后台name和id属性，可是要传递的对象多了很多属性
 ```js
 let params = {
@@ -44,7 +42,7 @@ console.log(params)
 // {id: 1, name: "twohaha"}
 ```
 
-### 清除全部cookie
+## 清除全部cookie
 ```js
 export function clearCookie() {
   // 通过正则匹配到全部的cookie的key
@@ -57,7 +55,7 @@ export function clearCookie() {
 }
 ```
 
-### 合并多个对象
+## 合并多个对象
 ```js
 /**
  * @param {Object} multiple object
@@ -80,7 +78,7 @@ export function merge(target) {
 }
 ```
 
-### 判断元素是否包含在容器中
+## 判断元素是否包含在容器中
 ```js
 export const isInContainer = (el, container) => {
   const elRect = el.getBoundingClientRect()
@@ -104,7 +102,7 @@ export const isInContainer = (el, container) => {
 }
 ```
 
-### 封装addEventListener
+## 封装addEventListener
 ```js
 export const on = (function() {
   if (document.addEventListener) {
@@ -122,7 +120,7 @@ export const on = (function() {
   }
 })();
 ```
-### 封装removeEventListener
+## 封装removeEventListener
 ```js
 export const off = (function() {
   if (document.removeEventListener) {
@@ -141,7 +139,7 @@ export const off = (function() {
 })();
 ```
 
-### 封装一次绑定方法once
+## 封装一次绑定方法once
 * [off](#封装addEventListener) 和 [on](#封装removeEventListener) 用到了上面封装的方法
 ```js
 export const once = function(el, event, fn) {
@@ -155,7 +153,7 @@ export const once = function(el, event, fn) {
 };
 ```
 
-### 获取密码输入框内容
+## 获取密码输入框内容
 
 * 方法一
 ```js
@@ -167,7 +165,7 @@ document.querySelector('input[type=password]').value
 document.querySelector('input[type=password]').setAttribute('type','text')
 ```
 
-### 模板字符串应用一
+## 模板字符串应用一
 * 配合对象解构赋值效果更佳
 ```js
 function details ({name, address, phone}) {
@@ -175,7 +173,7 @@ function details ({name, address, phone}) {
 }
 ```
 
-### 模板字符串应用二
+## 模板字符串应用二
 * 作为函数实参
 ```js{6}
 function huskyDetails (content, weight) {
@@ -187,10 +185,36 @@ huskyDetails`husky${25}`
 // husky is big dog
 ```
 
-### 根据数字返回星期
+## 根据数字返回星期
 
 ```js
 function backDate( number ) {
   return number <= 7?`星期${'日一二三四五六日'.charAt(number)}`:''
 }
+```
+
+## 判断元素是否有滚动条
+
+### 判断竖向是否有滚动条
+```js
+  element.scrollHeight > element.clientHeight;
+```
+### 判断横向是否有滚动条
+```js
+  element.scrollWidth > element.clientWidth;
+```
+
+## 计算默认滚动条的宽度
+```js
+// 计算滚动条宽度的方法：新建一个带有滚动条的DIV元素，再计算该元素offsetWidth和clientWidth的差值。
+function getScrollbarWidth() {
+
+    var scrollDiv = document.createElement("div");
+    scrollDiv.style.cssText = 'width: 99px; height: 99px; overflow: scroll; position: absolute; top: -9999px;';
+    document.body.appendChild(scrollDiv);
+    var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+    document.body.removeChild(scrollDiv);
+
+    return scrollbarWidth;
+};
 ```
