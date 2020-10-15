@@ -218,3 +218,21 @@ function getScrollbarWidth() {
     return scrollbarWidth;
 };
 ```
+
+
+
+
+## 不常用技巧
+
+### new Function 的方式创建异步方法
+```js
+const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor;
+
+const fetchPage = new AsyncFunction("url", "return await fetch(url);");
+
+fetchPage('./index.json').then((res)=>{
+  return res.json();
+}).then((res)=>{
+  console.log(res);
+})
+```

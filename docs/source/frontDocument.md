@@ -23,6 +23,8 @@
 
 * [webRTC简单示例](https://webrtc.github.io/samples/)
 
+* [webRTC的教程 webrtc for the curious](https://webrtcforthecurious.com/)
+
 * [java23种设计模式全面解析](http://c.biancheng.net/design_pattern/)
 
 * [HTML标准，在线文档](https://html.spec.whatwg.org/multipage/)
