@@ -66,7 +66,11 @@
 
 * [iohook](https://wilix-team.github.io/iohook/)基于node端可以全局监听键盘鼠标等事件，当然也可以在electron中使用
 
+* 暗亮主题切换JS插件[darken](https://github.com/ColinEspinas/darken)
+
 * 生成表格的插件[gridjs](https://gridjs.io/)
+
+* 可视化编程JS插件[Rete](https://rete.js.org/#/)
 
 * 斯坦福开源的JS加密库[sjcl](https://github.com/bitwiseshiftleft/sjcl/)
 
