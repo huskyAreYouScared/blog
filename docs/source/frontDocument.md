@@ -28,3 +28,5 @@
 * [java23种设计模式全面解析](http://c.biancheng.net/design_pattern/)
 
 * [HTML标准，在线文档](https://html.spec.whatwg.org/multipage/)
+
+* [canvas中文API文档](https://www.canvasapi.cn/)

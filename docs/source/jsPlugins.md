@@ -64,6 +64,10 @@
 
 ## 不常用
 
+* 2d的物理引擎[matterjs](https://brm.io/matter-js/)
+
+* 基于Jquery的布局插件[w2ui](http://w2ui.com/web/)支持动态改变布局样式[demo](http://w2ui.com/web/demo)
+
 * [iohook](https://wilix-team.github.io/iohook/)基于node端可以全局监听键盘鼠标等事件，当然也可以在electron中使用
 
 * 暗亮主题切换JS插件[darken](https://github.com/ColinEspinas/darken)
