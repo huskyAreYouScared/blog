@@ -262,7 +262,6 @@ function getScrollbarWidth() {
         navigator.userAgent.toLowerCase().indexOf('android') !== -1) ?
     true : false)
 ```
-
 ### 判断IE系统
 
 ``` js
@@ -271,14 +270,58 @@ function getScrollbarWidth() {
     true : false)
 ```
 
+
+## 退出进入全屏
+
+### 进入全屏
+
+``` js
+// params 可以传入想要全屏的元素
+function requestFullScreen(element) {
+    // 判断各种浏览器，找到正确的方法
+    var requestMethod = element.requestFullScreen || //W3C
+        element.webkitRequestFullScreen || //FireFox
+        element.mozRequestFullScreen || //Chrome等
+        element.msRequestFullScreen; //IE11
+    if (requestMethod) {
+        requestMethod.call(element);
+    } else if (typeof window.ActiveXObject !== "undefined") { //for Internet Explorer
+        var wscript = new ActiveXObject("WScript.Shell");
+        if (wscript !== null) {
+            wscript.SendKeys("{F11}");
+        }
+    }
+}
+```
+
+### 退出全屏
+```js
+function exitFull() {
+    // 判断各种浏览器，找到正确的方法
+    var exitMethod = document.exitFullscreen || //W3C
+        document.mozCancelFullScreen || //FireFox
+        document.webkitExitFullscreen || //Chrome等
+        document.webkitExitFullscreen; //IE11
+    if (exitMethod) {
+        exitMethod.call(document);
+    } else if (typeof window.ActiveXObject !== "undefined") { //for Internet Explorer
+        var wscript = new ActiveXObject("WScript.Shell");
+        if (wscript !== null) {
+            wscript.SendKeys("{F11}");
+        }
+    }
+}
+```
+
+
 ## 不常用技巧
 
 ### new Function 的方式创建异步方法
 
 ``` js
-const AsyncFunction = Object.getPrototypeOf(async function() {}).constructor; 
+const AsyncFunction = Object.getPrototypeOf(async function() {}).constructor;
 
-const fetchPage = new AsyncFunction("url", "return await fetch(url); "); 
+const fetchPage = new AsyncFunction("url", "return await fetch(url); ");
 
 fetchPage('./index.json').then((res) => {
 

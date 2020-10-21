@@ -58,3 +58,5 @@
 * [数据可视化工具目录](https://datavizcatalogue.com/ZH/)
 
 * [火柴人风格插图资源网站](http://pictogram2.com/)
+
+* ics[阿里普惠体字体资源](https://ics.alibaba.com/project/Hn8mXx)
