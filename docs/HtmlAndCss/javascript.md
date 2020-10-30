@@ -4,6 +4,10 @@ sidebarDepth: 3
 
 # JS收藏夹
 
+## 文章
+
+* CJS，AMD,UMD，ESM等模块的介绍 [what-the-heck-are-cjs-amd-umd-and-esm-ikm](https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm)
+
 ## 函数参数校验器
 
 ``` js
@@ -315,6 +319,20 @@ function exitFull() {
 
 
 ## 不常用技巧
+
+### Node突破内存限制
+
+#### 方式一
+* 直接在终端运行下面这段代码即可，也可持久化到package.json的script中
+```bash
+export NODE_OPTIONS='--max-old-space-size=4096'
+```
+#### 方式二
+```bash
+node --max-old-space-size=8192 [file].js 
+```
+
+* 内存的大小可以设置为 [2048, 4096, 8192, 16384] 等等
 
 ### new Function 的方式创建异步方法
 

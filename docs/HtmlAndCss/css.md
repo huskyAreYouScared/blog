@@ -14,7 +14,9 @@
 
 * [animista动画生成](https://animista.net/)
 
-* [三角形生成](https://www.dute.org/css-arrow)
+* [三角形生成（1）](https://www.dute.org/css-arrow)
+
+* [三角形生成（2）](http://apps.eky.hk/css-triangle-generator/zh-hant)
 
 * [文本阴影生成（text-shadow）](https://techbrood.com/tool?p=cg-text-shadow)
 
