@@ -84,6 +84,7 @@
 
 * vue grid布局插件-可以用于可视化大屏[vue-grid-layout](https://github.com/jbaysolutions/vue-grid-layout)
 
+* vue-clickaway检测点击方式的插件，可用于modal模态框等应用[vue-clickaway](https://www.npmjs.com/package/vue-clickaway)
 
 ## vue相关知识文章
 

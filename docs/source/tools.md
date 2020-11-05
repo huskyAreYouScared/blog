@@ -178,3 +178,5 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * 配色网站[中国古典颜色 CHINESE COLOR](https://colors.ichuantong.cn/)
 
 * linuxcool[linux命令手册](https://www.linuxcool.com/)
+
+* 获取地图信息[openstreetmap](https://www.openstreetmap.org/)
