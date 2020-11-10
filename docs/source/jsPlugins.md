@@ -64,6 +64,8 @@
 
 ## 不常用
 
+* ffmpeg 的 Webassembly版可以用在浏览器客户端[ffmpegwasm](https://github.com/ffmpegwasm/ffmpeg.wasm)
+
 * 2d的物理引擎[matterjs](https://brm.io/matter-js/)
 
 * 基于Jquery的布局插件[w2ui](http://w2ui.com/web/)支持动态改变布局样式[demo](http://w2ui.com/web/demo)
