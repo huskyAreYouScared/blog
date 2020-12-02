@@ -84,6 +84,7 @@
 
 * vue grid布局插件-可以用于可视化大屏[vue-grid-layout](https://github.com/jbaysolutions/vue-grid-layout)
 
+* 滚动布局全方面解决方案[BetterScroll 2.0](https://better-scroll.github.io/docs/zh-CN/)
 
 ## vue相关知识文章
 

@@ -3,6 +3,10 @@
 本模块记录一些实用的工具网站
 :::
 
+## 精选
+
+* 算法可视化工具网站[visualgo](https://visualgo.net/en)
+
 ## 常用
 * [图壳](https://imgkr.com/)免费的图床网站，这个是我试传的图片[https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png](https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png)
 
