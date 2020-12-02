@@ -10,11 +10,17 @@
 
 * [css圆形的写法](https://cloudfour.com/thinks/css-circles/)
 
+## 插件
+
+* [瀑布流布局插件](https://masonry.desandro.com/)
+
 ## css代码生成
 
 * [animista动画生成](https://animista.net/)
 
-* [三角形生成](https://www.dute.org/css-arrow)
+* [三角形生成（1）](https://www.dute.org/css-arrow)
+
+* [三角形生成（2）](http://apps.eky.hk/css-triangle-generator/zh-hant)
 
 * [文本阴影生成（text-shadow）](https://techbrood.com/tool?p=cg-text-shadow)
 
@@ -154,4 +160,15 @@ display: -webkit-box;
 -webkit-line-clamp: 2;
 line-clamp: 2;
 -webkit-box-orient: vertical;
+```
+
+### clamp 响应式布局
+```css
+/* minimum 最小值
+flexible 弹性值
+maximum 最大值 */
+h1 {
+  /* font-size: clamp(minimum, flexible, maximum); */
+  font-size: clamp(16px, 5vw, 34px);
+}
 ```

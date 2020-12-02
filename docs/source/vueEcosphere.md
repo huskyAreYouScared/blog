@@ -86,6 +86,8 @@
 
 * 滚动布局全方面解决方案[BetterScroll 2.0](https://better-scroll.github.io/docs/zh-CN/)
 
+* vue-clickaway检测点击方式的插件，可用于modal模态框等应用[vue-clickaway](https://www.npmjs.com/package/vue-clickaway)
+
 ## vue相关知识文章
 
 * [vue技术解密](https://ustbhuangyi.github.io/vue-analysis/)黄轶大佬编写

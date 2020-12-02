@@ -34,6 +34,7 @@ module.exports = {
       ],
       "/source/": [
         "",
+        "webgl",
         "vueEcosphere",
         "npmPlugins",
         "tools",
