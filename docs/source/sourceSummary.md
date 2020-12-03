@@ -60,3 +60,7 @@
 * [火柴人风格插图资源网站](http://pictogram2.com/)
 
 * ics[阿里普惠体字体资源](https://ics.alibaba.com/project/Hn8mXx)
+
+* 着色器分享网站[shadertoy](https://www.shadertoy.com/)
+
+* 动画交互和设计的未来[lottiefiles](https://lottiefiles.com/)
