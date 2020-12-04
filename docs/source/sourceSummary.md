@@ -9,7 +9,13 @@
 
 * [SVG搜索引擎](https://www.svgrepo.com/)
 
-* [免费的视频图片素材网站Pexels](https://www.pexels.com/zh-cn/)
+* 免费的视频图片素材网站 
+  * [Pexels](https://www.pexels.com/zh-cn/)
+  * [unsplash](https://unsplash.com/)
+  * [visualhunt](https://visualhunt.com/)
+  * [pixabay](https://pixabay.com/zh/)
+  * [gratisography](https://gratisography.com/)
+  * [lifeofpix](https://www.lifeofpix.com/)
 
 * 免费的api提供，可用于demo项目测试使用[jsonplaceholder](https://jsonplaceholder.typicode.com/)
 
