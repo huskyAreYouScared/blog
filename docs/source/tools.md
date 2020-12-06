@@ -10,6 +10,8 @@
 ## 常用
 * 通过复制内容来快速生成css代码的工具网站[kakacss](https://renzhezhilu.gitee.io/kakacss/)
 
+* 查询npm包体积和加载性能分析[bundlephobia](https://bundlephobia.com/) 
+
 * [图壳](https://imgkr.com/)免费的图床网站，这个是我试传的图片[https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png](https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png)
 
 * 可以获取Github状态的统计报表,项目图钉,语言排行榜，用markdown的方式使用，如下图[使用教程教程 github-readme-stats](https://github.com/anuraghazra/github-readme-stats)
