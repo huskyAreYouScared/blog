@@ -43,6 +43,8 @@
 * [生成骨架屏的网站-传送门](https://skeletonreact.com/)可以生成react或vue等等不同前端框架的代码
 
 ## 必备
+* [生成带配图的宣传网址的工具网站](https://thumbnail.ai/)
+
 * [svg在线编辑网站](https://www.zhangxinxu.com/sp/svg/)
 
 * [用衍生艺术生成占位符图片占位符](https://generative-placeholders.glitch.me/)
