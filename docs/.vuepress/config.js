@@ -116,6 +116,7 @@ module.exports = {
         "nginxSummary",
         "dockerSummary",
         "authorization",
+        "office"
       ],
       "/": [""],
     },
