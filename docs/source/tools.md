@@ -190,3 +190,7 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * linuxcool[linux命令手册](https://www.linuxcool.com/)
 
 * 获取地图信息[openstreetmap](https://www.openstreetmap.org/)
+
+* 可以画对称图画的网站[Andala](https://www.aliciaunderhill.xyz/Andala/)
+
+* [根据用户输入生成头像](https://multiavatar.com/)
