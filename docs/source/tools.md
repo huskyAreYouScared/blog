@@ -194,3 +194,5 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * 可以画对称图画的网站[Andala](https://www.aliciaunderhill.xyz/Andala/)
 
 * [根据用户输入生成头像](https://multiavatar.com/)
+
+* [AI生成资源的网站](https://aiartists.org/ai-generated-art-tools)
