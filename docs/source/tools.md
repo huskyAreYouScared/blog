@@ -196,3 +196,5 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [根据用户输入生成头像](https://multiavatar.com/)
 
 * [AI生成资源的网站](https://aiartists.org/ai-generated-art-tools)
+
+* github仓库，只需要在github+1s就可以打开网页版的vscode[测试一下](https://github1s.com/huskyAreYouScared/subtitle)

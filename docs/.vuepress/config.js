@@ -52,6 +52,7 @@ module.exports = {
         "httpProtol",
         "webGame",
         "money",
+        "book"
       ],
       "/HtmlAndCss/": [
         "",
@@ -116,7 +117,7 @@ module.exports = {
         "nginxSummary",
         "dockerSummary",
         "authorization",
-        "office"
+        "office",
       ],
       "/": [""],
     },
