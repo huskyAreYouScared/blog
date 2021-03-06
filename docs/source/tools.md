@@ -104,6 +104,8 @@ eg:https://gitmemory.com/huskyareyouscared/subtitle
 
 * [临时分享文件的服务网站-sendfiles](https://sendfiles.online/)
 
+* [生成美观的代码截图的网站](https://ray.so/)
+
 * [可以提取图片上的文字服务的网站-白描](https://web.baimiaoapp.com/)
 
 * [utteranc-借助GitHub issue实现的轻量blog评论小部件](https://utteranc.es/)
@@ -198,3 +200,9 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [AI生成资源的网站](https://aiartists.org/ai-generated-art-tools)
 
 * github仓库，只需要在github+1s就可以打开网页版的vscode[测试一下](https://github1s.com/huskyAreYouScared/subtitle)
+
+* 生成Github提交记录的3D模型[github官方-https://skyline.github.com/](https://skyline.github.com/)
+
+* [react的资源搜索网站](https://bestofreactjs.com/)
+
+* [vue的资源搜索网站](https://bestofvue.com/search)
