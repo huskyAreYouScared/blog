@@ -206,3 +206,5 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [react的资源搜索网站](https://bestofreactjs.com/)
 
 * [vue的资源搜索网站](https://bestofvue.com/search)
+
+* [生成二次元图片的网站-crypko](https://crypko.ai/)
