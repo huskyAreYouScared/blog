@@ -98,3 +98,5 @@
 ## 工具
 
 * 通过拖拽的方式开发中后台系统[传送门](http://www.freedomen.cn/#/Introduce)
+
+* 开发跨平台的框架[vue-nodegui](https://github.com/nodegui/vue-nodegui)
