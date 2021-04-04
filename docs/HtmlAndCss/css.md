@@ -40,7 +40,11 @@
 
 * [生成网格效果](https://stripesgenerator.com/)
 
-* [生成剪影风格的网站](https://www.softr.io/tools/svg-wave-generator)
+* [生成剪影风格](https://www.softr.io/tools/svg-wave-generator)
+
+* [可以生成液体形状](https://www.softr.io/tools/svg-shape-generator)
+
+* [css-doodle一个css绘画库](https://css-doodle.com/)doodle乱画
 
 ## css开源库
 
