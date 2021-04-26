@@ -208,3 +208,18 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [vue的资源搜索网站](https://bestofvue.com/search)
 
 * [生成二次元图片的网站-crypko](https://crypko.ai/)
+
+* [可视化算法得工具网站visualgo](https://visualgo.net/zh)
+
+* [.new域名工具-doc.new](doc.new).new域名是谷歌托管的，提供了一个打开网络服务的快捷方式，下面是一些例子。
+  - doc.new：新建一篇谷歌文档
+  - sheet.new：新建一个谷歌表格
+  - js.new：新建一个 CodeSandbox 的代码片段
+  - github.new：新建一个 GitHub 仓库
+
+* [生成vscode主题得在线工具网站](https://themes.vscode.one/)
+
+* [浏览器调用这段代码会在vscode安装对应主题-vscode:extension/theedgesofben.punk-runner](vscode:extension/theedgesofben.punk-runner)
+  - vscode:extension/*** 后面主题名
+
+* [解决跨域问题的cors工具-github开源地址](https://github.com/Rob--W/cors-anywhere)

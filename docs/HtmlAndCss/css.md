@@ -44,6 +44,8 @@
 
 * [可以生成液体形状](https://www.softr.io/tools/svg-shape-generator)
 
+* [拟物风格生成代码](https://neumorphism.io/#55c1c3)
+
 ## css开源库
 
 * [css-doodle一个css绘画库](https://css-doodle.com/)doodle乱画
@@ -51,6 +53,8 @@
 * [mvp.css](https://andybrewer.github.io/mvp/) 一个最简化的 CSS 库，不提供任何自定义的类，只给出最基本的 HTML 元素的样式，适合在它的基础上添加自定义的样式
 
 * [freefrontend前端资源库](https://freefrontend.com/)
+
+* [只用css实现的图表chartscss](https://chartscss.org/)
 ## 碎片知识
 
 ### 事件透传
