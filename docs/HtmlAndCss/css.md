@@ -34,7 +34,9 @@
 
 * [CSS 布局收集](https://csslayout.io/)
 
-* [毛玻璃效果生成](https://glassmorphism.com/)
+* 毛玻璃效果生成
+  * [毛玻璃效果生成1](https://glassmorphism.com/)
+  * [毛玻璃效果生成2](https://zxuqian.cn/docs/tools/glassmorphism-generator)
 
 * [一个可以在线调节主要参数（CSS 变量）的 CSS 框架。](https://cavepaint.github.io/cavepaintcss/)
 
