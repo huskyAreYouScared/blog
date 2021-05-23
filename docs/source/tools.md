@@ -223,3 +223,7 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
   - vscode:extension/*** 后面主题名
 
 * [解决跨域问题的cors工具-github开源地址](https://github.com/Rob--W/cors-anywhere)
+
+* [通过点击拖拽的方式快速生成readme文件的网站](https://readme.so/)
+
+* [共享网页的工具](https://comebrowsewithme.com/)多个人可以一起操作一个网页，缺点画质不清晰
