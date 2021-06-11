@@ -99,6 +99,12 @@
 
 * 可以将SVG，img，emoji,文字变成3D效果的插件[ztext.js](https://bennettfeely.com/ztext/)
 
+* 语音识别工具包[https://github.com/alphacep/vosk-api](https://github.com/alphacep/vosk-api)
+
+* [前端数学可视化插件](https://thoughtspile.github.io/grafar/#/)
+
+* [可以将任何网站的活跃展示像GitHub那样的活跃图](https://github.com/yihong0618/GitHubPoster)
+
 ### AST解析库
 
 * [esprima](https://esprima.org/)

@@ -75,10 +75,12 @@
 
 * 查看星系的在线网站[viewer.legacysurvey.org](https://viewer.legacysurvey.org/)
 
-* 3d预览网站[https://alteredqualia.com/]
+* 3d预览网站[https://alteredqualia.com/](https://alteredqualia.com/)
 
-* bg-painter多种背景生成网站-可自定义后下载[http://www.bg-painter.com/]
+* bg-painter多种背景生成网站-可自定义后下载[http://www.bg-painter.com/](http://www.bg-painter.com/)
 
-* bggenerator背景生成网站-同样支持自定义[https://bggenerator.com/]
+* bggenerator背景生成网站-同样支持自定义[https://bggenerator.com/](https://bggenerator.com/)
 
-* 网格风格的背景生成网站patternizer[https://patternizer.com/zyhx]
+* 网格风格的背景生成网站patternizer[https://patternizer.com/zyhx](https://patternizer.com/zyhx)
+
+* 旧系统视频素材[http://www.therestartpage.com/](http://www.therestartpage.com/)

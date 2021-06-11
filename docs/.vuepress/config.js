@@ -20,6 +20,7 @@ module.exports = {
       { text: "算法", link: "/algorithm/" },
       { text: "资源", link: "/source/" },
       { text: "技术杂谈", link: "/other/" },
+      { text: "真会玩", link: "/play/" },
       { text: "Github", link: "https://github.com/huskyAreYouScared/" },
       { text: "国内地址", link: "https://husky_are_you_scared.gitee.io/blog/" },
     ],
@@ -118,6 +119,9 @@ module.exports = {
         "dockerSummary",
         "authorization",
         "office",
+      ],
+      "/play/": [
+        ""
       ],
       "/": [""],
     },

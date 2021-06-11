@@ -24,6 +24,10 @@
 
 * 十分钟邮箱[10minutemail](https://10minutemail.net/)
 
+* 临时邮箱[https://temp-mail.org/zh/](https://temp-mail.org/zh/)
+
+* 给自己未来发送邮件的服务[https://www.futureme.org/](https://www.futureme.org/)注意信息安全o
+
 * carbon[生成代码图片](https://carbon.now.sh/)
 
 * [很强大的流程图在线绘制draw.io](https://www.draw.io/)
@@ -227,3 +231,13 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [通过点击拖拽的方式快速生成readme文件的网站](https://readme.so/)
 
 * [共享网页的工具](https://comebrowsewithme.com/)多个人可以一起操作一个网页，缺点画质不清晰
+
+* [邮箱安全信息检测网站](https://monitor.firefox.com/)https://monitor.firefox.com/
+
+* [个人信息伪造](https://www.fakepersongenerator.com/) https://www.fakepersongenerator.com/ 
+
+* [查询不同年份发生的事情](http://whathappenedinmybirthyear.com/)http://whathappenedinmybirthyear.com/
+
+* [日常专业问题解答网站](https://zh.wikihow.com/)https://zh.wikihow.com/
+
+* [图片转线稿工具](https://javier.xyz/pintr/)https://javier.xyz/pintr/
