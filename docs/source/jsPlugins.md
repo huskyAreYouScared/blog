@@ -62,6 +62,8 @@
 
 * 图片预览插件[Viewer.js](https://cn.pornhub.com/view_video.php?viewkey=ph5d82aac8b5817)
 
+* 可以识别人体的动作、手势和面部表情的js库[https://handsfree.js.org/](https://handsfree.js.org/)
+
 ## 不常用
 
 * ffmpeg 的 Webassembly版可以用在浏览器客户端[ffmpegwasm](https://github.com/ffmpegwasm/ffmpeg.wasm)

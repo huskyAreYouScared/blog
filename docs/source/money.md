@@ -13,7 +13,8 @@
 
 * 国外短链接 shorte，[地址一 - 国外](https://shorte.st/) ,[地址二](http://dd.ma/22OCns7u), [地址三](http://nez.cc/2AoggH) [地址四 - 国外](http://j.gs/EOD5)
 
-## 挖矿挂机
+* 领宽短链接[https://zws.im/](https://zws.im/)
+## 挖矿
 
 * Crypto Tab[去下载](https://cryptotabbrowser.com/14505624)
 

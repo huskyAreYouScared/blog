@@ -84,3 +84,5 @@
 * 网格风格的背景生成网站patternizer[https://patternizer.com/zyhx](https://patternizer.com/zyhx)
 
 * 旧系统视频素材[http://www.therestartpage.com/](http://www.therestartpage.com/)
+
+* [7天学习五笔打字的在线教程](https://wubi.yantuz.cn/)https://wubi.yantuz.cn/

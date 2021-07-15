@@ -241,3 +241,5 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [日常专业问题解答网站](https://zh.wikihow.com/)https://zh.wikihow.com/
 
 * [图片转线稿工具](https://javier.xyz/pintr/)https://javier.xyz/pintr/
+
+* [开源-在线油画](https://david.li/paint/)https://david.li/paint/
