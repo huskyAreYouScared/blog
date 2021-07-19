@@ -234,6 +234,8 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 
 * [邮箱安全信息检测网站](https://monitor.firefox.com/)https://monitor.firefox.com/
 
+* [一个 Rust 库，用来检查 Email 邮箱的可靠性，功能非常多，包括邮箱是否存在、是否为一次性地址、是否泄露过密码、用户有没有设置头像图片等等,对个人免费](https://github.com/reacherhq/check-if-email-exists)https://github.com/reacherhq/check-if-email-exists
+
 * [个人信息伪造](https://www.fakepersongenerator.com/) https://www.fakepersongenerator.com/ 
 
 * [查询不同年份发生的事情](http://whathappenedinmybirthyear.com/)http://whathappenedinmybirthyear.com/
@@ -243,3 +245,15 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [图片转线稿工具](https://javier.xyz/pintr/)https://javier.xyz/pintr/
 
 * [开源-在线油画](https://david.li/paint/)https://david.li/paint/
+
+* [用JS发送邮件--免费版有模板和流量限制](https://www.emailjs.com/)https://www.emailjs.com/
+
+* [在线图片压缩服务](https://imagecompressor.com/zh/)https://imagecompressor.com/zh/
+
+* [在线的项目管理网站-clickup-有免费版支持小型团队协作](https://clickup.com/)https://clickup.com/
+
+* [查看 npm 包添加到您的项目中的成本](https://bundlephobia.com/)https://bundlephobia.com/
+
+* [支持3d风格的流程图网站-有免费版](https://www.cloudcraft.co/)https://www.cloudcraft.co/
+
+* [开源的网页设计调试工具chrome插件版](https://github.com/GoogleChromeLabs/ProjectVisBug)https://github.com/GoogleChromeLabs/ProjectVisBug
