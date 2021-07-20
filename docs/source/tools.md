@@ -257,3 +257,9 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [支持3d风格的流程图网站-有免费版](https://www.cloudcraft.co/)https://www.cloudcraft.co/
 
 * [开源的网页设计调试工具chrome插件版](https://github.com/GoogleChromeLabs/ProjectVisBug)https://github.com/GoogleChromeLabs/ProjectVisBug
+
+* [嘿呦终端-运维工具](https://heyterm.com/zh-cn/)https://heyterm.com/zh-cn/
+
+* [Colaboratory-可在浏览器中编写和执行 Python 代码](https://colab.research.google.com/)https://colab.research.google.com/
+
+* [信用卡生成器-vccgenerator](https://www.vccgenerator.com/)https://www.vccgenerator.com/

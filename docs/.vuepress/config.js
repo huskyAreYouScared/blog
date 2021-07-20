@@ -53,7 +53,8 @@ module.exports = {
         "httpProtol",
         "webGame",
         "money",
-        "book"
+        "book",
+        "cloudservices",
       ],
       "/HtmlAndCss/": [
         "",
@@ -119,10 +120,9 @@ module.exports = {
         "dockerSummary",
         "authorization",
         "office",
+        "linux",
       ],
-      "/play/": [
-        ""
-      ],
+      "/play/": [""],
       "/": [""],
     },
     lastUpdated: "Last Updated",

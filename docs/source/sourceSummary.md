@@ -86,3 +86,5 @@
 * 旧系统视频素材[http://www.therestartpage.com/](http://www.therestartpage.com/)
 
 * [7天学习五笔打字的在线教程](https://wubi.yantuz.cn/)https://wubi.yantuz.cn/
+
+* [免费域名申请网站-freenom](https://freenom.com/)https://freenom.com/
