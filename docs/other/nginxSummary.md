@@ -86,6 +86,21 @@ server {
 - eg: http://www.woniuwnwn.top/index.html
 - version : nginx version: nginx/1.14.0 (Ubuntu)
 :::
+
+### 纯ipv6服务器
+* 需要在原配置上增加一行`listen [::]:80`
+```bash
+server {
+      listen 80;
+      listen [::]:80;
+      server_name www.woniuwnwn.top;
+      location / {
+              root /data/blog/dist;
+              index index.html index.htm;
+      }
+}
+
+```
 ### 指定错误页面
 * 通过`error_page`来指定
 ```bash
