@@ -46,7 +46,7 @@
 
 * [可以生成液体形状](https://www.softr.io/tools/svg-shape-generator)
 
-* [拟物风格生成代码](https://neumorphism.io/#55c1c3)
+* [新拟态风格-Neumorphism.io](https://neumorphism.io/)主要生成box-shadow Css代码
 
 ## css开源库
 

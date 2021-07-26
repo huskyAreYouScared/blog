@@ -6,6 +6,8 @@
 ::: tip Desc
 由于是免费的原因，不同的平台可能会有不同的限制，大家可以自己比对着看
 :::
+* [byet.host](https://byet.host/)https://byet.host/
+
 * [freehosting](https://www.freehosting.com/)(https://www.freehosting.com/)
 
 * [freehostingnoads](https://freehostingnoads.net/)https://freehostingnoads.net/
