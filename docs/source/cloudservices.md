@@ -2,11 +2,13 @@
 
 ## free
 
-### 托管网站专区
+### 虚拟主机
 ::: tip Desc
 由于是免费的原因，不同的平台可能会有不同的限制，大家可以自己比对着看
 :::
 * [byet.host](https://byet.host/)https://byet.host/
+
+* [freewha](https://freewha.com/)https://freewha.com/
 
 * [freehosting](https://www.freehosting.com/)(https://www.freehosting.com/)
 

@@ -15,3 +15,9 @@
 * [云旅行](http://www.airpano.com/)http://www.airpano.com/
 
 * [科幻线条风格绘画网站](http://weavesilk.com/)http://weavesilk.com/
+
+* [WebGL-流体模拟网站-效果很赞/](https://paveldogreat.github.io/WebGL-Fluid-Simulation/)https://paveldogreat.github.io/WebGL-Fluid-Simulation/
+
+* [sharkle-网站盲盒-点击后会有很多有意思的网站](https://sharkle.com/)https://sharkle.com/
+
+* [cybermap-可视化全球网络攻击](https://cybermap.kaspersky.com/)https://cybermap.kaspersky.com/

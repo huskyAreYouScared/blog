@@ -29,6 +29,8 @@
 
 ## 精华
 
+* [free-for是一个关于各种（工具、虚拟主机等等）网站推荐的集合](https://free-for.dev/#/)https://free-for.dev/#/
+
 * [github emoji 表情列表](https://www.cnblogs.com/takeurhand/p/6940135.html)
 
 * [插图网站](https://undraw.co/illustrations)可商用

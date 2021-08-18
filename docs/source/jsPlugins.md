@@ -66,6 +66,8 @@
 
 ## 不常用
 
+* 去中心化存储IPFS的js库[web3.storage](https://web3.storage/)
+
 * ffmpeg 的 Webassembly版可以用在浏览器客户端[ffmpegwasm](https://github.com/ffmpegwasm/ffmpeg.wasm)
 
 * 2d的物理引擎[matterjs](https://brm.io/matter-js/)

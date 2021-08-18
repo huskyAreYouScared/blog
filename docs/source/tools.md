@@ -8,9 +8,13 @@
 * 算法可视化工具网站[visualgo](https://visualgo.net/en)
 
 ## 常用
+* [dns-ip检测服务](https://nstool.netease.com/)https://nstool.netease.com/
+
 * 通过复制内容来快速生成css代码的工具网站[kakacss](https://renzhezhilu.gitee.io/kakacss/)
 
 * 查询npm包体积和加载性能分析[bundlephobia](https://bundlephobia.com/) 
+
+* [上传照片可以生成卡通头像](https://toonme.com/)https://toonme.com/
 
 * [图壳](https://imgkr.com/)免费的图床网站，这个是我试传的图片[https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png](https://imgkr.cn-bj.ufileos.com/47935e7d-d93b-42d1-9992-70095b462f5c.png)
 
@@ -265,3 +269,11 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [Colaboratory-可在浏览器中编写和执行 Python 代码](https://colab.research.google.com/)https://colab.research.google.com/
 
 * [信用卡生成器-vccgenerator](https://www.vccgenerator.com/)https://www.vccgenerator.com/
+
+* [举牌小人图片生成工具](http://1.hus.tcapps.twocola.com/)http://1.hus.tcapps.twocola.com/
+
+* [P站风格logo生成工具](https://lab.bangbang93.com/porn-hub)https://lab.bangbang93.com/porn-hub
+
+* [支付宝到账语音生成工具](https://saythemoney.github.io/#)https://saythemoney.github.io/
+
+* [随机动漫头像生成工具](https://make.girls.moe/#/)https://make.girls.moe/#/

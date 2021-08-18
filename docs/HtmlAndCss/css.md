@@ -48,6 +48,8 @@
 
 * [新拟态风格-Neumorphism.io](https://neumorphism.io/)主要生成box-shadow Css代码
 
+* [新拟态风格的设计稿-可以用来寻找灵感](https://dribbble.com/search/neumorphism)https://dribbble.com/search/neumorphism
+
 ## css开源库
 
 * [css-doodle一个css绘画库](https://css-doodle.com/)doodle乱画
@@ -57,6 +59,9 @@
 * [freefrontend前端资源库](https://freefrontend.com/)
 
 * [只用css实现的图表chartscss](https://chartscss.org/)
+
+* [新拟态风格组件库(基础版本不需要付费)-neumorphism-ui-bootstrap](https://github.com/themesberg/neumorphism-ui-bootstrap)https://github.com/themesberg/neumorphism-ui-bootstrap
+
 ## 碎片知识
 
 ### 事件透传
