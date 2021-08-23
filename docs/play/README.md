@@ -20,4 +20,6 @@
 
 * [sharkle-网站盲盒-点击后会有很多有意思的网站](https://sharkle.com/)https://sharkle.com/
 
+* [theuselessweb-另一个网站盲盒](https://theuselessweb.com/)https://theuselessweb.com/
+
 * [cybermap-可视化全球网络攻击](https://cybermap.kaspersky.com/)https://cybermap.kaspersky.com/

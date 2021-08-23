@@ -277,3 +277,31 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [支付宝到账语音生成工具](https://saythemoney.github.io/#)https://saythemoney.github.io/
 
 * [随机动漫头像生成工具](https://make.girls.moe/#/)https://make.girls.moe/#/
+
+* [生成英文手写风格的工具网站](https://www.calligrapher.ai/)https://www.calligrapher.ai/
+
+* [歌曲伴奏和人声分离的工具网站-lalal.ai](https://www.lalal.ai/zh-hans/)https://www.lalal.ai/zh-hans/
+
+* [shapefactory-设计工具网站](https://shapefactory.co/)https://shapefactory.co/
+  * [logo](https://logo.shapefactory.co/)https://logo.shapefactory.co/ --付费
+  * [配色-pigment](https://pigment.shapefactory.co/)https://pigment.shapefactory.co/ 
+  * [渐变色-gradient](https://gradient.shapefactory.co/)https://gradient.shapefactory.co/
+  * [双色图-duotone](https://duotone.shapefactory.co/)https://duotone.shapefactory.co/
+
+* [设备截图工具网站-deviceshots](https://deviceshots.com/)https://deviceshots.com/
+
+* [视频片头制作网站-panzoid](https://panzoid.com/)https://panzoid.com/
+
+* [制作波浪效果的工具网站-getwaves](https://getwaves.io/)https://getwaves.io/
+
+* [制作水滴效果的工具网站-blobmaker](https://www.blobmaker.app/)https://www.blobmaker.app/
+
+* [可以制作多种风格（水滴，波浪等等）图片的工具网站-haikei](https://app.haikei.app/)https://app.haikei.app/
+
+* [4kdownload-提供很多关于音视频的工具](https://www.4kdownload.com/)https://www.4kdownload.com/
+
+* [双色调工具网站-duotones](https://duotones.co/)https://duotones.co/
+
+* [渐变色工具网站-webgradients](https://webgradients.com/)https://webgradients.com/
+
+* [制作故障风格片段的工具网站-photomosh](https://photomosh.com/)https://photomosh.com/

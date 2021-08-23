@@ -90,3 +90,19 @@
 * [7天学习五笔打字的在线教程](https://wubi.yantuz.cn/)https://wubi.yantuz.cn/
 
 * [免费域名申请网站-freenom](https://freenom.com/)https://freenom.com/
+
+* [动手写一个编译器文章](https://github.com/pandolia/tinyc)https://github.com/pandolia/tinyc
+
+* [macosicons-macos图标下载网站](https://macosicons.com/)https://macosicons.com/
+
+* [大量png图片](https://pngimg.com/)https://pngimg.com/
+
+* [小霸王游戏网站集合-可追忆童年](https://www.yikm.net/)https://www.yikm.net/
+
+* [100font-免版权字体](https://www.100font.com/)https://www.100font.com/
+
+* [audiolibrary-无版权音乐网站](https://www.audiolibrary.com.co/)https://www.audiolibrary.com.co/
+
+* [gfycat-素材网站](https://gfycat.com/)https://gfycat.com/
+
+* [vjshi-付费素材网站](https://www.vjshi.com/)https://www.vjshi.com/
