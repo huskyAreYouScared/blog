@@ -106,3 +106,13 @@
 * [gfycat-素材网站](https://gfycat.com/)https://gfycat.com/
 
 * [vjshi-付费素材网站](https://www.vjshi.com/)https://www.vjshi.com/
+
+* [thosefree-免费资源（包括-前端-设计-应用等）](https://www.thosefree.com/)https://www.thosefree.com/
+
+* [医学微视-查询病症](https://www.mvyxws.com/)https://www.mvyxws.com/
+
+* [学各种语言的交互式教学网站-duolingo多邻国](https://www.duolingo.cn/)https://www.duolingo.cn/
+
+* [译学馆](https://www.yxgapp.com/)https://www.yxgapp.com/
+
+* [itellyou-Windows各种工具（office、Visio等）](https://msdn.itellyou.cn/)https://msdn.itellyou.cn/

@@ -305,3 +305,9 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [渐变色工具网站-webgradients](https://webgradients.com/)https://webgradients.com/
 
 * [制作故障风格片段的工具网站-photomosh](https://photomosh.com/)https://photomosh.com/
+
+* [二维码美化工具](https://www.weihaobang.com/tool/erweimameihua/)https://www.weihaobang.com/tool/erweimameihua/
+
+* [语音识别转文字工具-webcaptioner](https://webcaptioner.com/)https://webcaptioner.com/
+
+* [sukoutu-抠图工具网站](https://sukoutu.com/)https://sukoutu.com/

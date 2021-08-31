@@ -54,6 +54,7 @@ module.exports = {
         "money",
         "book",
         "cloudservices",
+        "software",
       ],
       "/HtmlAndCss/": [
         "",
