@@ -311,3 +311,5 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [语音识别转文字工具-webcaptioner](https://webcaptioner.com/)https://webcaptioner.com/
 
 * [sukoutu-抠图工具网站](https://sukoutu.com/)https://sukoutu.com/
+
+* [github.dev/[用户名]/[仓库名]-在线VSCode](https://github.dev/huskyAreYouScared/blog)https://github.dev/huskyAreYouScared/blog

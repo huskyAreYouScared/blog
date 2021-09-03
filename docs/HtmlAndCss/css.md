@@ -50,6 +50,8 @@
 
 * [新拟态风格的设计稿-可以用来寻找灵感](https://dribbble.com/search/neumorphism)https://dribbble.com/search/neumorphism
 
+* [分割线代码生成](https://www.shapedivider.app/)https://www.shapedivider.app/
+
 ## css开源库
 
 * [css-doodle一个css绘画库](https://css-doodle.com/)doodle乱画

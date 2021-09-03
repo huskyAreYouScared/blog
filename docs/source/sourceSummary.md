@@ -116,3 +116,5 @@
 * [译学馆](https://www.yxgapp.com/)https://www.yxgapp.com/
 
 * [itellyou-Windows各种工具（office、Visio等）](https://msdn.itellyou.cn/)https://msdn.itellyou.cn/
+
+* [网站404-资源未找到展示图片](https://error404.fun/)https://error404.fun/
