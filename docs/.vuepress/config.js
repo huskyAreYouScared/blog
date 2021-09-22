@@ -121,6 +121,7 @@ module.exports = {
         "authorization",
         "office",
         "linux",
+        "yidong"
       ],
       "/play/": [""],
       "/": [""],

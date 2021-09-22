@@ -313,3 +313,5 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [sukoutu-抠图工具网站](https://sukoutu.com/)https://sukoutu.com/
 
 * [github.dev/[用户名]/[仓库名]-在线VSCode](https://github.dev/huskyAreYouScared/blog)https://github.dev/huskyAreYouScared/blog
+
+* [高亮显示所输入网址的源代码](https://neatnik.net/view-source/)https://neatnik.net/view-source/
