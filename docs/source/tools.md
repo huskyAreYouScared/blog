@@ -7,6 +7,10 @@
 
 * 算法可视化工具网站[visualgo](https://visualgo.net/en)
 
+* 可视化代码执行网站工具[pythontutor](https://pythontutor.com/)https://pythontutor.com/
+
+* 将markdown转换成HTML的工具[MDcat](https://github.com/calganaygun/MDcat)https://github.com/calganaygun/MDcat
+
 ## 常用
 * [dns-ip检测服务](https://nstool.netease.com/)https://nstool.netease.com/
 
@@ -315,3 +319,5 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [github.dev/[用户名]/[仓库名]-在线VSCode](https://github.dev/huskyAreYouScared/blog)https://github.dev/huskyAreYouScared/blog
 
 * [高亮显示所输入网址的源代码](https://neatnik.net/view-source/)https://neatnik.net/view-source/
+
+* [可以展示NFT的在线画廊](oncyber)https://oncyber.io/
