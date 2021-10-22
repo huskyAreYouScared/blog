@@ -66,6 +66,8 @@
 
 * [新拟态风格组件库(基础版本不需要付费)-neumorphism-ui-bootstrap](https://github.com/themesberg/neumorphism-ui-bootstrap)https://github.com/themesberg/neumorphism-ui-bootstrap
 
+* [pollen](https://www.pollen.style/) CSS 变量库，提供一组常用的 CSS 变量（比如颜色、长度、字体大小等等）。开发者可以将这个库作为初始变量。
+
 ## 碎片知识
 
 ### 事件透传

@@ -321,3 +321,5 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [高亮显示所输入网址的源代码](https://neatnik.net/view-source/)https://neatnik.net/view-source/
 
 * [可以展示NFT的在线画廊](oncyber)https://oncyber.io/
+
+* [可以生成notion风格的头像](https://notion-avatar.vercel.app/zh)https://notion-avatar.vercel.app/zh
