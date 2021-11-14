@@ -323,3 +323,5 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [可以展示NFT的在线画廊](oncyber)https://oncyber.io/
 
 * [可以生成notion风格的头像](https://notion-avatar.vercel.app/zh)https://notion-avatar.vercel.app/zh
+
+* [生成各种姿势的 3D 人体模型的网页工具](https://setpose.com/)https://setpose.com/

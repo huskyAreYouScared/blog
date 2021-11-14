@@ -120,3 +120,5 @@
 * [网站404-资源未找到展示图片](https://error404.fun/)https://error404.fun/
 
 * [免费的天气 API 服务，可以获取全球任意地点的天气数据](https://open-meteo.com/en/docs)https://open-meteo.com/en/docs
+
+* [数学知识库集合 awesome-math](https://github.com/rossant/awesome-math)https://github.com/rossant/awesome-math

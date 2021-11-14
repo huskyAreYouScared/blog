@@ -20,5 +20,7 @@
     "vuepress": "^1.2.0"
   },
   "homepage": "https://huskyareyouscared.github.io/blog",
-  "dependencies": {}
+  "dependencies": {
+    "yarn": "^1.22.17"
+  }
 }
