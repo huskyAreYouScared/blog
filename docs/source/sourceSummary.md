@@ -122,3 +122,7 @@
 * [免费的天气 API 服务，可以获取全球任意地点的天气数据](https://open-meteo.com/en/docs)https://open-meteo.com/en/docs
 
 * [数学知识库集合 awesome-math](https://github.com/rossant/awesome-math)https://github.com/rossant/awesome-math
+
+* [I Tell You windows资源](https://msdn.itellyou.cn/)
+
+* [开发者武器库-提供很多web小工具](https://devtool.tech/)https://devtool.tech/

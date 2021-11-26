@@ -325,3 +325,5 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [可以生成notion风格的头像](https://notion-avatar.vercel.app/zh)https://notion-avatar.vercel.app/zh
 
 * [生成各种姿势的 3D 人体模型的网页工具](https://setpose.com/)https://setpose.com/
+
+* [生成树形结构的目录小工具](https://devtool.tech/tree)https://devtool.tech/tree
