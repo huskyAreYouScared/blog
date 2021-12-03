@@ -327,3 +327,9 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [生成各种姿势的 3D 人体模型的网页工具](https://setpose.com/)https://setpose.com/
 
 * [生成树形结构的目录小工具](https://devtool.tech/tree)https://devtool.tech/tree
+
+* [基于 GitHub Discussions（讨论区） 的网站评论系统](https://giscus.app/zh-CN)https://giscus.app/zh-CN
+
+* [在 GitHub 仓库的 README 文件里面，加入图形化的项目数据统计](https://repobeats.axiom.co/)https://repobeats.axiom.co/
+
+* [网页的背景音生成器](https://neal.fun/ambient-chaos/)https://neal.fun/ambient-chaos/
