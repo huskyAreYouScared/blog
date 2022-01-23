@@ -333,3 +333,7 @@ https://github.githistory.xyz/huskyAreYouScared/blog/blob/master/docs/.vuepress/
 * [在 GitHub 仓库的 README 文件里面，加入图形化的项目数据统计](https://repobeats.axiom.co/)https://repobeats.axiom.co/
 
 * [网页的背景音生成器](https://neal.fun/ambient-chaos/)https://neal.fun/ambient-chaos/
+
+* [emoji合成趣味网站](https://tikolu.net/emojimix/%F0%9F%A6%81+%F0%9F%99%88)
+
+* [5秒钟语音克隆](https://github.com/babysor/MockingBird)
